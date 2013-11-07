@@ -1,3 +1,6 @@
+/* DASH */
+#top, #nav-path {display: none !important;}
+
 /* The standard CSS for doxygen */
 
 body, table, div, p, dl {
