@@ -1,7 +1,7 @@
 require 'json'
 
 SearchIndexPath = 'Pebble.docset/Contents/Resources/Documents/search/'
-Mapping = [['Class', 'classes'], ['Function', 'functions'], ['Enum', 'enums'], ['Literal', 'enumvalues'], ['Module', 'groups'], ['Type', 'typedefs']]
+Mapping = [['Struct', 'classes'], ['Function', 'functions'], ['Enum', 'enums'], ['Literal', 'enumvalues'], ['Module', 'groups'], ['Type', 'typedefs']]
 
 def print_create_table
   puts "DROP TABLE IF EXISTS searchIndex;"
@@ -11,13 +11,6 @@ end
 
 def print_insert(name, path, type)
   puts "INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('#{name}', '#{type}', '#{path}');"
-end
-
-def parse_entries_recursive(entries)
-  entries.each do |entry_array|
-    print_insert(entry_array[0], 'function', entry_array[1])
-    parse_entries_recursive(entry_array[2]) if (entry_array[2].class == Array)
-  end
 end
 
 def main
