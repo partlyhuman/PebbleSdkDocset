@@ -10,5 +10,7 @@
   <string>Pebble</string>
   <key>isDashDocset</key>
   <true/>
+  <key>dashIndexFilePath</key>
+  <string>modules.html</string>
 </dict>
 </plist>
