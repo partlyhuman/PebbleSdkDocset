@@ -1,14 +1,15 @@
 var group___dictionary =
 [
     [ "dict_calc_buffer_size", "group___dictionary.html#ga0551d069624fb5bfc066fecfa4153bde", null ],
-    [ "dict_calc_buffer_size_from_tuplets", "group___dictionary.html#ga8e85252a0649e731904a5288edd21ac9", null ],
+    [ "dict_calc_buffer_size_from_tuplets", "group___dictionary.html#gad31424a83643adbfd9e84c4bd37e4627", null ],
     [ "dict_find", "group___dictionary.html#ga3639dbedb6da3248e0c2b1c804368da2", null ],
     [ "dict_merge", "group___dictionary.html#ga8ab5934dba34043d2f3319e9ff9dcfc1", null ],
     [ "dict_read_begin_from_buffer", "group___dictionary.html#ga53e2f0be9656c1331b96dd9a21684cda", null ],
     [ "dict_read_first", "group___dictionary.html#gaac0457f671cd0e4e9e539812f9a641f2", null ],
     [ "dict_read_next", "group___dictionary.html#ga0eec986d580dbf197753dff6aab3dae4", null ],
-    [ "dict_serialize_tuplets", "group___dictionary.html#gab89f0ab25c25513fbe563a60f76790d0", null ],
-    [ "dict_serialize_tuplets_to_buffer", "group___dictionary.html#ga8bddb2e3f5a07b88e1d1b1c56e606ebc", null ],
+    [ "dict_serialize_tuplets", "group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc", null ],
+    [ "dict_serialize_tuplets_to_buffer", "group___dictionary.html#gaeaaca187fe71e6d2dd8a4eb4deec2069", null ],
+    [ "dict_serialize_tuplets_to_buffer_with_iter", "group___dictionary.html#ga93526111e666de9fdca7276f6ca73c5d", null ],
     [ "dict_write_begin", "group___dictionary.html#ga9ec44fce51a2ce464a954b2bdd240ded", null ],
     [ "dict_write_cstring", "group___dictionary.html#ga015dfe89d0ee2f8b4e16ddda21bcf556", null ],
     [ "dict_write_data", "group___dictionary.html#ga30091feef740732d5d6bc3cf2312642a", null ],

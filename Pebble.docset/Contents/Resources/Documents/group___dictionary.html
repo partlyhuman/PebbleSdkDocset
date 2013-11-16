@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <div class="line">};</div>
 <div class="line">uint8_t buffer[256];</div>
 <div class="line"><a class="code" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> size = <span class="keyword">sizeof</span>(buffer);</div>
-<div class="line"><a class="code" href="group___dictionary.html#ga8bddb2e3f5a07b88e1d1b1c56e606ebc">dict_serialize_tuplets_to_buffer</a>(pairs, ARRAY_LENGTH(pairs), buffer, &amp;size);</div>
+<div class="line"><a class="code" href="group___dictionary.html#gaeaaca187fe71e6d2dd8a4eb4deec2069">dict_serialize_tuplets_to_buffer</a>(pairs, ARRAY_LENGTH(pairs), buffer, &amp;size);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// buffer now contains the serialized information</span></div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
@@ -212,21 +212,21 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga8e85252a0649e731904a5288edd21ac9"></a>
+<a class="anchor" id="gad31424a83643adbfd9e84c4bd37e4627"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> dict_calc_buffer_size_from_tuplets </td>
           <td>(</td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>tuplets_count</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
+          <td class="paramname"><em>tuplets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
-          <td class="paramname"><em>tuplets</em>&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tuplets_count</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,8 +240,8 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <dl class="section note"><dt>Note</dt><dd>See <a class="el" href="group___dictionary.html#ga0551d069624fb5bfc066fecfa4153bde">dict_calc_buffer_size()</a> for the formula for the calculation. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tuplets_count</td><td>The total number of Tuplets that follow. </td></tr>
     <tr><td class="paramname">tuplets</td><td>An array of Tuplets that need to be stored in the dictionary. </td></tr>
+    <tr><td class="paramname">tuplets_count</td><td>The total number of Tuplets that follow. </td></tr>
   </table>
   </dd>
 </dl>
@@ -443,7 +443,7 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gab89f0ab25c25513fbe563a60f76790d0"></a>
+<a class="anchor" id="ga6de59736dc56fcda7e4df30ba10ba0cc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -462,14 +462,14 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>tuplets_count</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
+          <td class="paramname"><em>tuplets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
-          <td class="paramname"><em>tuplets</em>&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tuplets_count</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -485,8 +485,8 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
   <table class="params">
     <tr><td class="paramname">callback</td><td>The callback that will be called with the serialized data of the generated dictionary. </td></tr>
     <tr><td class="paramname">context</td><td>Pointer to any application specific data that gets passed into the callback. </td></tr>
-    <tr><td class="paramname">tuplets_count</td><td>The number of tuplets that follow. </td></tr>
     <tr><td class="paramname">tuplets</td><td>An array of Tuplets that need to be serialized into the dictionary. </td></tr>
+    <tr><td class="paramname">tuplets_count</td><td>The number of tuplets that follow. </td></tr>
   </table>
   </dd>
 </dl>
@@ -494,21 +494,21 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga8bddb2e3f5a07b88e1d1b1c56e606ebc"></a>
+<a class="anchor" id="gaeaaca187fe71e6d2dd8a4eb4deec2069"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="group___dictionary.html#gaafae887a6d07cde8d11885c755b55351">DictionaryResult</a> dict_serialize_tuplets_to_buffer </td>
           <td>(</td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>tuplets_count</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
+          <td class="paramname"><em>tuplets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
-          <td class="paramname"><em>tuplets</em>, </td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tuplets_count</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -533,8 +533,66 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <p>Utility function that takes an array of Tuplets and serializes them into a dictionary with a given buffer and size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">tuplets_count</td><td>The number of tuplets in the array </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">tuplets</td><td>The array of tuplets </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">tuplets_count</td><td>The number of tuplets in the array </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">buffer</td><td>The buffer in which to write the serialized dictionary </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_in_out</td><td>The available buffer size in bytes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size_in_out</td><td>The number of bytes written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351af73d82390e594bfac5d10931183b27a6">DICT_OK</a>, <a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a436347bb1e21285a334a96da7b9e8f04">DICT_NOT_ENOUGH_STORAGE</a> or <a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a7f135de6b3f8f23083dc99dcb49ac2a2">DICT_INVALID_ARGS</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga93526111e666de9fdca7276f6ca73c5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___dictionary.html#gaafae887a6d07cde8d11885c755b55351">DictionaryResult</a> dict_serialize_tuplets_to_buffer_with_iter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___dictionary.html#struct_dictionary_iterator">DictionaryIterator</a> *&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a> *const&#160;</td>
+          <td class="paramname"><em>tuplets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tuplets_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>size_in_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Serializes an array of Tuplets into a dictionary with a given buffer and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">iter</td><td>The dictionary iterator </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">tuplets</td><td>The array of tuplets </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">tuplets_count</td><td>The number of tuplets in the array </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">buffer</td><td>The buffer in which to write the serialized dictionary </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size_in_out</td><td>The available buffer size in bytes </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">size_in_out</td><td>The number of bytes written </td></tr>
@@ -1192,16 +1250,16 @@ Width of the integer. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback for <a class="el" href="group___dictionary.html#gab89f0ab25c25513fbe563a60f76790d0">dict_serialize_tuplets()</a> utility. </p>
+<p>Callback for <a class="el" href="group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc">dict_serialize_tuplets()</a> utility. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>The data of the serialized dictionary </td></tr>
     <tr><td class="paramname">size</td><td>The size of data </td></tr>
-    <tr><td class="paramname">context</td><td>The context pointer as passed in to <a class="el" href="group___dictionary.html#gab89f0ab25c25513fbe563a60f76790d0">dict_serialize_tuplets()</a> </td></tr>
+    <tr><td class="paramname">context</td><td>The context pointer as passed in to <a class="el" href="group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc">dict_serialize_tuplets()</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___dictionary.html#gab89f0ab25c25513fbe563a60f76790d0" title="Utility function that takes a list of Tuplets from which a dictionary will be serialized, ready to transmit or store. ">dict_serialize_tuplets</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc" title="Utility function that takes a list of Tuplets from which a dictionary will be serialized, ready to transmit or store. ">dict_serialize_tuplets</a> </dd></dl>
 
 </div>
 </div>
@@ -1268,7 +1326,7 @@ Width of the integer. </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 6 2013 09:43:08 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

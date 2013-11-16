@@ -17,6 +17,7 @@ var group___drawing =
       [ "GCornersAll", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72a10c32729cb11dfef115ea24de0feec0d", null ],
       [ "GCornersTop", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72a766de55f907e71c9bac59fde38be8476", null ],
       [ "GCornersBottom", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72a78d979b360f297bfcbd9c2027a2c8bd4", null ],
-      [ "GCornersLeft", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72ab43e2029f5adce549c50b39302d05414", null ]
+      [ "GCornersLeft", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72ab43e2029f5adce549c50b39302d05414", null ],
+      [ "GCornersRight", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72ad36ef78a320c78d45471faac405895e1", null ]
     ] ]
 ];
