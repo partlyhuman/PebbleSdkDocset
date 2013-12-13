@@ -114,11 +114,11 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Data serialization utilities. </p>
-<p>On several occassions, pieces of information that might be residing in different parts of Pebble's memory (RAM), need to be gathered into one compact, continuous block of data. One of these occassions is when the pieces of information get sent over the network / Bluetooth connection. This process of gathering the information and assembling the continous block of data is called serialization. The Dictionary, <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures and accompanying functions help do this in a lightweight way. </p>
-<dl class="section note"><dt>Note</dt><dd>There are no transformations done on the actual data. These utilities merely help assembling the data into one continous buffer according to a certain format.</dd></dl>
-<p>An example subsystem that uses Dictionary and friends is <a class="el" href="group___app_message.html">AppMessage</a>, for sending information between watch apps and phone apps.</p>
-<h3>Write example:</h3>
-<p>Writing two key/value pairs: </p>
+<p>Data residing in different parts of Pebble memory (RAM) may need to be gathered and assembled into a single continuous block for transport over the network via Bluetooth. The process of gathering and assembling this continuous block of data is called serialization.</p>
+<p>You use data serialization utilities, like Dictionary, <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures and accompanying functions, to accomplish this task. No transformations are performed on the actual data, however. These Pebble utilities simply help assemble the data into one continuous buffer according to a specific format.</p>
+<p><a class="el" href="group___app_message.html">AppMessage</a> uses these utilities&ndash;in particular, Dictionary&ndash;to send information between mobile and Pebble watchapps.</p>
+<h3>Writing key/value pairs</h3>
+<p>To write two key/value pairs, without using Tuplets, you would do this: </p>
 <div class="fragment"><div class="line"><span class="comment">// Byte array + key:</span></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> SOME_DATA_KEY = 0xb00bf00b;</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">const</span> uint8_t data[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};</div>
@@ -148,8 +148,8 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <div class="line"><span class="keyword">const</span> <a class="code" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> final_size = <a class="code" href="group___dictionary.html#ga3eb27175dd477e85ddd6add9bd1f8989">dict_write_end</a>(&amp;iter);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// buffer now contains the serialized information</span></div>
-</div><!-- fragment --><h3>Read example:</h3>
-<p>Read example: iterating over the key/value pairs in the dictionary that was created in the previous example.</p>
+</div><!-- fragment --><h3>Reading key/value pairs</h3>
+<p>To iterate over the key/value pairs in the dictionary that was created in the previous example code, you would do this:</p>
 <div class="fragment"><div class="line"><a class="code" href="group___dictionary.html#struct_tuple">Tuple</a> *tuple = <a class="code" href="group___dictionary.html#ga53e2f0be9656c1331b96dd9a21684cda">dict_read_begin_from_buffer</a>(&amp;iter, buffer, final_size);</div>
 <div class="line"><span class="keywordflow">while</span> (tuple) {</div>
 <div class="line">  <span class="keywordflow">switch</span> (tuple-&gt;<a class="code" href="group___dictionary.html#ae0a5c5233ca231aa7c1a368d340a97c0">key</a>) {</div>
@@ -162,9 +162,9 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <div class="line">  }</div>
 <div class="line">  tuple = <a class="code" href="group___dictionary.html#ga0eec986d580dbf197753dff6aab3dae4">dict_read_next</a>(&amp;iter);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> vs. <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a></h3>
-<p>Note the difference between the <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures. <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> is the header for a serialized key/value pair. <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> is a helper data structure that references the value you want to serialize. This data structure exists to make the creation of a Dictionary nicer to write. As mnemonic to remember the difference: TupleT(emplate), the <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> being a template to create a Dictionary with <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> structures.</p>
-<p>Example: </p>
+</div><!-- fragment --><h3><a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures</h3>
+<p>To understand the difference between <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures: <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> is the header for a serialized key/value pair, while <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> is a helper data structure that references the value you want to serialize. This data structure exists to make the creation of a Dictionary easier to write. Use this mnemonic to remember the difference: TupleT(emplate), the <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> being a template to create a Dictionary with <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> structures.</p>
+<p>For example: </p>
 <div class="fragment"><div class="line"><a class="code" href="group___dictionary.html#struct_tuplet">Tuplet</a> pairs[] = {</div>
 <div class="line">  TupletInteger(WEATHER_ICON_KEY, (uint8_t) 1),</div>
 <div class="line">  TupletCString(WEATHER_TEMPERATURE_KEY, <span class="stringliteral">&quot;1234 Fahrenheit&quot;</span>),</div>
@@ -600,6 +600,31 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351af73d82390e594bfac5d10931183b27a6">DICT_OK</a>, <a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a436347bb1e21285a334a96da7b9e8f04">DICT_NOT_ENOUGH_STORAGE</a> or <a class="el" href="group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a7f135de6b3f8f23083dc99dcb49ac2a2">DICT_INVALID_ARGS</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa7fbb0db218e7e6f59eccfa2650fd645"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> dict_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___dictionary.html#struct_dictionary_iterator">DictionaryIterator</a> *&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the size of data that has been written to the dictionary. AKA, the "dictionary size". Note that this is most likely different than the size of the backing storage/backing buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>The dictionary iterator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total number of bytes which have been written to the dictionary. </dd></dl>
 
 </div>
 </div>
@@ -1288,6 +1313,9 @@ Width of the integer. </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ggaafae887a6d07cde8d11885c755b55351ad1c1a2b4398b21aca5d171b47f1b6876"></a>DICT_INTERNAL_INCONSISTENCY</em>&nbsp;</td><td class="fielddoc">
 <p>The lengths and/or count of the dictionary its tuples are inconsistent. </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaafae887a6d07cde8d11885c755b55351a613e308b84e2711144a049c512393045"></a>DICT_MALLOC_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>A requested operation required additional memory to be allocated, but the allocation failed, likely due to insufficient remaining heap memory. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1326,7 +1354,7 @@ Width of the integer. </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

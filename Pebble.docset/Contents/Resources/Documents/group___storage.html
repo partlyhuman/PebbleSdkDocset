@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('group___persistent.html','');});
+$(document).ready(function(){initNavTree('group___storage.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -113,6 +113,12 @@ $(document).ready(function(){initNavTree('group___persistent.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>A mechanism to store persistent application data and state. </p>
+<p>The Persistent Storage API provides you with a mechanism for performing a variety of tasks, like saving user settings, caching data from the phone app, or counting high scores for Pebble watchapp games.</p>
+<p>In Pebble OS, storage is defined by a collection of fields that you can create, modify or delete. In the API, a field is specified as a key with a corresponding value.</p>
+<p>Using the Storage API, every app is able to get its own persistent storage space. Each value in that space is associated with a uint32_t key.</p>
+<p>Storage supports saving integers, strings and byte arrays. The maximum size of byte arrays and strings is defined by PERSIST_DATA_MAX_LENGTH (currently set to 256 bytes). You call the function persist_exists(key), which returns a boolean indicating if the key exists or not. The Storage API enables your app to save its state, and when compared to using <a class="el" href="group___app_message.html">AppMessage</a> to retrieve values from the phone, it provides you with a much faster way to restore state. In addition, it draws less power from the battery.</p>
+<p>Note that the size of all persisted values cannot exceed 4K. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gac1933ab31d528d823214a078fb1823d4"></a>
 <div class="memitem">
@@ -390,7 +396,7 @@ $(document).ready(function(){initNavTree('group___persistent.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Writes a blob of data of a specified size in bytes for a given key into persistent storage. The maximum size is <a class="el" href="group___persistent.html#ga0131571894c87dd4e9d63007e3600f22">PERSIST_DATA_MAX_LENGTH</a>. </p>
+<p>Writes a blob of data of a specified size in bytes for a given key into persistent storage. The maximum size is <a class="el" href="group___storage.html#ga0131571894c87dd4e9d63007e3600f22">PERSIST_DATA_MAX_LENGTH</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>The key of the field to write to. </td></tr>
@@ -463,7 +469,7 @@ $(document).ready(function(){initNavTree('group___persistent.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Writes a string a given key into persistent storage. The maximum size is <a class="el" href="group___persistent.html#gaa98cfabe4de457c0690d03549747bef6">PERSIST_STRING_MAX_LENGTH</a> including the null terminator. </p>
+<p>Writes a string a given key into persistent storage. The maximum size is <a class="el" href="group___storage.html#gaa98cfabe4de457c0690d03549747bef6">PERSIST_STRING_MAX_LENGTH</a> including the null terminator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>The key of the field to write to. </td></tr>
@@ -495,7 +501,7 @@ $(document).ready(function(){initNavTree('group___persistent.html','');});
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PERSIST_STRING_MAX_LENGTH&#160;&#160;&#160;<a class="el" href="group___persistent.html#ga0131571894c87dd4e9d63007e3600f22">PERSIST_DATA_MAX_LENGTH</a></td>
+          <td class="memname">#define PERSIST_STRING_MAX_LENGTH&#160;&#160;&#160;<a class="el" href="group___storage.html#ga0131571894c87dd4e9d63007e3600f22">PERSIST_DATA_MAX_LENGTH</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -510,7 +516,7 @@ $(document).ready(function(){initNavTree('group___persistent.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

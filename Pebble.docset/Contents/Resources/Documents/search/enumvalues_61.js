@@ -15,6 +15,8 @@ var searchData=
   ['app_5fmsg_5fbusy',['APP_MSG_BUSY',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaad6af2baa488efedd56b17f0ed1e8339',1,'pebble.h']]],
   ['app_5fmsg_5fcallback_5falready_5fregistered',['APP_MSG_CALLBACK_ALREADY_REGISTERED',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea1655968e4f04aa0b357acc4605dcff64',1,'pebble.h']]],
   ['app_5fmsg_5fcallback_5fnot_5fregistered',['APP_MSG_CALLBACK_NOT_REGISTERED',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaf423093b0f84bca4495e227bdcd207bd',1,'pebble.h']]],
+  ['app_5fmsg_5fclosed',['APP_MSG_CLOSED',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eab8679d62177c2bce72ab899c0cf3353a',1,'pebble.h']]],
+  ['app_5fmsg_5finternal_5ferror',['APP_MSG_INTERNAL_ERROR',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaa965e9ce0375fcc796fddaf12e319ee4',1,'pebble.h']]],
   ['app_5fmsg_5finvalid_5fargs',['APP_MSG_INVALID_ARGS',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eadfb91bdd9c369cc2eb00e019b4cf3846',1,'pebble.h']]],
   ['app_5fmsg_5fnot_5fconnected',['APP_MSG_NOT_CONNECTED',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea8dda18d5302ef6b07aa83985e91b54b7',1,'pebble.h']]],
   ['app_5fmsg_5fok',['APP_MSG_OK',['../group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea12a6ea49b151222e76cf4b99b7c0c4cc',1,'pebble.h']]],

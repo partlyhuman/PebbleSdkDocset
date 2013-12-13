@@ -13,6 +13,7 @@ var searchData=
   ['dict_5fserialize_5ftuplets',['dict_serialize_tuplets',['../group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc',1,'pebble.h']]],
   ['dict_5fserialize_5ftuplets_5fto_5fbuffer',['dict_serialize_tuplets_to_buffer',['../group___dictionary.html#gaeaaca187fe71e6d2dd8a4eb4deec2069',1,'pebble.h']]],
   ['dict_5fserialize_5ftuplets_5fto_5fbuffer_5fwith_5fiter',['dict_serialize_tuplets_to_buffer_with_iter',['../group___dictionary.html#ga93526111e666de9fdca7276f6ca73c5d',1,'pebble.h']]],
+  ['dict_5fsize',['dict_size',['../group___dictionary.html#gaa7fbb0db218e7e6f59eccfa2650fd645',1,'pebble.h']]],
   ['dict_5fwrite_5fbegin',['dict_write_begin',['../group___dictionary.html#ga9ec44fce51a2ce464a954b2bdd240ded',1,'pebble.h']]],
   ['dict_5fwrite_5fcstring',['dict_write_cstring',['../group___dictionary.html#ga015dfe89d0ee2f8b4e16ddda21bcf556',1,'pebble.h']]],
   ['dict_5fwrite_5fdata',['dict_write_data',['../group___dictionary.html#ga30091feef740732d5d6bc3cf2312642a',1,'pebble.h']]],

@@ -26,6 +26,6 @@ var searchData=
   ['light',['Light',['../group___light.html',1,'']]],
   ['light_5fenable',['light_enable',['../group___light.html#ga0131a703964d49744f2da1fac234b9b1',1,'pebble.h']]],
   ['light_5fenable_5finteraction',['light_enable_interaction',['../group___light.html#ga7074135af850ea753dc5a98378bca122',1,'pebble.h']]],
-  ['localtime',['localtime',['../group___standard_time.html#ga9e465efe7436775f41dd94e5e14a97d4',1,'localtime(const time_t *clock):&#160;common.dox'],['../group___time.html#gab78e33846b47fd18f359045d6ca762d2',1,'localtime(const time_t *timep):&#160;pebble.h']]],
+  ['localtime',['localtime',['../group___standard_time.html#ga9e465efe7436775f41dd94e5e14a97d4',1,'common.dox']]],
   ['logging',['Logging',['../group___logging.html',1,'']]]
 ];

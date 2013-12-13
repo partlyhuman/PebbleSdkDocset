@@ -113,14 +113,16 @@ $(document).ready(function(){initNavTree('group___standard_time.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Standard time functions. </p>
+<p>Standard system time functions. </p>
+<p>This module contains standard time functions, to get system time, convert to local time or UTC, and format for printing.</p>
+<p>Most of these functions are part of the C standard library which is documented at <a href="https://sourceware.org/newlib/libc.html#Timefns">https://sourceware.org/newlib/libc.html#Timefns</a> </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga9e465efe7436775f41dd94e5e14a97d4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="group___time.html#structtm">tm</a> * localtime </td>
+          <td class="memname">struct tm * localtime </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group___standard_time.html#gaffa4d193759c763a2623cc49d69b15f5">time_t</a> *&#160;</td>
           <td class="paramname"><em>clock</em></td><td>)</td>
@@ -165,7 +167,7 @@ $(document).ready(function(){initNavTree('group___standard_time.html','');});
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const struct <a class="el" href="group___time.html#structtm">tm</a> *&#160;</td>
+          <td class="paramtype">const struct tm *&#160;</td>
           <td class="paramname"><em>tm</em>&#160;</td>
         </tr>
         <tr>
@@ -273,7 +275,7 @@ $(document).ready(function(){initNavTree('group___standard_time.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

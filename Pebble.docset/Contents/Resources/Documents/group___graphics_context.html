@@ -113,12 +113,11 @@ $(document).ready(function(){initNavTree('group___graphics_context.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The graphics context is the "canvas" to draw into. </p>
-<p>The graphics engine of Pebble OS is inspired by several great graphics systems that have been developed by others, notably Apple’s Quartz 2D and its predecessor QuickDraw. Although Apple’s documentation is not directly applicable, it can be an informing and interesting to read about the source of inspiration for Pebble’s graphics system.</p>
-<h3>Graphics Context</h3>
-<p>The drawing model revolves around the idea of a “graphics context”. The graphics context is the “target” into which graphics functions can paint using drawing routines (see <a class="el" href="group___drawing.html">Drawing Primitives</a>, <a class="el" href="group___path_drawing.html">Drawing Paths</a> and <a class="el" href="group___text_drawing.html">Drawing Text</a>). It holds a reference to the bitmap into which to paint. It also holds the current drawing state, like the current fill color, stroke color, clipping box, drawing box, compositing mode, etc. The GContext struct is the type representing the graphics context.</p>
-<h3>Pebble OS requests your app to render</h3>
-<p>You (almost) never need to create a GContext yourself. In most cases, it is provided by Pebble OS as an argument that is passed into a render callback (the <code>.update_proc</code> of a Layer). It’s important to realize that Pebble OS will request your app to render. Your app cannot call drawing functions at any given point in time. Most frequently, your app will be calling out to graphics functions in the <code>.update_proc</code> callback of a Layer.</p>
+<p>The "canvas" into which an application draws. </p>
+<p>The Pebble OS graphics engine, inspired by several notable graphics systems, including Apple’s Quartz 2D and its predecessor QuickDraw, provides your app with a canvas into which to draw, namely, the graphics context. A graphics context is the target into which graphics functions can paint, using Pebble drawing routines (see <a class="el" href="group___drawing.html">Drawing Primitives</a>, <a class="el" href="group___path_drawing.html">Drawing Paths</a> and <a class="el" href="group___text_drawing.html">Drawing Text</a>).</p>
+<p>A graphics context holds a reference to the bitmap into which to paint. It also holds the current drawing state, like the current fill color, stroke color, clipping box, drawing box, compositing mode, and so on. The GContext struct is the type representing the graphics context.</p>
+<p>For drawing in your Pebble watchface or watchapp, you won't need to create a GContext yourself. In most cases, it is provided by Pebble OS as an argument passed into a render callback (the .update_proc of a Layer).</p>
+<p>Your app can’t call drawing functions at any given point in time: Pebble OS will request your app to render. Typically, your app will be calling out to graphics functions in the .update_proc callback of a Layer. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___layer.html">Layers</a> </dd>
 <dd>
 <a class="el" href="group___drawing.html">Drawing Primitives</a> </dd>
@@ -277,7 +276,7 @@ $(document).ready(function(){initNavTree('group___graphics_context.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

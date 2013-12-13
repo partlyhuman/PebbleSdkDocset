@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eventservice',['EventService',['../group___event_service.html',1,'']]]
+  ['event_20service',['Event Service',['../group___event_service.html',1,'']]]
 ];

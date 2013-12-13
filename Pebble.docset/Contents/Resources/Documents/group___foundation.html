@@ -116,6 +116,9 @@ $(document).ready(function(){initNavTree('group___foundation.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The core of the Pebble SDK. </p>
+<p>The Pebble SDK consists of different frameworks that are organized by functionality. Each framework includes an API and provides access to the software libraries supported natively by Pebble OS. You use these interfaces (APIs) in the C programming language to write software for the Pebble platform.</p>
+<p>Frameworks are grouped hierarchically into Foundation, Graphics, Standard C and User Interface.</p>
+<p>The Foundation framework is the core of the Pebble OS. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
@@ -126,17 +129,19 @@ Modules</h2></td></tr>
 <tr class="memdesc:group___app_comm"><td class="mdescLeft">&#160;</td><td class="mdescRight">API for interacting with the Pebble communication subsystem. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___app_message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_message.html">AppMessage</a></td></tr>
+<tr class="memdesc:group___app_message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-directional communication between phone apps and Pebble watchapps. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___app_sync"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_sync.html">AppSync</a></td></tr>
-<tr class="memdesc:group___app_sync"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Synchronization layer for AppMessage. <br/></td></tr>
+<tr class="memdesc:group___app_sync"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI synchronization layer for AppMessage. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___data_logging"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___data_logging.html">DataLogging</a></td></tr>
-<tr class="memdesc:group___data_logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables logging data asynchronously to a mobile application. <br/></td></tr>
+<tr class="memdesc:group___data_logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables logging data asynchronously to a mobile app. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___dictionary"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___dictionary.html">Dictionary</a></td></tr>
 <tr class="memdesc:group___dictionary"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data serialization utilities. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group___event_service"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___event_service.html">EventService</a></td></tr>
+<tr class="memitem:group___event_service"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___event_service.html">Event Service</a></td></tr>
+<tr class="memdesc:group___event_service"><td class="mdescLeft">&#160;</td><td class="mdescRight">APIs to handle event services. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___logging"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging.html">Logging</a></td></tr>
 <tr class="memdesc:group___logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions related to logging from apps. <br/></td></tr>
@@ -145,14 +150,13 @@ Modules</h2></td></tr>
 <tr class="memdesc:group___math"><td class="mdescLeft">&#160;</td><td class="mdescRight">Math routines. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___resources"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___resources.html">Resources</a></td></tr>
-<tr class="memdesc:group___resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading resources. <br/></td></tr>
+<tr class="memdesc:group___resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing application resources. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group___persistent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___persistent.html">Storage</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group___time"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___time.html">Time</a></td></tr>
-<tr class="memdesc:group___time"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard system time functions. <br/></td></tr>
+<tr class="memitem:group___storage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___storage.html">Storage</a></td></tr>
+<tr class="memdesc:group___storage"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mechanism to store persistent application data and state. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___timer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___timer.html">Timer</a></td></tr>
+<tr class="memdesc:group___timer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register timers for callbacks. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___wall_time"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___wall_time.html">Wall Time</a></td></tr>
 <tr class="memdesc:group___wall_time"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions, data structures and other things related to wall clock time. <br/></td></tr>
@@ -164,7 +168,7 @@ Modules</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

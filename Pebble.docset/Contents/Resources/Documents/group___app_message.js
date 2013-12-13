@@ -28,7 +28,9 @@ var group___app_message =
       [ "APP_MSG_ALREADY_RELEASED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea9ea88c5f059e1aee4010fee576d766bd", null ],
       [ "APP_MSG_CALLBACK_ALREADY_REGISTERED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea1655968e4f04aa0b357acc4605dcff64", null ],
       [ "APP_MSG_CALLBACK_NOT_REGISTERED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaf423093b0f84bca4495e227bdcd207bd", null ],
-      [ "APP_MSG_OUT_OF_MEMORY", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ead1cce21da2d8b46e305f9550a7384238", null ]
+      [ "APP_MSG_OUT_OF_MEMORY", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ead1cce21da2d8b46e305f9550a7384238", null ],
+      [ "APP_MSG_CLOSED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eab8679d62177c2bce72ab899c0cf3353a", null ],
+      [ "APP_MSG_INTERNAL_ERROR", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaa965e9ce0375fcc796fddaf12e319ee4", null ]
     ] ],
     [ "APP_MESSAGE_INBOX_SIZE_MINIMUM", "group___app_message.html#ga8a213339bca4388cf17c3f4c4b2e11fd", null ],
     [ "APP_MESSAGE_OUTBOX_SIZE_MINIMUM", "group___app_message.html#ga6fe648fbe225cda63583342bb2305187", null ]

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['storage',['Storage',['../group___persistent.html',1,'']]],
   ['scroll_5flayer_5fadd_5fchild',['scroll_layer_add_child',['../group___scroll_layer.html#ga318c7ebc11aa6d2ecf12c534bf1274cb',1,'pebble.h']]],
   ['scroll_5flayer_5fcreate',['scroll_layer_create',['../group___scroll_layer.html#gab88b8cf8308e3d68d5e714db11658e62',1,'pebble.h']]],
   ['scroll_5flayer_5fdestroy',['scroll_layer_destroy',['../group___scroll_layer.html#ga2fa5ed30c56396db4f3b0325d3e22365',1,'pebble.h']]],
@@ -49,10 +48,11 @@ var searchData=
   ['string',['String',['../group___standard_string.html',1,'']]],
   ['started',['started',['../group___animation.html#aabde74563b7b9821699bb5e9b3f4a59f',1,'AnimationHandlers']]],
   ['stopped',['stopped',['../group___animation.html#a56e5f5b77c843b7bc7e58587a42e197a',1,'AnimationHandlers']]],
+  ['storage',['Storage',['../group___storage.html',1,'']]],
   ['strcat',['strcat',['../group___standard_string.html#ga19546e43db31c3095991b04023b422b2',1,'common.dox']]],
   ['strcmp',['strcmp',['../group___standard_string.html#ga6f3dcb20ff11ff9db5904c3cfb61a38c',1,'common.dox']]],
   ['strcpy',['strcpy',['../group___standard_string.html#gac5082c8ce4f0cddd88bf4d0d2e738308',1,'common.dox']]],
-  ['strftime',['strftime',['../group___standard_time.html#ga49a1866c7618fef74c0cc900be1f1c45',1,'strftime(char *s, size_t max, const char *fmt, const struct tm *tm):&#160;common.dox'],['../group___time.html#ga52073483a887a377065bc47b7f261316',1,'strftime(char *s, size_t max, const char *format, const struct tm *tm):&#160;pebble.h']]],
+  ['strftime',['strftime',['../group___standard_time.html#ga49a1866c7618fef74c0cc900be1f1c45',1,'common.dox']]],
   ['strlen',['strlen',['../group___standard_string.html#ga008e171a518fe0e0352f31b245e03875',1,'common.dox']]],
   ['strncat',['strncat',['../group___standard_string.html#gaef7c0be850a2df7a4e4c5f76774a721b',1,'common.dox']]],
   ['strncmp',['strncmp',['../group___standard_string.html#gab36f95eb212013e67f97dacede2751db',1,'common.dox']]],

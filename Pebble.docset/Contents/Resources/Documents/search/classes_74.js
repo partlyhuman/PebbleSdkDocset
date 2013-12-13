@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tm',['tm',['../group___time.html#structtm',1,'']]],
   ['tuple',['Tuple',['../group___dictionary.html#struct_tuple',1,'']]],
   ['tuple_2evalue',['Tuple.value',['../group___dictionary.html#union_tuple_8value',1,'']]],
   ['tuplet',['Tuplet',['../group___dictionary.html#struct_tuplet',1,'']]],

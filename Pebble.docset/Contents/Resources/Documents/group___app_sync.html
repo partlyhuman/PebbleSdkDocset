@@ -113,21 +113,14 @@ $(document).ready(function(){initNavTree('group___app_sync.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>UI Synchronization layer for AppMessage. </p>
-<p>AppSync is a thin layer on top of <a class="el" href="group___app_message.html">AppMessage</a>, to make it easier to drive the information displayed in the user interface of a watch app with messages sent by a phone app.</p>
-<h3>Key Points</h3>
-<ul>
-<li>One callback to update the user interface, that is called whenever a <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> changes. See <a class="el" href="group___app_sync.html#ga448af36883189f6345cc7d5cd8a3cc29">AppSyncTupleChangedCallback</a>.</li>
-<li>Manages storage and book keeping of the current <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> values: <a class="el" href="group___app_sync.html">AppSync</a> copies incoming <a class="el" href="group___app_message.html">AppMessage</a> Tuples into this "current" Dictionary, so that the key/values remain available for the user interface to use. For example, it is safe to use a C-string value provided by AppSync and use it directly in a <a class="el" href="group___text_layer.html#ga19406f772604d595c5c1af7222992449">text_layer_set_text()</a> call.</li>
-<li>Your app needs to supply the buffer that AppSync uses for the "current" Dictionary when initializing AppSync.</li>
-</ul>
-<h3>Activity Diagram</h3>
-<div class="image">
-<img src="app_sync.png" alt="app_sync.png"/>
-</div>
-<p> Also see the activity diagram of the underlying <a class="el" href="group___app_message.html">AppMessage</a> subsystem.</p>
-<h3>Example Project</h3>
-<p>For a code example, see the sample project <code>demos/feature_app_messages</code>. </p>
+<p>UI synchronization layer for AppMessage. </p>
+<p>AppSync is a convenience layer that resides on top of <a class="el" href="group___app_message.html">AppMessage</a>, and serves as a UI synchronization layer for AppMessage. In so doing, AppSync makes it easier to drive the information displayed in the watchapp UI with messages sent by a phone app.</p>
+<p>AppSync maintains and updates a Dictionary, and provides your app with a callback (AppSyncTupleChangedCallback) routine that is called whenever the Dictionary changes and the app's UI is updated. Note that the app UI is not updated automatically. To update the UI, you need to implement the callback.</p>
+<p>Pebble OS provides support for data serialization utilities, like Dictionary, <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures and their accompanying functions. You use Tuplets to create a Dictionary with <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> structures.</p>
+<p>AppSync manages the storage and bookkeeping chores of the current <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> values. AppSync copies incoming AppMessage Tuples into this "current" Dictionary, so that the key/values remain available for the UI to use. For example, it is safe to use a C-string value provided by AppSync and use it directly in a <a class="el" href="group___text_layer.html#ga19406f772604d595c5c1af7222992449" title="Sets the pointer to the string where the TextLayer is supposed to find the text at a later point in t...">text_layer_set_text()</a> call.</p>
+<p>Your app needs to supply the buffer that AppSync uses for the "current" Dictionary when initializing AppSync.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/app-phone-communication.html">Integrating Pebble Watchapps with Phone Apps in Pebble Developer Guide</a>
+ for a conceptual overview and code usage. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga87669e4513866da4328edd460a9417e7"></a>
 <div class="memitem">
@@ -345,12 +338,12 @@ $(document).ready(function(){initNavTree('group___app_sync.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Called whenever a <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> changes. This does not necessarily mean the value in the <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> has changed. When the internal "current" dictionary gets updated, existing Tuples might get shuffled around in the backing buffer, even though the values stay the same. In this callback, the client code gets the chance to remove the old reference and start using the new one. In this callback, you application MUST clean up any references to the <code>old_tuple</code> of a PREVIOUS call to this callback (and replace it with the <code>new_tuple</code> that is passed in with the current call). </p>
+<p>Called whenever a <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> changes. This does not necessarily mean the value in the <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> has changed. When the internal "current" dictionary gets updated, existing Tuples might get shuffled around in the backing buffer, even though the values stay the same. In this callback, the client code gets the chance to remove the old reference and start using the new one. In this callback, your application MUST clean up any references to the <code>old_tuple</code> of a PREVIOUS call to this callback (and replace it with the <code>new_tuple</code> that is passed in with the current call). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>The key for which the <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> was changed. </td></tr>
     <tr><td class="paramname">new_tuple</td><td>The new tuple. The tuple points to the actual, updated "current" dictionary, as backed by the buffer internal to the AppSync struct. Therefore the <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> can be used after the callback returns, until the AppSync is deinited. In case there was an error (e.g. storage shortage), this <code>new_tuple</code> can be NULL_TUPLE. </td></tr>
-    <tr><td class="paramname">old_tuple</td><td>The values that will be replaced with <code>new_tuple</code>. The key, value and type will be equal to the previous tuple in the old destination dictionary, however the <code>old_tuple</code> points to a stack-allocated copy of the old data. This value will be NULL_TUPLE when the initial values are being set. </td></tr>
+    <tr><td class="paramname">old_tuple</td><td>The values that will be replaced with <code>new_tuple</code>. The key, value and type will be equal to the previous tuple in the old destination dictionary; however, the <code>old_tuple</code> points to a stack-allocated copy of the old data. This value will be NULL_TUPLE when the initial values are being set. </td></tr>
     <tr><td class="paramname">context</td><td>Pointer to application specific data, as set using <a class="el" href="group___app_sync.html#ga329a8fa4a27bb8b15cee9ffcc4a026df">app_sync_init()</a> </td></tr>
   </table>
   </dd>
@@ -365,7 +358,7 @@ $(document).ready(function(){initNavTree('group___app_sync.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

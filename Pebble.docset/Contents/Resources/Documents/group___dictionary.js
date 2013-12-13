@@ -10,6 +10,7 @@ var group___dictionary =
     [ "dict_serialize_tuplets", "group___dictionary.html#ga6de59736dc56fcda7e4df30ba10ba0cc", null ],
     [ "dict_serialize_tuplets_to_buffer", "group___dictionary.html#gaeaaca187fe71e6d2dd8a4eb4deec2069", null ],
     [ "dict_serialize_tuplets_to_buffer_with_iter", "group___dictionary.html#ga93526111e666de9fdca7276f6ca73c5d", null ],
+    [ "dict_size", "group___dictionary.html#gaa7fbb0db218e7e6f59eccfa2650fd645", null ],
     [ "dict_write_begin", "group___dictionary.html#ga9ec44fce51a2ce464a954b2bdd240ded", null ],
     [ "dict_write_cstring", "group___dictionary.html#ga015dfe89d0ee2f8b4e16ddda21bcf556", null ],
     [ "dict_write_data", "group___dictionary.html#ga30091feef740732d5d6bc3cf2312642a", null ],
@@ -23,7 +24,8 @@ var group___dictionary =
       [ "DICT_OK", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351af73d82390e594bfac5d10931183b27a6", null ],
       [ "DICT_NOT_ENOUGH_STORAGE", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a436347bb1e21285a334a96da7b9e8f04", null ],
       [ "DICT_INVALID_ARGS", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a7f135de6b3f8f23083dc99dcb49ac2a2", null ],
-      [ "DICT_INTERNAL_INCONSISTENCY", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351ad1c1a2b4398b21aca5d171b47f1b6876", null ]
+      [ "DICT_INTERNAL_INCONSISTENCY", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351ad1c1a2b4398b21aca5d171b47f1b6876", null ],
+      [ "DICT_MALLOC_FAILED", "group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a613e308b84e2711144a049c512393045", null ]
     ] ],
     [ "TupleType", "group___dictionary.html#gaf164f32d9bda6829f1738ef3fb2c6670", [
       [ "TUPLE_BYTE_ARRAY", "group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670ad852031b350c69166303a05dbe294ec7", null ],

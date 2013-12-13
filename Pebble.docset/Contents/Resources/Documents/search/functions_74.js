@@ -14,6 +14,6 @@ var searchData=
   ['text_5flayer_5fset_5ftext_5fcolor',['text_layer_set_text_color',['../group___text_layer.html#ga4e94ca9f977475342b3cccaf7e503515',1,'pebble.h']]],
   ['tick_5ftimer_5fservice_5fsubscribe',['tick_timer_service_subscribe',['../group___tick_timer_service.html#ga8b1ebbe9ca26a97b23af5610842bc892',1,'pebble.h']]],
   ['tick_5ftimer_5fservice_5funsubscribe',['tick_timer_service_unsubscribe',['../group___tick_timer_service.html#gaae157828fd8c8d1e8de6372d0a3aa25e',1,'pebble.h']]],
-  ['time',['time',['../group___standard_time.html#ga99ef1cb2c789827dd5db3886dccf9067',1,'time(time_t *tloc):&#160;common.dox'],['../group___time.html#ga99ef1cb2c789827dd5db3886dccf9067',1,'time(time_t *tloc):&#160;pebble.h']]],
-  ['time_5fms',['time_ms',['../group___standard_time.html#ga65bb1bfe1acc8776ccdafb90d3fe941a',1,'time_ms(time_t *tloc, uint16_t *out_ms):&#160;common.dox'],['../group___time.html#ga65bb1bfe1acc8776ccdafb90d3fe941a',1,'time_ms(time_t *tloc, uint16_t *out_ms):&#160;pebble.h']]]
+  ['time',['time',['../group___standard_time.html#ga99ef1cb2c789827dd5db3886dccf9067',1,'common.dox']]],
+  ['time_5fms',['time_ms',['../group___standard_time.html#ga65bb1bfe1acc8776ccdafb90d3fe941a',1,'common.dox']]]
 ];

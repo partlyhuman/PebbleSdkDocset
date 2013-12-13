@@ -114,7 +114,9 @@ $(document).ready(function(){initNavTree('group___app.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>App entry point and event loop. </p>
-<p>All interaction between a watchapp and the underlying Pebble OS is accomplished through an event loop. This should be quite similar to anyone with experience in SDL or any modern GUI library. Watchapps are responsible for subscribing to event services and implementing event handlers. Each handler receives specific types of Events dispatched throughout the life of the watchapp. <a class="el" href="group___app.html#ga76a67379592a1844028767ee20332730">app_event_loop()</a> takes care of both waiting for new events to become available on the watchapp event bus and routing new events to the appropriate handler. <a class="el" href="group___event_service.html">EventService</a> allows an app to directly register for different types of events. This function will block until the watchapp is ready to exit, and should be placed in the app's main() function. The following is a very simple example of how a watchapp typically configures and uses the <a class="el" href="group___app.html#ga76a67379592a1844028767ee20332730">app_event_loop()</a>:</p>
+<p>App is a module that provides you with a basic entry point and event loop for your Pebble app. All interaction between Pebble apps and the underlying Pebble OS takes place through an event loop. Using the <a class="el" href="group___app.html#ga76a67379592a1844028767ee20332730">app_event_loop()</a> function, you subscribe to event services and implement event handlers. Each handler receives specific types of Events dispatched throughout the life of the Pebble watchapp.</p>
+<p>The <a class="el" href="group___app.html#ga76a67379592a1844028767ee20332730">app_event_loop()</a> function takes care of both waiting for new events to become available on the watchapp event bus and routing new events to the appropriate handler. <a class="el" href="group___event_service.html">Event Service</a> allows an app to directly register for different types of events. This function will block until the watchapp is ready to exit, and should be placed in the app's main() function.</p>
+<p>A watchapp typically configures and uses the <a class="el" href="group___app.html#ga76a67379592a1844028767ee20332730">app_event_loop()</a> as follows:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
 <div class="line">  <span class="comment">// do set up here</span></div>
 <div class="line"></div>
@@ -149,7 +151,7 @@ $(document).ready(function(){initNavTree('group___app.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

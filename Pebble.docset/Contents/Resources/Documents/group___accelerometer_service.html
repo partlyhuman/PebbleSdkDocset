@@ -109,10 +109,13 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
 
 <div class="header">
   <div class="headertitle">
-<div class="title">AccelerometerService<div class="ingroups"><a class="el" href="group___event_service.html">EventService</a></div></div>  </div>
+<div class="title">AccelerometerService<div class="ingroups"><a class="el" href="group___event_service.html">Event Service</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Using the Pebble accelerometer. </p>
+<p>The AccelerometerService enables the Pebble accelerometer to detect taps, perform measures at a given frequency, and transmit samples in batches to save CPU time and processing.</p>
+<p>For available code samples, see Examples/watchapps/feature_accel_discs </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga59f64328a814994e9a17b0602d66c82f"></a>
 <div class="memitem">
@@ -139,6 +142,7 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
 </div><div class="memdoc">
 
 <p>Subscribe to the accelerometer data event service. Once subscribed, the handler gets called every time there are new accelerometer samples available. </p>
+<dl class="section note"><dt>Note</dt><dd>Cannot use <a class="el" href="group___accelerometer_service.html#ga37034e29e7a951e647de1e3c5deb34b7">accel_service_peek()</a> when subscribed to accelerometer data events. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handler</td><td>A callback to be executed on accelerometer data events </td></tr>
@@ -188,7 +192,10 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>-1 if the accel is not running </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Cannot be used when subscribed to accelerometer data events. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 if the accel is not running </dd>
+<dd>
+-2 if subscribed to accelerometer events. </dd></dl>
 
 </div>
 </div>
@@ -381,7 +388,7 @@ acceleration along the z axis </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

@@ -114,8 +114,9 @@ $(document).ready(function(){initNavTree('group___vibes.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Controlling the vibration motor. </p>
-<p>The vibration motor can be used as a very visceral way of giving feedback to the user. It's great to highlight important moments in games, or to draw the attention of the user. However, developers should use the vibration feature sparingly, as sustained use will rapidly deplete Pebble’s battery, and vibing too much and too often can get annoying. </p>
-<dl class="section note"><dt>Note</dt><dd>A note when using the following APIs: if there is an ongoing vibration, calling any of the functions to emit (another) vibration will have no effect. </dd></dl>
+<p>The Vibes API provides calls that let you control Pebble’s vibration motor.</p>
+<p>The vibration motor can be used as a visceral mechanism for giving immediate feedback to the user. You can use it to highlight important moments in games, or to draw the attention of the user. However, you should use the vibration feature sparingly, because sustained use will rapidly deplete Pebble’s battery, and vibrating Pebble too much and too often can become annoying for users. </p>
+<dl class="section note"><dt>Note</dt><dd>When using these calls, if there is an ongoing vibration, calling any of the functions to emit (another) vibration will have no effect. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gad190fd7825ec34d96d0ef05508275169"></a>
 <div class="memitem">
@@ -260,7 +261,7 @@ The length of the array of durations. </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:40 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

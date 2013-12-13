@@ -113,24 +113,32 @@ $(document).ready(function(){initNavTree('group___clicks.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Dealing with button input. </p>
-<p>The Clicks framework is the preferred way to handle button interactions. It offers an API that is concerned with "clicks" instead of raw up &amp; down button events. Each button has a ClickRecognizer, which is represented using the <a class="el" href="group___clicks.html#gab0f235645c2d1eb7b622542b59706085">ClickRecognizerRef</a> type, which are automatically created by the system. Each of these ClickRecognizers is a little state machine that processes the raw stream of up &amp; down events for one of the buttons and based upon the raw, incoming events, it tries to distill and match the "click" events according the application-provided configuration.</p>
-<p>There are a 4 types of "click" events:</p>
+<p>Handling button click interactions. </p>
+<p>Click handlers work by consuming raw button up and button down events and distilling those events into configurable user interactions. These interactions can be any one of the following:</p>
 <ul>
-<li>Single-click: detects a single click (button down event followed by button up event). It also offers "hold to repeat" functionality.</li>
-<li>Multi-click: detects double clicking, triple clicking and other arbitrary click counts. It can fire its event handler on all of the matched clicks, or just the last.</li>
-<li>Long-click: detects long clicks ("press and hold").</li>
-<li>Raw: this just forwards the raw button events. It is offered as a way to use both the higher level "clicks" processing and the raw button events at the same time.</li>
+<li>Single-click. Detects a single click, that is, a button down event followed by button up event. It also offers hold-to-repeat functionality.</li>
+<li>Multi-click. Detects double-clicking, triple-clicking and other arbitrary click counts. It can fire its event handler on all of the matched clicks, or just the last.</li>
+<li>Long-click. Detects long clicks, that is, press-and-hold.</li>
+<li>Raw. Simply forwards the raw button events. It is provided as a way to use both the higher level "clicks" processing and the raw button events at the same time.</li>
 </ul>
-<p>The configuration of the click recognizers happens inside a callback function (of type <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>) that is associated with a <a class="el" href="group___window.html">Window</a> using <a class="el" href="group___window.html#gaeefbe33bc69ffee444337b056912440c">window_set_click_config_provider()</a> or using <a class="el" href="group___window.html#gadfbe85cbdb8a0b96d970672639c5421e">window_set_click_config_provider_with_context()</a>.</p>
-<h3>Example</h3>
-<p>For example, here, we first associate a click config provider callback with our window: </p>
+<p>You set up click handlers in each application window in order to process button input and call the necessary event handlers.</p>
+<p>A Pebble window handles various click inputs, like short and long clicks, hold-to-repeat clicks and double clicks, by setting a Click Configuration Provider callback function.</p>
+<p>For convenience, a click callback provides a ClickRecognizer and a user-specified context. The ClickRecognizer can be used to determine which button triggered the callback.</p>
+<p>Note that you could have different buttons that share the same callback. However, you should use the ClickRecognizer to differentiate actions based on the triggering button.</p>
+<p>You can also have multiple types of handlers on the same button: for example, click and long click on the Select button.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
+ (chapter "Clicks") for a conceptual overview of clicks and relevant code examples. For SDK code examples, refer to</p>
+<ul>
+<li>Examples/todolist-demo</li>
+</ul>
+<h3>Usage example</h3>
+<p>For example, you first associate a click config provider callback with your window. Your callback will provide your click configuration to Pebble OS. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> app_init(<span class="keywordtype">void</span>) {</div>
 <div class="line">  ...</div>
 <div class="line">  <a class="code" href="group___window.html#gaeefbe33bc69ffee444337b056912440c">window_set_click_config_provider</a>(&amp;window, (<a class="code" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>) config_provider);</div>
 <div class="line">  ...</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> Then in the callback, we set our desired configuration for each button: </p>
+</div><!-- fragment --><p> Then in the callback, you set your desired configuration for each button: </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> config_provider(Window *window) {</div>
 <div class="line"> <span class="comment">// single click / repeat-on-hold config:</span></div>
 <div class="line">  <a class="code" href="group___window.html#gae09d8d7299a9d5a750a898a70f64bdec">window_single_click_subscribe</a>(<a class="code" href="group___clicks.html#ggaa60e15d86cfe7033f28c7d066c85266ea65a919b8a0f4539acfb865eb2a2dd9d0">BUTTON_ID_DOWN</a>, down_single_click_handler);</div>
@@ -142,7 +150,7 @@ $(document).ready(function(){initNavTree('group___clicks.html','');});
 <div class="line">  <span class="comment">// long click config:</span></div>
 <div class="line">  <a class="code" href="group___window.html#ga3329027de707b949f02328492165cf05">window_long_click_subscribe</a>(<a class="code" href="group___clicks.html#ggaa60e15d86cfe7033f28c7d066c85266ea98093cd31c917223780131cfafe91dec">BUTTON_ID_SELECT</a>, 700, select_long_click_handler, select_long_click_release_handler);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> Then we implement the handlers for each configuration we have set up: </p>
+</div><!-- fragment --><p> Now you implement the handlers for each click you've subscribed to and set up: </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> down_single_click_handler(<a class="code" href="group___clicks.html#gab0f235645c2d1eb7b622542b59706085">ClickRecognizerRef</a> recognizer, <span class="keywordtype">void</span> *context) {</div>
 <div class="line">  ... called on single click ...</div>
 <div class="line">  Window *window = (Window *)context; <span class="comment">// This context defaults to the window, but may be changed with \ref window_set_click_context.</span></div>
@@ -167,8 +175,8 @@ $(document).ready(function(){initNavTree('group___clicks.html','');});
 <div class="line">  ... called when <span class="keywordtype">long</span> click is released ...</div>
 <div class="line">  Window *window = (Window *)context; <span class="comment">// This context defaults to the window, but may be changed with \ref window_set_click_context.</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p> See templates/template_buttons/src/template_buttons.c for a complete example. </p>
-<dl class="section note"><dt>Note</dt><dd>The Back button cannot be re-configured. It is hard-wired to pop to the previous window on the <a class="el" href="group___window_stack.html">Window Stack</a>. </dd></dl>
+</div><!-- fragment --><p> See Examples/watchapps/pebble_arcade/src/entry.c for an example of click usage. </p>
+<dl class="section note"><dt>Note</dt><dd>The Back button can't be re-configured. It is hard-wired to pop to the previous window on the <a class="el" href="group___window_stack.html">Window Stack</a>. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga915cc99892dba2548494a9cc2b104dd7"></a>
 <div class="memitem">
@@ -318,7 +326,7 @@ $(document).ready(function(){initNavTree('group___clicks.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

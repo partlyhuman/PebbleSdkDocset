@@ -4,7 +4,6 @@ var searchData=
   ['gbitmap_5fcreate_5fwith_5fdata',['gbitmap_create_with_data',['../group___graphics_types.html#ga0c01fd1816c6c0fde05310141f293cc5',1,'pebble.h']]],
   ['gbitmap_5fcreate_5fwith_5fresource',['gbitmap_create_with_resource',['../group___graphics_types.html#gae1c7c90641f5138b5f36f9334d52085a',1,'pebble.h']]],
   ['gbitmap_5fdestroy',['gbitmap_destroy',['../group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92',1,'pebble.h']]],
-  ['gmtime',['gmtime',['../group___time.html#gab8c68cab16dbf9f2c5eadfaa49e34ac8',1,'pebble.h']]],
   ['gpath_5fcreate',['gpath_create',['../group___path_drawing.html#ga61db1b8ea3038564f1393f0cab1c8ff9',1,'pebble.h']]],
   ['gpath_5fdestroy',['gpath_destroy',['../group___path_drawing.html#gafee45d9c181217758e27bdaa577d98e0',1,'pebble.h']]],
   ['gpath_5fdraw_5ffilled',['gpath_draw_filled',['../group___path_drawing.html#ga4aa5b80f8f98d2cb7e6701b39bb18e32',1,'pebble.h']]],

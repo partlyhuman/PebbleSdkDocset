@@ -44,7 +44,6 @@ var searchData=
   ['get_5fnum_5fsections',['get_num_sections',['../group___menu_layer.html#ae238e0615b104181c18306eb65b381ab',1,'MenuLayerCallbacks']]],
   ['getter',['getter',['../group___property_animation.html#a200acccc9fcfeb2267d3534f01687ef7',1,'PropertyAnimationAccessors']]],
   ['gfont',['GFont',['../group___fonts.html#ga49c1c67f30e577eb50ab54cd5526cb7a',1,'pebble.h']]],
-  ['gmtime',['gmtime',['../group___time.html#gab8c68cab16dbf9f2c5eadfaa49e34ac8',1,'pebble.h']]],
   ['gpath',['GPath',['../group___path_drawing.html#struct_g_path',1,'']]],
   ['gpath_5fcreate',['gpath_create',['../group___path_drawing.html#ga61db1b8ea3038564f1393f0cab1c8ff9',1,'pebble.h']]],
   ['gpath_5fdestroy',['gpath_destroy',['../group___path_drawing.html#gafee45d9c181217758e27bdaa577d98e0',1,'pebble.h']]],

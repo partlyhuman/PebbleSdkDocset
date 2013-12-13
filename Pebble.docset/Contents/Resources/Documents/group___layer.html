@@ -115,11 +115,14 @@ $(document).ready(function(){initNavTree('group___layer.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Hierarchical layout system. </p>
-<p>Layers are “visual objects”. They are the objects that can be displayed on the screen, for example a box that contains text or a box that contains an image. Each layer stores the information about its state necessary to (re)draw the object it represents and uses graphics routines along with this state to draw itself when asked. Multiple layers can be arranged into a tree. This enables ordering (front to back), layout, hierarchy and relative positioning.</p>
-<p>Please refer to <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
+<p>User interface layers for displaying graphic components. </p>
+<p>Layers are objects that can be displayed on a Pebble watchapp window, enabling users to see visual objects, like text or images. Each layer stores the information about its state necessary to draw or redraw the object that it represents and uses graphics routines along with this state to draw itself when asked. Layers can be used to display various graphics.</p>
+<p>Layers are the basic building blocks for your application UI. Layers can be nested inside each other. Every window has a root layer which is always the topmost layer. You provide a function that is called to draw the content of the layer when needed; or you can use standard layers that are provided by the system, such as text layer, image layer, menu layer, action bar layer, and so on.</p>
+<p>The Pebble layer hierarchy is the list of things that need to be drawn to the screen. Multiple layers can be arranged into a hierarchy. This enables ordering (front to back), layout and hierarchy. Through relative positioning, visual objects that are grouped together by adding them into the same layer can be moved all at once. This means that the child layers will move accordingly. If a parent layer has clipping enabled, all the children will be clipped to the frame of the parent.</p>
+<p>Pebble OS provides convenience layers with built-in logic for displaying different graphic components, like text and bitmap layers.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
  (chapter "Layers") for a conceptual overview of Layers and relevant code examples.</p>
-<p>The Modules list contains "subclasses" of Layer. The listed types can be safely type-casted to <code>Layer</code> (or <code>Layer *</code> in case of a pointer). Therefore the <code>layer_...</code> functions can be used with the datastructures of these "subclasses". <br/>
+<p>The Modules listed here contain what can be thought of conceptually as subclasses of Layer. The listed types can be safely type-casted to <code>Layer</code> (or <code>Layer *</code> in case of a pointer). The <code>layer_...</code> functions can then be used with the data structures of these subclasses. <br/>
 For example, the following is legal: </p>
 <div class="fragment"><div class="line">TextLayer *text_layer;</div>
 <div class="line">...</div>
@@ -796,7 +799,7 @@ Modules</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

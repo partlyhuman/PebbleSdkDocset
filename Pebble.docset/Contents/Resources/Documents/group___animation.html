@@ -115,9 +115,9 @@ $(document).ready(function(){initNavTree('group___animation.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Abstract framework to animate anything. </p>
-<p>The animation framework is an abstract system on top of which concrete animations can be built. However, it only deals with timing, curves and the life-cycle of an animation (start, repeated updates and end). Being an abstract base layer, it <b>does NOT</b> animate anything visibly. If you are looking for a quick way to move a Layer around on the screen, check out <a class="el" href="group___property_animation.html">PropertyAnimation</a>.</p>
-<p>Also refer to <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
+<p>Abstract framework to create arbitrary animations. </p>
+<p>The Animation framework provides your Pebble app with an base layer to create arbitrary animations. The simplest way to work with animations is to use the layer frame <a class="el" href="group___property_animation.html">PropertyAnimation</a>, which enables you to move a Layer around on the screen. Using <a class="el" href="group___animation.html#gae33435c58e422b9b88a15726cb017433" title="Sets the implementation of the custom animation. When implementing custom animations, use this function to specify what functions need to be called to for the setup, frame update and teardown of the animation. ">animation_set_implementation()</a>, you can implement a custom animation.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
  (chapter "Animation") for a conceptual overview of the animation framework and on how to write custom animations. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
@@ -752,7 +752,7 @@ Called by the animation system when the animation needs to calculate the next an
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

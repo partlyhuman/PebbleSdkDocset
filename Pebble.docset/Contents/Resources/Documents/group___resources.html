@@ -113,9 +113,11 @@ $(document).ready(function(){initNavTree('group___resources.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Loading resources. </p>
-<p>Resources are stored in flash and need to be loaded into RAM in order to use them. Below are functions that provide the most rudimentary way of loading resources. See <a href="http://developer.getpebble.com/2/guides/managing-resources.html">Managing App Resources in Pebble Developer Guide</a>
-, for information on how to embed resources into your app's bundle. </p>
+<p>Managing application resources. </p>
+<p>Resources are data files that are bundled with your application binary and can be loaded at runtime. You use resources to embed images or custom fonts in your app, but also to embed any data file. Resources are always read-only.</p>
+<p>Resources are stored on Pebble’s flash memory and only loaded in RAM when you load them. This means that you can have a large number of resources embedded inside your app, even though Pebble’s RAM memory is very limited.</p>
+<p>See <a href="http://developer.getpebble.com/2/guides/managing-resources.html">Managing App Resources in Pebble Developer Guide</a>
+ for information on how to embed resources into your app's bundle. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga3f32b97d857618e5772f72d8e2dbc566"></a>
 <div class="memitem">
@@ -291,7 +293,7 @@ $(document).ready(function(){initNavTree('group___resources.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

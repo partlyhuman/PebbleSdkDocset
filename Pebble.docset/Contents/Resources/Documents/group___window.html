@@ -116,9 +116,13 @@ $(document).ready(function(){initNavTree('group___window.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The basic building block of the user interface. </p>
-<p>Windows are the basic unit of app flow. The person wearing the watch interacts with a window, using what they see on screen and pressing the buttons of the watch. Thus a window is output, but takes input as well (see <a class="el" href="group___window.html#gaeefbe33bc69ffee444337b056912440c">window_set_click_config_provider()</a> and <a class="el" href="group___clicks.html">Clicks</a>). When a window is visible, its root Layer (and all its child layers) will be drawn onto the screen automatically. The <a class="el" href="group___window_stack.html">Window Stack</a> is the global manager of what window is presented and makes sure that input events are forwarded to the top-most window.</p>
-<p>Please refer to <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
- (chapter "Windows") for a conceptual overview of <a class="el" href="group___window.html">Window</a>, the <a class="el" href="group___window_stack.html">Window Stack</a> and relevant code examples. </p>
+<p>Windows are the top-level elements in the UI hierarchy and the basic building blocks for a Pebble UI. A single window is always displayed at a time on Pebble, with the exception of when animating from one window to the other, which, in that case, is managed by the window stack. You can stack windows on top of each other, but only the topmost window will be visible.</p>
+<p>Users wearing a Pebble typically interact with the content and media displayed in a window, clicking and pressing buttons on the watch, depending on what they see and wish to respond to in a window.</p>
+<p>Windows serve to display a hierarchy of layers on the screen and handle user input. When a window is visible, its root Layer (and all its child layers) are drawn onto the screen automatically.</p>
+<p>You need a window, which always fills the entire screen, to display images, text, and graphics in your Pebble app. A layer by itself doesn’t display on Pebble; it must be in the current window’s layer hierarchy to be visible.</p>
+<p>The Window Stack serves as the global manager of what window is presented and makes sure that input events are forwarded to the topmost window.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
+ (chapter "Window") for a conceptual overview of Window, the Window Stack and relevant code examples. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
@@ -547,7 +551,7 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Dealing with button input. ">Clicks</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Handling button click interactions. ">Clicks</a> </dd>
 <dd>
 <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff" title="This callback gets called at times that a click recognizer has to be set up, for example when a new w...">ClickConfigProvider</a> </dd></dl>
 
@@ -592,7 +596,7 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Dealing with button input. ">Clicks</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Handling button click interactions. ">Clicks</a> </dd>
 <dd>
 <a class="el" href="group___window.html#gaeefbe33bc69ffee444337b056912440c" title="Sets the click configuration provider callback function on the window. This will automatically setup ...">window_set_click_config_provider</a> </dd></dl>
 
@@ -819,7 +823,7 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Dealing with button input. ">Clicks</a> A value of 0ms means "no repeat timer". The minimum is 30ms, and values below will be disregarded. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___clicks.html" title="Handling button click interactions. ">Clicks</a> A value of 0ms means "no repeat timer". The minimum is 30ms, and values below will be disregarded. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handler</td><td>The <a class="el" href="group___clicks.html#ga8a973b4663a5171db84223d6ae79f28d">ClickHandler</a> to fire on this event. </td></tr>
@@ -924,7 +928,7 @@ Modules</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

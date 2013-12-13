@@ -113,6 +113,38 @@ $(document).ready(function(){initNavTree('group___app_message.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Bi-directional communication between phone apps and Pebble watchapps. </p>
+<p>AppMessage is a bi-directional messaging subsystem that enables communication between phone apps and Pebble watchapps. This is accomplished by allowing phone and watchapps to exchange arbitrary sets of key/value pairs. The key/value pairs are stored in the form of a Dictionary, the layout of which is left for the application developer to define.</p>
+<p>AppMessage implements a push-oriented messaging protocol, enabling your app to call functions and methods to push messages from Pebble to phone and vice versa. The protocol is symmetric: both Pebble and the phone can send messages. All messages are acknowledged. In this context, there is no client-server model, as such.</p>
+<p>During the sending phase, one side initiates the communication by transferring a dictionary over the air. The other side then receives this message and is given an opportunity to perform actions on that data. As soon as possible, the other side is expected to reply to the message with a simple acknowledgment that the message was received successfully.</p>
+<p>PebbleKit JavaScript provides you with a set of standard JavaScript APIs that let your app receive messages from the watch, make HTTP requests, and send new messages to the watch. AppMessage APIs are used to send and receive data. A Pebble watchapp can use the resources of the connected phone to fetch information from web services, send information to web APIs, or store login credentials. On the JavaScript side, you communicate with Pebble via a Pebble object exposed in the namespace.</p>
+<p>Messages always need to get either ACKnowledged or "NACK'ed," that is, not acknowledged. If not, messages will result in a time-out failure. The AppMessage subsystem takes care of this implicitly. In the phone libraries, this step is a bit more explicit.</p>
+<p>The Pebble watch interfaces make a distinction between the Inbox and the Outbox calls. The Inbox receives messages from the phone on the watch; the Outbox sends messages from the watch to the phone. These two buffers can be managed separately.</p>
+<h4>Warning</h4>
+<p>A critical constraint of AppMessage is that messages are limited in size. An ingoing (outgoing) message larger than the inbox (outbox) will not be transmitted and will generate an error. You can choose your inbox and outbox size when you call <a class="el" href="group___app_message.html#ga26735aa7eb22ab58bd7496e673d03155" title="Open AppMessage to transfers. ">app_message_open()</a>.</p>
+<p>Pebble SDK provides a static minimum guaranteed size (APP_MESSAGE_INBOX_SIZE_MINIMUM and APP_MESSAGE_OUTBOX_SIZE_MINIMUM). Requesting a buffer of the minimum guaranteed size (or smaller) is always guaranteed to succeed on all Pebbles in this SDK version or higher, and with every phone.</p>
+<p>In some context, Pebble might be able to provide your application with larger inbox/outbox. You can call <a class="el" href="group___app_message.html#gad544294c297f3d1941bd94b6b396a24b" title="Programatically determine the inbox size maximum in the current configuration. ">app_message_inbox_size_maximum()</a> and <a class="el" href="group___app_message.html#gaa8161491da4b16dde64be8754cfde815" title="Programatically determine the outbox size maximum in the current configuration. ">app_message_outbox_size_maximum()</a> in your code to get the largest possible value you can use.</p>
+<p>To always get the largest buffer available, follow this best practice:</p>
+<p>app_message_open(<a class="el" href="group___app_message.html#gad544294c297f3d1941bd94b6b396a24b" title="Programatically determine the inbox size maximum in the current configuration. ">app_message_inbox_size_maximum()</a>, <a class="el" href="group___app_message.html#gaa8161491da4b16dde64be8754cfde815" title="Programatically determine the outbox size maximum in the current configuration. ">app_message_outbox_size_maximum()</a>)</p>
+<p>AppMessage uses your application heap space. That means that the sizes you pick for the AppMessage inbox and outbox buffers are important in optimizing your app’s performance. The more you use for AppMessage, the less space you’ll have for the rest of your app.</p>
+<p>To register callbacks, you should call <a class="el" href="group___app_message.html#ga9ab844c63d926f0e8f708a171b3838d3" title="Registers a function that will be called after any Inbox message is received successfully. ">app_message_register_inbox_received()</a>, <a class="el" href="group___app_message.html#ga9ab844c63d926f0e8f708a171b3838d3" title="Registers a function that will be called after any Inbox message is received successfully. ">app_message_register_inbox_received()</a>, <a class="el" href="group___app_message.html#gae7cbb364b6e932c4bfd1ae89ecca87f9" title="Registers a function that will be called after any Outbox message is sent and an ACK reply occurs in ...">app_message_register_outbox_sent()</a>, <a class="el" href="group___app_message.html#ga73c134254ff2b17d3c57c7d019e79323" title="Registers a function that will be called after any Outbox message is not sent with a timely ACK reply...">app_message_register_outbox_failed()</a>.</p>
+<p>Pebble recommends that you call them before <a class="el" href="group___app_message.html#ga26735aa7eb22ab58bd7496e673d03155" title="Open AppMessage to transfers. ">app_message_open()</a> to ensure you do not miss a message arriving between starting AppMessage and registering the callback. You can set a context that will be passed to all the callbacks with <a class="el" href="group___app_message.html#gab6d67168d6bed587d5e0c92cd3a54ba6" title="Sets the context that will be passed to all AppMessage callbacks. ">app_message_set_context()</a>.</p>
+<p>In circumstances that may not be ideal, when using AppMessage several types of errors may occur. For example:</p>
+<ul>
+<li>The send can’t start because the system state won't allow for a success. Several reasons you're unable to perform a send: A send() is already occurring (only one is possible at a time) or Bluetooth is not enabled or connected.</li>
+<li>The send and receive occur, but the receiver can’t accept the message. For instance, there is no app that receives such a message.</li>
+<li>The send occurs, but the receiver either does not actually receive the message or can’t handle it in a timely fashion.</li>
+<li>In the case of a dropped message, the phone sends a message to the watchapp, while there is still an unprocessed message in the Inbox.</li>
+</ul>
+<p>Other errors are possible and described by AppMessageResult. A client of the AppMessage interface should use the result codes to be more robust in the face of communication problems either in the field or while debugging.</p>
+<p>Refer to the <a href="http://developer.getpebble.com/2/guides/app-phone-communication.html">Integrating Pebble Watchapps with Phone Apps in Pebble Developer Guide</a>
+ for a conceptual overview and code usage.</p>
+<p>For code examples, refer to the SDK Examples that directly use App Message. These include:</p>
+<ul>
+<li>Examples/todolist-demo</li>
+<li>Examples/pebblekit-js/quotes</li>
+<li>Examples/weather-demo </li>
+</ul>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga4794243c5779d5e861f964b61e0a7652"></a>
 <div class="memitem">
@@ -426,10 +458,11 @@ $(document).ready(function(){initNavTree('group___app_message.html','');});
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The reason why the message was dropped. Some possibilities include <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaad6af2baa488efedd56b17f0ed1e8339">APP_MSG_BUSY</a> and <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaf2eb603be26c295d0a16433564a72598">APP_MSG_BUFFER_OVERFLOW</a>.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Pointer to application data as specified when registering the callback. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Pointer to application data as specified when registering the callback.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Note that you can call <a class="el" href="group___app_message.html#ga7715e322ec2a7a49bf66aa63353190fd" title="Begin writing to the Outbox&#39;s Dictionary buffer. ">app_message_outbox_begin()</a> from this handler to prepare a new message. This will invalidate the previous dictionary iterator; do not use it after calling <a class="el" href="group___app_message.html#ga7715e322ec2a7a49bf66aa63353190fd" title="Begin writing to the Outbox&#39;s Dictionary buffer. ">app_message_outbox_begin()</a>. </p>
 
 </div>
 </div>
@@ -469,10 +502,11 @@ $(document).ready(function(){initNavTree('group___app_message.html','');});
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">iterator</td><td>The dictionary iterator to the sent message. The iterator will be in the final state that was sent. Note that the iterator cannot be modified or saved off as the library will re-open the dictionary with dict_begin() after this callback returns.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The result of the operation. Some possibilities for the value include <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea4a03bcc21fc33a6acc7d73188b2b4b21">APP_MSG_SEND_TIMEOUT</a>, <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eadba700a7db67d4238d24e7379b69fba3">APP_MSG_SEND_REJECTED</a>, <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea8dda18d5302ef6b07aa83985e91b54b7">APP_MSG_NOT_CONNECTED</a>, <a class="el" href="group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea38e78da25eed665c85368df213ed8088">APP_MSG_APP_NOT_RUNNING</a>, and the combination <code>(APP_MSG_NOT_CONNECTED | APP_MSG_APP_NOT_RUNNING)</code>.</td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">context</td><td>Pointer to application data as specified when registering the callback. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">context</td><td>Pointer to application data as specified when registering the callback.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Note that you can call <a class="el" href="group___app_message.html#ga7715e322ec2a7a49bf66aa63353190fd" title="Begin writing to the Outbox&#39;s Dictionary buffer. ">app_message_outbox_begin()</a> from this handler to prepare a new message. This will invalidate the previous dictionary iterator; do not use it after calling <a class="el" href="group___app_message.html#ga7715e322ec2a7a49bf66aa63353190fd" title="Begin writing to the Outbox&#39;s Dictionary buffer. ">app_message_outbox_begin()</a>. </p>
 
 </div>
 </div>
@@ -546,6 +580,12 @@ $(document).ready(function(){initNavTree('group___app_message.html','');});
 <tr><td class="fieldname"><em><a class="anchor" id="gga695a78c926b20edbb14d7faf5a78c29ead1cce21da2d8b46e305f9550a7384238"></a>APP_MSG_OUT_OF_MEMORY</em>&nbsp;</td><td class="fielddoc">
 <p>The support library did not have sufficient application memory to perform the requested operation. </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga695a78c926b20edbb14d7faf5a78c29eab8679d62177c2bce72ab899c0cf3353a"></a>APP_MSG_CLOSED</em>&nbsp;</td><td class="fielddoc">
+<p>App message was closed. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga695a78c926b20edbb14d7faf5a78c29eaa965e9ce0375fcc796fddaf12e319ee4"></a>APP_MSG_INTERNAL_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>An internal OS error prevented APP_MSG from completing an operation. </p>
+</td></tr>
 </table>
 
 </div>
@@ -591,7 +631,7 @@ $(document).ready(function(){initNavTree('group___app_message.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

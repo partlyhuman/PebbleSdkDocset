@@ -113,10 +113,13 @@ $(document).ready(function(){initNavTree('group___data_logging.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Enables logging data asynchronously to a mobile application. </p>
-<p>Allows an application to log data to a session, which will be sent to the associated phone application at the earliest convenience.</p>
-<div class="fragment"><div class="line"><span class="comment">// Create a data logging session for 4-byte unsigned integers with a tag of 0x1234</span></div>
-<div class="line">DataLoggingSessionRef logging_session = <a class="code" href="group___data_logging.html#ga5177edf0006d2df7c77573db1c62e9f2">data_logging_create</a>(0x1234, <a class="code" href="group___data_logging.html#gga35a7aa37609a9aebb3ad316e77cb716da472622733c6b9932c72ed1f19ae66526">DATA_LOGGING_UINT</a>, 4, <span class="keyword">false</span>);</div>
+<p>Enables logging data asynchronously to a mobile app. </p>
+<p>In Pebble OS, data logging is a data storage and transfer subsystem that allows watchapps to save data on non-volatile storage devices when the phone is not available to process it. The API provides your watchapp with a mechanism for short-term data buffering for asynchronous data transmission to a mobile app.</p>
+<p>Using this API, your Pebble watchapp can create an arbitrary number of logs, but you’re limited in the amount of storage space you can use. Note that approximately 500K is available for data logging, which is shared among all watchapps that use it.</p>
+<p>Your app can log data to a session, either creating, adding or deleting data to that session. The data is then sent to the associated phone application at the earliest convenience. If a phone is available, the data is sent directly to the phone. Otherwise, it is saved to the watch storage until the watch is connected to a phone.</p>
+<p>For example:</p>
+<p>To create a data logging session for 4-byte unsigned integers with a tag of 0x1234, you would do this: </p>
+<div class="fragment"><div class="line">DataLoggingSessionRef logging_session = <a class="code" href="group___data_logging.html#ga5177edf0006d2df7c77573db1c62e9f2">data_logging_create</a>(0x1234, <a class="code" href="group___data_logging.html#gga35a7aa37609a9aebb3ad316e77cb716da472622733c6b9932c72ed1f19ae66526">DATA_LOGGING_UINT</a>, 4, <span class="keyword">false</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Fake creating some data and logging it to the session.</span></div>
 <div class="line"><a class="code" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> data[] = { 1, 2, 3, 4 };</div>
@@ -128,7 +131,8 @@ $(document).ready(function(){initNavTree('group___data_logging.html','');});
 <div class="line"></div>
 <div class="line"><span class="comment">// When we don&#39;t need to log anything else, we can close off the session.</span></div>
 <div class="line"><a class="code" href="group___data_logging.html#ga649d07075da61f59d8a18ebb589573af">data_logging_finish</a>(logging_session);</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+</div><!-- fragment --><p>For code samples, refer to Examples/data-logging-demo. </p>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga5177edf0006d2df7c77573db1c62e9f2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +261,7 @@ $(document).ready(function(){initNavTree('group___data_logging.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>The different types of session data we support. This type describes the type of a singular item in the data session. Every item in a given session is the same type and size. </p>
+<p>The different types of session data that Pebble supports. This type describes the type of a singular item in the data session. Every item in a given session is the same type and size. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga35a7aa37609a9aebb3ad316e77cb716dad2f7d26a001c89ff0571aa1504836dc2"></a>DATA_LOGGING_BYTE_ARRAY</em>&nbsp;</td><td class="fielddoc">
 <p>Array of bytes. Remember that this is the type of a single item in the logging session, so using this type means you'll be logging multiple byte arrays (each a fixed length described by item_length) for the duration of the session. </p>
@@ -307,7 +311,7 @@ $(document).ready(function(){initNavTree('group___data_logging.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 14 2013 17:45:39 for Pebble SDK by
+    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
