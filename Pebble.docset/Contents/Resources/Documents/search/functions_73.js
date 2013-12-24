@@ -19,6 +19,7 @@ var searchData=
   ['simple_5fmenu_5flayer_5fcreate',['simple_menu_layer_create',['../group___simple_menu_layer.html#ga8cb9fa4fbe318289989506ba49f228f5',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fdestroy',['simple_menu_layer_destroy',['../group___simple_menu_layer.html#ga0608656e550deb3b0339cd1c807990e2',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fget_5flayer',['simple_menu_layer_get_layer',['../group___simple_menu_layer.html#ga084151685bf2cadc5efaa52ee534c020',1,'pebble.h']]],
+  ['simple_5fmenu_5flayer_5fget_5fmenu_5flayer',['simple_menu_layer_get_menu_layer',['../group___simple_menu_layer.html#gaf4fe6986f8dd03cd5f260148d906171c',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fget_5fselected_5findex',['simple_menu_layer_get_selected_index',['../group___simple_menu_layer.html#ga496b6f0e2b65a70715d01d3d2630d215',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fset_5fselected_5findex',['simple_menu_layer_set_selected_index',['../group___simple_menu_layer.html#gad1a4c28d39c0aa4bcad32920ec0f2e75',1,'pebble.h']]],
   ['sin_5flookup',['sin_lookup',['../group___math.html#gad373193b20c68af1004a9dc2c35c2e48',1,'pebble.h']]],

@@ -122,19 +122,13 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
 <li><a class="el" href="group___graphics_types.html">Graphics Types</a> </li>
 </ul>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga876d51066b9015f2fccd784186c4620d"></a>
+<a class="anchor" id="ga4e3ae8151d8d57e23fc160251242face"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void graphics_draw_text </td>
+          <td class="memname"><a class="el" href="group___graphics_types.html#struct_g_size">GSize</a> graphics_text_layout_get_content_size </td>
           <td>(</td>
-          <td class="paramtype">GContext *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>text</em>, </td>
         </tr>
@@ -160,83 +154,7 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group___text_drawing.html#ga12cbd02b0d5668d7c9bd582077bf7f1d">GTextAlignment</a>&#160;</td>
-          <td class="paramname"><em>alignment</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___text_drawing.html#gaf1a8558f11138c8b1a4993d8de10c490">GTextLayoutCacheRef</a>&#160;</td>
-          <td class="paramname"><em>layout</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw text into the current graphics context, using the context's current text color. The text will be drawn inside a box with the specified dimensions and configuration, with clipping occuring automatically. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctx</td><td>The destination graphics context in which to draw </td></tr>
-    <tr><td class="paramname">text</td><td>The zero terminated UTF-8 string to draw </td></tr>
-    <tr><td class="paramname">font</td><td>The font in which the text should be set </td></tr>
-    <tr><td class="paramname">box</td><td>The bounding box in which to draw the text. The first line of text will be drawn against the top of the box. </td></tr>
-    <tr><td class="paramname">overflow_mode</td><td>The overflow behavior, in case the text is larger than what fits inside the box. </td></tr>
-    <tr><td class="paramname">alignment</td><td>The horizontal alignment of the text </td></tr>
-    <tr><td class="paramname">layout</td><td>Optional layout cache data. Supply <code>NULL</code> to ignore the layout caching mechanism. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga340c1959b4511200f6bbf665ce63b390"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group___graphics_types.html#struct_g_size">GSize</a> graphics_text_layout_get_max_used_size </td>
-          <td>(</td>
-          <td class="paramtype">GContext *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group___fonts.html#ga49c1c67f30e577eb50ab54cd5526cb7a">GFont</a> const&#160;</td>
-          <td class="paramname"><em>font</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___graphics_types.html#struct_g_rect">GRect</a>&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___text_drawing.html#gadad5abc1b1cfbddd48bd79f70c05b8fa">GTextOverflowMode</a>&#160;</td>
-          <td class="paramname"><em>overflow_mode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___text_drawing.html#ga12cbd02b0d5668d7c9bd582077bf7f1d">GTextAlignment</a>&#160;</td>
-          <td class="paramname"><em>alignment</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group___text_drawing.html#gaf1a8558f11138c8b1a4993d8de10c490">GTextLayoutCacheRef</a>&#160;</td>
-          <td class="paramname"><em>layout</em>&#160;</td>
+          <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,18 +167,15 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
 <p>Obtain the maximum size that a text with given font, overflow mode and alignment occupies within a given rectangular constraint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ctx</td><td>the current graphics context </td></tr>
     <tr><td class="paramname">text</td><td>The zero terminated UTF-8 string for which to calculate the size </td></tr>
     <tr><td class="paramname">font</td><td>The font in which the text should be set while calculating the size </td></tr>
     <tr><td class="paramname">box</td><td>The bounding box in which the text should be constrained </td></tr>
     <tr><td class="paramname">overflow_mode</td><td>The overflow behavior, in case the text is larger than what fits inside the box. </td></tr>
     <tr><td class="paramname">alignment</td><td>The horizontal alignment of the text </td></tr>
-    <tr><td class="paramname">layout</td><td>Optional layout cache data. Supply <code>NULL</code> to ignore the layout caching mechanism. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The maximum size occupied by the text </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Because of an implementation detail, it is necessary to pass in the current graphics context, even though this function does not draw anything. </dd></dl>
 
 </div>
 </div>
@@ -291,7 +206,7 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
 </div><div class="memdoc">
 
 <p>Text aligment controls the way the text is aligned inside the box the text is drawn into. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___text_drawing.html#ga876d51066b9015f2fccd784186c4620d" title="Draw text into the current graphics context, using the context&#39;s current text color. The text will be drawn inside a box with the specified dimensions and configuration, with clipping occuring automatically. ">graphics_draw_text</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd>graphics_draw_text </dd>
 <dd>
 <a class="el" href="group___text_layer.html#gaf44cc52cecaa94867d927130da4d4aca" title="Sets the alignment of the TextLayer. ">text_layer_set_text_alignment</a> </dd></dl>
 <table class="fieldtable">
@@ -319,7 +234,7 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
 </div><div class="memdoc">
 
 <p>Text overflow mode controls the way text overflows when the string that is drawn does not fit inside the area constraint. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___text_drawing.html#ga876d51066b9015f2fccd784186c4620d" title="Draw text into the current graphics context, using the context&#39;s current text color. The text will be drawn inside a box with the specified dimensions and configuration, with clipping occuring automatically. ">graphics_draw_text</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd>graphics_draw_text </dd>
 <dd>
 <a class="el" href="group___text_layer.html#ga654f359a8f5736aa5ca82735d8b03b16" title="Sets the line break mode of the TextLayer. ">text_layer_set_overflow_mode</a> </dd></dl>
 <table class="fieldtable">
@@ -342,7 +257,7 @@ $(document).ready(function(){initNavTree('group___text_drawing.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
+    <li class="footer">Generated on Mon Dec 23 2013 23:16:07 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

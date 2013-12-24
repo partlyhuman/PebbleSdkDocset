@@ -9,9 +9,13 @@ var NAVTREEINDEX0 =
 "group___accelerometer_service.html#ga60d51127c2333c2dcf1353af861815b8":[0,0,6,0,7],
 "group___accelerometer_service.html#ga6e5529eb344958546eaec00dbcbd5cf8":[0,0,6,0,6],
 "group___accelerometer_service.html#ga741c3716bd24f2b4b033bfee324bd9d6":[0,0,6,0,3],
-"group___accelerometer_service.html#ga8aab5de9ee899fea12c4c957c2178fae":[0,0,6,0,9],
+"group___accelerometer_service.html#ga7e27c2b57bcc23becf875bd347c03c91":[0,0,6,0,9],
+"group___accelerometer_service.html#ga8aab5de9ee899fea12c4c957c2178fae":[0,0,6,0,10],
 "group___accelerometer_service.html#ga9a155b36ac30b2caa5f304123b73c4dd":[0,0,6,0,8],
 "group___accelerometer_service.html#gace3f4489893a103a08f81a7c3b8be765":[0,0,6,0,4],
+"group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a014bd8f2ad19525dee2de60374de04eb":[0,0,6,0,9,0],
+"group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088":[0,0,6,0,9,2],
+"group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3":[0,0,6,0,9,1],
 "group___action_bar_layer.html":[0,3,2,0],
 "group___action_bar_layer.html#ga03f3cf8b2817e31ff6c9b670f934dfe6":[0,3,2,0,9],
 "group___action_bar_layer.html#ga0abe5d50cc4845dc219bf69ca24b4466":[0,3,2,0,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a6891120e8a7f64c1df5e04145e395c68":[0,1,5,15,0],
 "group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a69df73d8847b94ef75af3b41b5315a05":[0,1,5,15,2],
 "group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0d082bc1a280106ce0c8ce60508ed44d":[0,1,5,14,8],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0e09ed4f51fd1f8b81205a61405b6eeb":[0,1,5,14,5],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa2791f2177d74ec6baf029a8e25f731d9":[0,1,5,14,3],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa51bd2083cb00987d9e770436985642b2":[0,1,5,14,0],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa91754028af85b5079e59025bc13bc021":[0,1,5,14,6],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aaa6582295979f7c0661f6b5c686a5a606":[0,1,5,14,2]
+"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0e09ed4f51fd1f8b81205a61405b6eeb":[0,1,5,14,5]
 };

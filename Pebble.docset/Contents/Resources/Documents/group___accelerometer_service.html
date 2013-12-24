@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
         <tr>
           <td class="memname">int accel_service_peek </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group___accelerometer_service.html#struct_accel_data">AccelData</a> *&#160;</td>
+          <td class="paramtype">AccelData *&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
 <p>Peek at the last recorded reading. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>a pointer to a pre-allocated <a class="el" href="group___accelerometer_service.html#struct_accel_data" title="A single accelerometer sample for all three axes. ">AccelData</a> item </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>a pointer to a pre-allocated AccelData item </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,48 +289,13 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
 
 </div>
 </div>
-<hr/><h2 class="groupheader">Data Structure Documentation</h2>
-<a name="struct_accel_data" id="struct_accel_data"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct AccelData</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>A single accelerometer sample for all three axes. </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a class="anchor" id="abe5df85a74073f78086968cbbe82b32f"></a>int16_t</td>
-<td class="fieldname">
-x</td>
-<td class="fielddoc">
-acceleration along the x axis </td></tr>
-<tr><td class="fieldtype">
-<a class="anchor" id="a58008ae111afcb60b47419541c48aa91"></a>int16_t</td>
-<td class="fieldname">
-y</td>
-<td class="fielddoc">
-acceleration along the y axis </td></tr>
-<tr><td class="fieldtype">
-<a class="anchor" id="a4c5562ab5758dc0374b8231f7b54d607"></a>int16_t</td>
-<td class="fieldname">
-z</td>
-<td class="fielddoc">
-acceleration along the z axis </td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="ga60d51127c2333c2dcf1353af861815b8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* AccelDataHandler)(<a class="el" href="group___accelerometer_service.html#struct_accel_data">AccelData</a> *data, <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> num_samples)</td>
+          <td class="memname">typedef void(* AccelDataHandler)(AccelData *data, <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> num_samples)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -338,8 +303,8 @@ acceleration along the z axis </td></tr>
 <p>Callback type for accelerometer data events. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>a pointer to data </td></tr>
-    <tr><td class="paramname">num_samples</td><td>the number of available samples </td></tr>
+    <tr><td class="paramname">data</td><td>Pointer to the collected accelerometer samples. </td></tr>
+    <tr><td class="paramname">num_samples</td><td>the number of samples stored in data. </td></tr>
   </table>
   </dd>
 </dl>
@@ -351,7 +316,7 @@ acceleration along the z axis </td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* AccelTapHandler)(AccelAxisType axis, int32_t direction)</td>
+          <td class="memname">typedef void(* AccelTapHandler)(<a class="el" href="group___accelerometer_service.html#ga7e27c2b57bcc23becf875bd347c03c91">AccelAxisType</a> axis, int32_t direction)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -368,6 +333,29 @@ acceleration along the z axis </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga7e27c2b57bcc23becf875bd347c03c91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___accelerometer_service.html#ga7e27c2b57bcc23becf875bd347c03c91">AccelAxisType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga7e27c2b57bcc23becf875bd347c03c91a014bd8f2ad19525dee2de60374de04eb"></a>ACCEL_AXIS_X</em>&nbsp;</td><td class="fielddoc">
+<p>Accelerometer's X axis. The positive direction along the X axis goes toward the right of the watch. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3"></a>ACCEL_AXIS_Y</em>&nbsp;</td><td class="fielddoc">
+<p>Accelerometer's Y axis. The positive direction along the Y axis goes toward the top of the watch. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088"></a>ACCEL_AXIS_Z</em>&nbsp;</td><td class="fielddoc">
+<p>Accelerometer's Z axis. The positive direction along the Z axis goes vertically out of the watchface. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga8aab5de9ee899fea12c4c957c2178fae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +376,7 @@ acceleration along the z axis </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
+    <li class="footer">Generated on Mon Dec 23 2013 23:16:07 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

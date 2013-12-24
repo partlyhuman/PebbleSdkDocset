@@ -9,3 +9,4 @@ Regenerate the docset with the supplied ruby script and sqlite. The script dumps
 ``ruby generate-pebble-sdk-docset.rb | sqlite3 ./Pebble.docset/Contents/Resources/docSet.dsidx``
 
 Enjoy!
+

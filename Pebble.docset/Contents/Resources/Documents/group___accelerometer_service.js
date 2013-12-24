@@ -9,5 +9,10 @@ var group___accelerometer_service =
     [ "accel_tap_service_unsubscribe", "group___accelerometer_service.html#ga6e5529eb344958546eaec00dbcbd5cf8", null ],
     [ "AccelDataHandler", "group___accelerometer_service.html#ga60d51127c2333c2dcf1353af861815b8", null ],
     [ "AccelTapHandler", "group___accelerometer_service.html#ga9a155b36ac30b2caa5f304123b73c4dd", null ],
+    [ "AccelAxisType", "group___accelerometer_service.html#ga7e27c2b57bcc23becf875bd347c03c91", [
+      [ "ACCEL_AXIS_X", "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a014bd8f2ad19525dee2de60374de04eb", null ],
+      [ "ACCEL_AXIS_Y", "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3", null ],
+      [ "ACCEL_AXIS_Z", "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088", null ]
+    ] ],
     [ "AccelSamplingRate", "group___accelerometer_service.html#ga8aab5de9ee899fea12c4c957c2178fae", null ]
 ];

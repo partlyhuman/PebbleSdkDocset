@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['accel_5faxis_5fx',['ACCEL_AXIS_X',['../group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a014bd8f2ad19525dee2de60374de04eb',1,'pebble.h']]],
+  ['accel_5faxis_5fy',['ACCEL_AXIS_Y',['../group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3',1,'pebble.h']]],
+  ['accel_5faxis_5fz',['ACCEL_AXIS_Z',['../group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088',1,'pebble.h']]],
   ['animationcurveeasein',['AnimationCurveEaseIn',['../group___animation.html#ggaf481a363d622c146285096e6395d9ec8af02b78b3839b10b84309c5a6fc1cedae',1,'pebble.h']]],
   ['animationcurveeaseinout',['AnimationCurveEaseInOut',['../group___animation.html#ggaf481a363d622c146285096e6395d9ec8a06d9643acfd6ced6e5b1b851b4f0b7de',1,'pebble.h']]],
   ['animationcurveeaseout',['AnimationCurveEaseOut',['../group___animation.html#ggaf481a363d622c146285096e6395d9ec8a74d22c9dbe9c71aca41cbf4913418a7a',1,'pebble.h']]],

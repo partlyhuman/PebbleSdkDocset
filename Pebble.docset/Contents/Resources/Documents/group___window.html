@@ -338,7 +338,9 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Subscribe to long click events. </p>
-<dl class="section note"><dt>Note</dt><dd>Must be called from within the <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be called from within the <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>. </dd>
+<dd>
+The back button cannot be overridden with a long click. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">button_id</td><td>The button events to subscribe to. </td></tr>
@@ -464,7 +466,9 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Subscribe to raw click events. </p>
-<dl class="section note"><dt>Note</dt><dd>Must be called from within the <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be called from within the <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>. </dd>
+<dd>
+The back button cannot be overridden with a raw click. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">button_id</td><td>The button events to subscribe to. </td></tr>
@@ -868,7 +872,9 @@ Modules</h2></td></tr>
 <p>Subscribe to single click event, with a repeat interval. A single click is detected every time "repeat_interval_ms" has been reached. </p>
 <dl class="section note"><dt>Note</dt><dd>Must be called from within the <a class="el" href="group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff">ClickConfigProvider</a>. </dd>
 <dd>
-<a class="el" href="group___window.html#gae09d8d7299a9d5a750a898a70f64bdec">window_single_click_subscribe()</a> and <a class="el" href="group___window.html#ga1ff2467f009b80f8bc97ef197e34d332">window_single_repeating_click_subscribe()</a> conflict, and cannot both be used on the same button. </dd></dl>
+<a class="el" href="group___window.html#gae09d8d7299a9d5a750a898a70f64bdec">window_single_click_subscribe()</a> and <a class="el" href="group___window.html#ga1ff2467f009b80f8bc97ef197e34d332">window_single_repeating_click_subscribe()</a> conflict, and cannot both be used on the same button. </dd>
+<dd>
+The back button cannot be overridden with a repeating click. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">repeat_interval_ms</td><td>When holding down, how many milliseconds before the handler is fired again. </td></tr>
@@ -928,7 +934,7 @@ Modules</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Dec 12 2013 18:41:22 for Pebble SDK by
+    <li class="footer">Generated on Mon Dec 23 2013 23:16:07 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
