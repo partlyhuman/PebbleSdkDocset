@@ -116,12 +116,13 @@ var NAVTREEINDEX0 =
 "group___battery_state_service.html#gadef114a27f24cc39e3ee5bda3756c865":[0,0,6,2,1],
 "group___bitmap_layer.html":[0,3,2,1],
 "group___bitmap_layer.html#ga3fa77622a7b1ea656f0503dfadeea712":[0,3,2,1,0],
-"group___bitmap_layer.html#ga4c1765f9330890641c4c09ba7e894894":[0,3,2,1,3],
+"group___bitmap_layer.html#ga4c1765f9330890641c4c09ba7e894894":[0,3,2,1,4],
 "group___bitmap_layer.html#ga4ef30a7562a029d81e2956ab8068f0f5":[0,3,2,1,1],
-"group___bitmap_layer.html#ga67522a1e62431f0f68d161d83fb6d83e":[0,3,2,1,4],
-"group___bitmap_layer.html#ga7bc761ca8227881c5853cbc0e279385e":[0,3,2,1,6],
-"group___bitmap_layer.html#ga919b52c2feb69c13966f4a52815377f8":[0,3,2,1,5],
-"group___bitmap_layer.html#gac9147d277bf7e57b5efcaebf8db3f0b2":[0,3,2,1,2],
+"group___bitmap_layer.html#ga67522a1e62431f0f68d161d83fb6d83e":[0,3,2,1,5],
+"group___bitmap_layer.html#ga7bc761ca8227881c5853cbc0e279385e":[0,3,2,1,7],
+"group___bitmap_layer.html#ga919b52c2feb69c13966f4a52815377f8":[0,3,2,1,6],
+"group___bitmap_layer.html#gabe873bfc58601ef31730591192e16b45":[0,3,2,1,2],
+"group___bitmap_layer.html#gac9147d277bf7e57b5efcaebf8db3f0b2":[0,3,2,1,3],
 "group___bluetooth_connection_service.html":[0,0,6,3],
 "group___bluetooth_connection_service.html#ga31ae0c22e1cbf2af34b39b49e98c777a":[0,0,6,3,0],
 "group___bluetooth_connection_service.html#ga6661ab4bdb986715602183b7849ffe84":[0,0,6,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a128d4e4336a363bccf2d86330c236274":[0,1,5,15,1],
 "group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a6891120e8a7f64c1df5e04145e395c68":[0,1,5,15,0],
 "group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a69df73d8847b94ef75af3b41b5315a05":[0,1,5,15,2],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0d082bc1a280106ce0c8ce60508ed44d":[0,1,5,14,8],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0e09ed4f51fd1f8b81205a61405b6eeb":[0,1,5,14,5]
+"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0d082bc1a280106ce0c8ce60508ed44d":[0,1,5,14,8]
 };

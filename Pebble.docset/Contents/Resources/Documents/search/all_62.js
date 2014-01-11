@@ -9,6 +9,7 @@ var searchData=
   ['batterystateservice',['BatteryStateService',['../group___battery_state_service.html',1,'']]],
   ['bitmap_5flayer_5fcreate',['bitmap_layer_create',['../group___bitmap_layer.html#ga3fa77622a7b1ea656f0503dfadeea712',1,'pebble.h']]],
   ['bitmap_5flayer_5fdestroy',['bitmap_layer_destroy',['../group___bitmap_layer.html#ga4ef30a7562a029d81e2956ab8068f0f5',1,'pebble.h']]],
+  ['bitmap_5flayer_5fget_5fbitmap',['bitmap_layer_get_bitmap',['../group___bitmap_layer.html#gabe873bfc58601ef31730591192e16b45',1,'pebble.h']]],
   ['bitmap_5flayer_5fget_5flayer',['bitmap_layer_get_layer',['../group___bitmap_layer.html#gac9147d277bf7e57b5efcaebf8db3f0b2',1,'pebble.h']]],
   ['bitmap_5flayer_5fset_5falignment',['bitmap_layer_set_alignment',['../group___bitmap_layer.html#ga4c1765f9330890641c4c09ba7e894894',1,'pebble.h']]],
   ['bitmap_5flayer_5fset_5fbackground_5fcolor',['bitmap_layer_set_background_color',['../group___bitmap_layer.html#ga67522a1e62431f0f68d161d83fb6d83e',1,'pebble.h']]],
