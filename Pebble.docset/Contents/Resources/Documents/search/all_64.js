@@ -44,6 +44,7 @@ var searchData=
   ['dictionarykeyupdatedcallback',['DictionaryKeyUpdatedCallback',['../group___dictionary.html#ga99b02996e555fcbaa01c456501dfb384',1,'pebble.h']]],
   ['dictionaryresult',['DictionaryResult',['../group___dictionary.html#gaafae887a6d07cde8d11885c755b55351',1,'pebble.h']]],
   ['dictionaryserializecallback',['DictionarySerializeCallback',['../group___dictionary.html#ga41471ee8f71754cbaf16fd0ea27c5b58',1,'pebble.h']]],
+  ['did_5fvibrate',['did_vibrate',['../group___accelerometer_service.html#a8e60f95e0d893d078f9906b51cbf9cc7',1,'AccelData']]],
   ['draw_5fheader',['draw_header',['../group___menu_layer.html#a17fe3e517c3ae67f5d3132f3b849d5da',1,'MenuLayerCallbacks']]],
   ['draw_5frow',['draw_row',['../group___menu_layer.html#a5a3e2169ba3368e9b555b9b58bcc2637',1,'MenuLayerCallbacks']]],
   ['drawing_20primitives',['Drawing Primitives',['../group___drawing.html',1,'']]],

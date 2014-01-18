@@ -23,6 +23,7 @@ var searchData=
   ['time_5fms',['time_ms',['../group___standard_time.html#ga65bb1bfe1acc8776ccdafb90d3fe941a',1,'common.dox']]],
   ['time_5ft',['time_t',['../group___standard_time.html#gaffa4d193759c763a2623cc49d69b15f5',1,'common.dox']]],
   ['timer',['Timer',['../group___timer.html',1,'']]],
+  ['timestamp',['timestamp',['../group___accelerometer_service.html#acb871e01f60e4aec0a29eafc108102d9',1,'AccelData']]],
   ['timeunits',['TimeUnits',['../group___wall_time.html#ga0423d00e0eb199de523a92031b5a1107',1,'pebble.h']]],
   ['title',['title',['../group___simple_menu_layer.html#a3f4b4f9cbfbc573c71480f0a8861eacf',1,'SimpleMenuItem::title()'],['../group___simple_menu_layer.html#a4c8e4113f9641b51e1d16e3c32f465dc',1,'SimpleMenuSection::title()']]],
   ['trig_5fmax_5fangle',['TRIG_MAX_ANGLE',['../group___math.html#gade7adcdaf0a7aca734c444328afd6f77',1,'pebble.h']]],

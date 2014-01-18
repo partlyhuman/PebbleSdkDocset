@@ -14,5 +14,10 @@ var group___accelerometer_service =
       [ "ACCEL_AXIS_Y", "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3", null ],
       [ "ACCEL_AXIS_Z", "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088", null ]
     ] ],
-    [ "AccelSamplingRate", "group___accelerometer_service.html#ga8aab5de9ee899fea12c4c957c2178fae", null ]
+    [ "AccelSamplingRate", "group___accelerometer_service.html#ga8aab5de9ee899fea12c4c957c2178fae", [
+      [ "ACCEL_SAMPLING_10HZ", "group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeace78d0dca57efd817bb042b08498aa86", null ],
+      [ "ACCEL_SAMPLING_25HZ", "group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faea51bc931568b736a44bba10aa1d23962a", null ],
+      [ "ACCEL_SAMPLING_50HZ", "group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeacf408daf2f2be43d16fc0a688337976f", null ],
+      [ "ACCEL_SAMPLING_100HZ", "group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeaa2b7db2631973784df9460de6d08f61a", null ]
+    ] ]
 ];

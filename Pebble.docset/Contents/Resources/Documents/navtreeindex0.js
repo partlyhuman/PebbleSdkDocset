@@ -16,6 +16,10 @@ var NAVTREEINDEX0 =
 "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a014bd8f2ad19525dee2de60374de04eb":[0,0,6,0,9,0],
 "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a7325f28986e84a06c2f4d0ff655a3088":[0,0,6,0,9,2],
 "group___accelerometer_service.html#gga7e27c2b57bcc23becf875bd347c03c91a907b48bf3bb7df1fb92f7fd2cd4d52d3":[0,0,6,0,9,1],
+"group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faea51bc931568b736a44bba10aa1d23962a":[0,0,6,0,10,1],
+"group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeaa2b7db2631973784df9460de6d08f61a":[0,0,6,0,10,3],
+"group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeace78d0dca57efd817bb042b08498aa86":[0,0,6,0,10,0],
+"group___accelerometer_service.html#gga8aab5de9ee899fea12c4c957c2178faeacf408daf2f2be43d16fc0a688337976f":[0,0,6,0,10,2],
 "group___action_bar_layer.html":[0,3,2,0],
 "group___action_bar_layer.html#ga03f3cf8b2817e31ff6c9b670f934dfe6":[0,3,2,0,9],
 "group___action_bar_layer.html#ga0abe5d50cc4845dc219bf69ca24b4466":[0,3,2,0,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa30d689e91f2ce16dd949b4076fb76ce4":[0,1,5,16,2],
 "group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa3ca84b5c70798643a3bd07b263c47fe6":[0,1,5,16,5],
 "group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa3d668fac5e660241746c082d7155e059":[0,1,5,16,0],
-"group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556faba6dadf20ebce8ba4c25ecf3c9a39142":[0,1,5,16,4],
-"group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a128d4e4336a363bccf2d86330c236274":[0,1,5,15,1],
-"group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a6891120e8a7f64c1df5e04145e395c68":[0,1,5,15,0],
-"group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a69df73d8847b94ef75af3b41b5315a05":[0,1,5,15,2],
-"group___graphics_types.html#ggac8aa0eb3d3065fde8d2d6f282fa47f6aa0d082bc1a280106ce0c8ce60508ed44d":[0,1,5,14,8]
+"group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556faba6dadf20ebce8ba4c25ecf3c9a39142":[0,1,5,16,4]
 };
