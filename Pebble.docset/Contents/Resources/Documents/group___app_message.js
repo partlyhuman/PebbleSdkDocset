@@ -1,0 +1,37 @@
+var group___app_message =
+[
+    [ "app_message_deregister_callbacks", "group___app_message.html#ga4794243c5779d5e861f964b61e0a7652", null ],
+    [ "app_message_get_context", "group___app_message.html#gabb31148adaf227f338b011b8da7b61c8", null ],
+    [ "app_message_inbox_size_maximum", "group___app_message.html#gad544294c297f3d1941bd94b6b396a24b", null ],
+    [ "app_message_open", "group___app_message.html#ga26735aa7eb22ab58bd7496e673d03155", null ],
+    [ "app_message_outbox_begin", "group___app_message.html#ga7715e322ec2a7a49bf66aa63353190fd", null ],
+    [ "app_message_outbox_send", "group___app_message.html#ga54169009d1ad008ea8e4f66005ce9cfc", null ],
+    [ "app_message_outbox_size_maximum", "group___app_message.html#gaa8161491da4b16dde64be8754cfde815", null ],
+    [ "app_message_register_inbox_dropped", "group___app_message.html#gad15eeddef5ffa5ea0185eb734c0fbe9d", null ],
+    [ "app_message_register_inbox_received", "group___app_message.html#ga9ab844c63d926f0e8f708a171b3838d3", null ],
+    [ "app_message_register_outbox_failed", "group___app_message.html#ga73c134254ff2b17d3c57c7d019e79323", null ],
+    [ "app_message_register_outbox_sent", "group___app_message.html#gae7cbb364b6e932c4bfd1ae89ecca87f9", null ],
+    [ "app_message_set_context", "group___app_message.html#gab6d67168d6bed587d5e0c92cd3a54ba6", null ],
+    [ "AppMessageInboxDropped", "group___app_message.html#gaebc89fb84b4199c8eb5c4a07112f1867", null ],
+    [ "AppMessageInboxReceived", "group___app_message.html#ga96afe3dc428a27239758f73b3cb84d9c", null ],
+    [ "AppMessageOutboxFailed", "group___app_message.html#gab360cbc2497e5f2bbfe2aa137a646c6a", null ],
+    [ "AppMessageOutboxSent", "group___app_message.html#ga3b8cde26c0744516c8acca1b3a3638af", null ],
+    [ "AppMessageResult", "group___app_message.html#ga695a78c926b20edbb14d7faf5a78c29e", [
+      [ "APP_MSG_OK", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea12a6ea49b151222e76cf4b99b7c0c4cc", null ],
+      [ "APP_MSG_SEND_TIMEOUT", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea4a03bcc21fc33a6acc7d73188b2b4b21", null ],
+      [ "APP_MSG_SEND_REJECTED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eadba700a7db67d4238d24e7379b69fba3", null ],
+      [ "APP_MSG_NOT_CONNECTED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea8dda18d5302ef6b07aa83985e91b54b7", null ],
+      [ "APP_MSG_APP_NOT_RUNNING", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea38e78da25eed665c85368df213ed8088", null ],
+      [ "APP_MSG_INVALID_ARGS", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eadfb91bdd9c369cc2eb00e019b4cf3846", null ],
+      [ "APP_MSG_BUSY", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaad6af2baa488efedd56b17f0ed1e8339", null ],
+      [ "APP_MSG_BUFFER_OVERFLOW", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaf2eb603be26c295d0a16433564a72598", null ],
+      [ "APP_MSG_ALREADY_RELEASED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea9ea88c5f059e1aee4010fee576d766bd", null ],
+      [ "APP_MSG_CALLBACK_ALREADY_REGISTERED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ea1655968e4f04aa0b357acc4605dcff64", null ],
+      [ "APP_MSG_CALLBACK_NOT_REGISTERED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaf423093b0f84bca4495e227bdcd207bd", null ],
+      [ "APP_MSG_OUT_OF_MEMORY", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29ead1cce21da2d8b46e305f9550a7384238", null ],
+      [ "APP_MSG_CLOSED", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eab8679d62177c2bce72ab899c0cf3353a", null ],
+      [ "APP_MSG_INTERNAL_ERROR", "group___app_message.html#gga695a78c926b20edbb14d7faf5a78c29eaa965e9ce0375fcc796fddaf12e319ee4", null ]
+    ] ],
+    [ "APP_MESSAGE_INBOX_SIZE_MINIMUM", "group___app_message.html#ga8a213339bca4388cf17c3f4c4b2e11fd", null ],
+    [ "APP_MESSAGE_OUTBOX_SIZE_MINIMUM", "group___app_message.html#ga6fe648fbe225cda63583342bb2305187", null ]
+];
