@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleIdentifier</key>
-  <string>pebble-sdk-2.0</string>
+  <string>pebble-sdk-2.0.2</string>
   <key>CFBundleName</key>
   <string>Pebble</string>
   <key>DocSetPlatformFamily</key>
