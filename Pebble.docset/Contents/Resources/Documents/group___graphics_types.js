@@ -1,6 +1,7 @@
 var group___graphics_types =
 [
     [ "gbitmap_create_as_sub_bitmap", "group___graphics_types.html#ga5d86515990747e47a76c0a16ed6b2850", null ],
+    [ "gbitmap_create_blank", "group___graphics_types.html#gaf9265d531bb149b22875962a5a5fe068", null ],
     [ "gbitmap_create_with_data", "group___graphics_types.html#ga0c01fd1816c6c0fde05310141f293cc5", null ],
     [ "gbitmap_create_with_resource", "group___graphics_types.html#gae1c7c90641f5138b5f36f9334d52085a", null ],
     [ "gbitmap_destroy", "group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92", null ],

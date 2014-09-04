@@ -2,6 +2,7 @@ var group___clicks =
 [
     [ "click_number_of_clicks_counted", "group___clicks.html#ga915cc99892dba2548494a9cc2b104dd7", null ],
     [ "click_recognizer_get_button_id", "group___clicks.html#ga373020cf179b975eb53636154a9c6ce5", null ],
+    [ "click_recognizer_is_repeating", "group___clicks.html#gae9b3816aa6c1a9ebbc77ad621284b5b6", null ],
     [ "ClickConfigProvider", "group___clicks.html#ga9e12024e5769c1a76644a8cfd8288aff", null ],
     [ "ClickHandler", "group___clicks.html#ga8a973b4663a5171db84223d6ae79f28d", null ],
     [ "ClickRecognizerRef", "group___clicks.html#gab0f235645c2d1eb7b622542b59706085", null ],

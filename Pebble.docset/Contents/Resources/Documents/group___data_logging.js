@@ -9,6 +9,7 @@ var group___data_logging =
       [ "DATA_LOGGING_INT", "group___data_logging.html#gga35a7aa37609a9aebb3ad316e77cb716da545b43678a162cc7e54a95de503fa184", null ]
     ] ],
     [ "DataLoggingResult", "group___data_logging.html#gaddc3b8874990b538c7fe17b019ace38f", [
+      [ "DATA_LOGGING_SUCCESS", "group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fa3b84913c135ef19b14498d42b50daa88", null ],
       [ "DATA_LOGGING_BUSY", "group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fa920b5048b86670c159a1be628113434c", null ],
       [ "DATA_LOGGING_FULL", "group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fafeea64638c2370bbbaab20722aac9fa8", null ],
       [ "DATA_LOGGING_NOT_FOUND", "group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fa6b1d5cd4697ac475efab2d6e00b97a80", null ],

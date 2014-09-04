@@ -3,6 +3,7 @@ var group___window =
     [ "NumberWindow", "group___number_window.html", "group___number_window" ],
     [ "window_create", "group___window.html#gad97e085cc35ca1f5a6f713918089374c", null ],
     [ "window_destroy", "group___window.html#ga820c1ac9478c640ee5c43ec79c70ce47", null ],
+    [ "window_get_click_config_context", "group___window.html#ga5be1adcc8915381d97b9b268d089d496", null ],
     [ "window_get_click_config_provider", "group___window.html#ga22519bc087f0779705c5981eff3e030f", null ],
     [ "window_get_fullscreen", "group___window.html#ga5a1b10a9d3b59950d6c3f6f6574d4c1e", null ],
     [ "window_get_root_layer", "group___window.html#ga8a0233aa7927ebc51a0b2d8708f52fe0", null ],

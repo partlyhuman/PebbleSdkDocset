@@ -16,10 +16,12 @@ var group___menu_layer =
     [ "menu_layer_set_selected_next", "group___menu_layer.html#ga27d5ac45541dd3b0ad9f1f0adb25720a", null ],
     [ "MenuLayerDrawHeaderCallback", "group___menu_layer.html#ga4dbe0980dc6d9fe2b49b778a067d6314", null ],
     [ "MenuLayerDrawRowCallback", "group___menu_layer.html#gaf48db275951d825c381a5cd4bf402562", null ],
+    [ "MenuLayerDrawSeparatorCallback", "group___menu_layer.html#ga454d5ffbec2a3db30909424a2f17f689", null ],
     [ "MenuLayerGetCellHeightCallback", "group___menu_layer.html#ga887d990a7c3f3bcbaf52b95b5e0b5523", null ],
     [ "MenuLayerGetHeaderHeightCallback", "group___menu_layer.html#ga0d55e9aa2b85e71fe5f9b048ac6fb7aa", null ],
     [ "MenuLayerGetNumberOfRowsInSectionsCallback", "group___menu_layer.html#ga1fc43ba267ee6e19523f8ed228330041", null ],
     [ "MenuLayerGetNumberOfSectionsCallback", "group___menu_layer.html#ga947fe18e7aef373c0478d84081f997f2", null ],
+    [ "MenuLayerGetSeparatorHeightCallback", "group___menu_layer.html#ga05b16cef2dd97e9fb3333cde300c80c1", null ],
     [ "MenuLayerSelectCallback", "group___menu_layer.html#ga69a890004b0232f08f7b83dda6cb1878", null ],
     [ "MenuLayerSelectionChangedCallback", "group___menu_layer.html#ga4cc9ec01c64cdacec243b5316b467ba9", null ],
     [ "MenuRowAlign", "group___menu_layer.html#ga3da7ef671ff0f18d110d0af8be996a01", [
