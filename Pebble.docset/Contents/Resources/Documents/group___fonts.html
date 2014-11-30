@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___fonts.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,9 +116,9 @@ $(document).ready(function(){initNavTree('group___fonts.html','');});
 <p>Custom and system fonts. </p>
 <p>Pebble OS provides you with a wide range of system fonts that you can use when you need to display and render text or numbers in your Pebble watchface or watchapp.</p>
 <p>If you want to use a system font, you call <a class="el" href="group___fonts.html#ga8d05ec62a2e79c75b2938c2e2d6ba70a" title="Loads a system font corresponding to the specified font key. ">fonts_get_system_font()</a> and simply pass it the name of the system font you want.</p>
-<p>To use a custom font, call <a class="el" href="group___fonts.html#gaaa9347b6ab667256ced7c3c06e780bc6" title="Loads a custom font. ">fonts_load_custom_font()</a>. The sample code feature_custom_font shows how you can do this programmatically, using a font resource to convert a TrueType font into a rasterized version of that font at a specified font size.</p>
+<p>To use a custom font, call <a class="el" href="group___fonts.html#gaaf4a526b0bbe417959eb7935b89a5f56" title="Loads a custom font. ">fonts_load_custom_font()</a>. The sample code feature_custom_font shows how you can do this programmatically, using a font resource to convert a TrueType font into a rasterized version of that font at a specified font size.</p>
 <p>For example:</p>
-<div class="fragment"><div class="line"><a class="code" href="group___fonts.html#ga49c1c67f30e577eb50ab54cd5526cb7a" title="Pointer to opaque font data structure. ">GFont</a> custom_font = <a class="code" href="group___fonts.html#gaaa9347b6ab667256ced7c3c06e780bc6" title="Loads a custom font. ">fonts_load_custom_font</a></div>
+<div class="fragment"><div class="line"><a class="code" href="group___fonts.html#ga49c1c67f30e577eb50ab54cd5526cb7a" title="Pointer to opaque font data structure. ">GFont</a> custom_font = <a class="code" href="group___fonts.html#gaaf4a526b0bbe417959eb7935b89a5f56" title="Loads a custom font. ">fonts_load_custom_font</a></div>
 <div class="line">   (<a class="code" href="group___resources.html#ga3f32b97d857618e5772f72d8e2dbc566" title="Gets the resource handle for a file identifier. ">resource_get_handle</a>(RESOURCE_ID_FONT_OSP_DIN_44));</div>
 </div><!-- fragment --><p>Raster Gothic Condensed is the font used throughout the Pebble system, largely because it is optimized for monochromatic displays. Pebble selected this font because it allows a relatively large number of characters to be displayed on a single line, also because the font has an excellent readability vs. size ratio.</p>
 <p>Refer to the chapter<a href="http://developer.getpebble.com/2/guides/managing-resources.html">Managing App Resources in Pebble Developer Guide</a>
@@ -157,15 +157,15 @@ $(document).ready(function(){initNavTree('group___fonts.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gaaa9347b6ab667256ced7c3c06e780bc6"></a>
+<a class="anchor" id="gaaf4a526b0bbe417959eb7935b89a5f56"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="group___fonts.html#ga49c1c67f30e577eb50ab54cd5526cb7a">GFont</a> fonts_load_custom_font </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group___resources.html#gaa5af85cf2f1c0751f61427fb3c78349c">ResHandle</a>&#160;</td>
-          <td class="paramname"><em>resource</em>)</td><td></td>
+          <td class="paramtype"><a class="el" href="group___resources.html#gabc5102ad91f29ffca2b77dce7caa8664">ResHandle</a>&#160;</td>
+          <td class="paramname"><em>handle</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('group___fonts.html','');});
 </div><div class="memdoc">
 
 <p>Pointer to opaque font data structure. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___fonts.html#gaaa9347b6ab667256ced7c3c06e780bc6">fonts_load_custom_font()</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___fonts.html#gaaf4a526b0bbe417959eb7935b89a5f56">fonts_load_custom_font()</a> </dd>
 <dd>
 <a class="el" href="group___text_layer.html#gadb8ccc8f9a14ab4a2386f6ccac8de0f1">text_layer_set_font()</a> </dd>
 <dd>
@@ -236,7 +236,7 @@ $(document).ready(function(){initNavTree('group___fonts.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

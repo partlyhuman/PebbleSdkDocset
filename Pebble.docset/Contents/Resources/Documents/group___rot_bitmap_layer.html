@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,6 +113,11 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Layer that displays a rotated bitmap image. </p>
+<p>A RotBitmapLayer is like a <a class="el" href="group___bitmap_layer.html">BitmapLayer</a> but has the ability to be rotated (by default, around its center). The amount of rotation is specified using <a class="el" href="group___rot_bitmap_layer.html#ga0aa9e535226e88bad75410ce177c27af">rot_bitmap_layer_set_angle()</a> or <a class="el" href="group___rot_bitmap_layer.html#ga1392050689ca39d86949c8b4744ddaa2">rot_bitmap_layer_increment_angle()</a>. The rotation argument to those functions is specified as an amount of clockwise rotation, where the value 0x10000 represents a full 360 degree rotation and 0 represent no rotation, and it scales linearly between those values, just like <a class="el" href="group___math.html#gad373193b20c68af1004a9dc2c35c2e48">sin_lookup</a>.</p>
+<p>The center of rotation in the source bitmap is always placed at the center of the RotBitmapLayer and the size of the RotBitmapLayer is automatically calculated so that the entire Bitmap can fit in at all rotation angles.</p>
+<p>For example, if the image is 10px wide and high, the RotBitmapLayer will be 14px wide ( sqrt(10^2+10^2) ).</p>
+<p>By default, the center of rotation in the source bitmap is the center of the bitmap but you can call <a class="el" href="group___rot_bitmap_layer.html#ga455a2e9f47703fe44a1054ff02396162">rot_bitmap_set_src_ic()</a> to change the center of rotation. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga8813c8dda16b21688de6492540b8c69e"></a>
 <div class="memitem">
@@ -127,11 +132,49 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a new RotBitmapLayer on the heap and initializes it with the default values: </p>
+<ul>
+<li>Angle: 0</li>
+<li>Compositing mode: <a class="el" href="group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa3d668fac5e660241746c082d7155e059">GCompOpAssign</a></li>
+<li>Corner clip color: <a class="el" href="group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a6891120e8a7f64c1df5e04145e395c68">GColorClear</a></li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The bitmap to display in this RotBitmapLayer </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the RotBitmapLayer. <code>NULL</code> if the RotBitmapLayer could not be created </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaab3e652ddced9c86daf6182d17fb727e"></a>
+<a class="anchor" id="ga8b3b96d607c07aa1a64a0bf6c78f5bf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rot_bitmap_layer_destroy </td>
+          <td>(</td>
+          <td class="paramtype">RotBitmapLayer *&#160;</td>
+          <td class="paramname"><em>bitmap</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroys a RotBitmapLayer and frees all associated memory. </p>
+<dl class="section note"><dt>Note</dt><dd>It is the developer responsibility to free the <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer to destroy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1392050689ca39d86949c8b4744ddaa2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -139,7 +182,7 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
           <td class="memname">void rot_bitmap_layer_increment_angle </td>
           <td>(</td>
           <td class="paramtype">RotBitmapLayer *&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
+          <td class="paramname"><em>bitmap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -155,11 +198,18 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>changes the rotation by the given amount </p>
+<p>Change the rotation angle of this RotBitmapLayer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer on which to change the rotation </td></tr>
+    <tr><td class="paramname">angle_change</td><td>The rotation angle change </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="gafbe4c88b8f02eead61551d93af9da156"></a>
+<a class="anchor" id="ga0aa9e535226e88bad75410ce177c27af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -167,7 +217,7 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
           <td class="memname">void rot_bitmap_layer_set_angle </td>
           <td>(</td>
           <td class="paramtype">RotBitmapLayer *&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
+          <td class="paramname"><em>bitmap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -183,7 +233,123 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>sets rotation to the given angle </p>
+<p>Sets the rotation angle of this RotBitmapLayer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer on which to change the rotation </td></tr>
+    <tr><td class="paramname">angle</td><td>Rotation is an integer between 0 (no rotation) and 0x10000 (360 degree rotation).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___math.html#gad373193b20c68af1004a9dc2c35c2e48" title="Look-up the sine of the given angle from a pre-computed table. ">sin_lookup()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga05bb6f3e05c774b3e20b8ff4d1068d67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rot_bitmap_layer_set_corner_clip_color </td>
+          <td>(</td>
+          <td class="paramtype">RotBitmapLayer *&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___graphics_types.html#gaafde3cb660d99f7fe83e40c86e67b6c4">GColor</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines what color to use in areas that are not covered by the source bitmap. By default this is <a class="el" href="group___graphics_types.html#ggaafde3cb660d99f7fe83e40c86e67b6c4a6891120e8a7f64c1df5e04145e395c68">GColorClear</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer on which to change the corner clip color </td></tr>
+    <tr><td class="paramname">color</td><td>The corner clip color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5ddf5cbe3499a3ee5487e82d5d5659d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rot_bitmap_set_compositing_mode </td>
+          <td>(</td>
+          <td class="paramtype">RotBitmapLayer *&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___graphics_types.html#ga0d021422bd90a2a49e6c8d848e6d556f">GCompOp</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the compositing mode of how the bitmap image is composited onto what has been drawn beneath the RotBitmapLayer. By default this is <a class="el" href="group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa3d668fac5e660241746c082d7155e059">GCompOpAssign</a>. The RotBitmapLayer is automatically marked dirty after this operation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer on which to change the rotation </td></tr>
+    <tr><td class="paramname">mode</td><td>The compositing mode to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___graphics_types.html#ga0d021422bd90a2a49e6c8d848e6d556f">GCompOp</a> for visual examples of the different compositing modes. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga455a2e9f47703fe44a1054ff02396162"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rot_bitmap_set_src_ic </td>
+          <td>(</td>
+          <td class="paramtype">RotBitmapLayer *&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___graphics_types.html#struct_g_point">GPoint</a>&#160;</td>
+          <td class="paramname"><em>ic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the only point that will not be affected by the rotation in the source bitmap. </p>
+<p>For example, if you pass <a class="el" href="group___graphics_types.html#gabf9cee451faac8ad07157b775b951699" title="Convenience macro to make a GPoint. ">GPoint(0, 0)</a>, the image will rotate around the top-left corner.</p>
+<p>This point is always projected at the center of the RotBitmapLayer. Calling this function automatically adjusts the width and height of the RotBitmapLayer so that the entire bitmap can fit inside the layer at all rotation angles.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>The RotBitmapLayer on which to change the rotation </td></tr>
+    <tr><td class="paramname">ic</td><td>The only point in the original image that will not be affected by the rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -193,7 +359,7 @@ $(document).ready(function(){initNavTree('group___rot_bitmap_layer.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

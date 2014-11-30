@@ -17,5 +17,6 @@ var searchData=
   ['menu_5flayer_5fset_5fcallbacks',['menu_layer_set_callbacks',['../group___menu_layer.html#ga859926c731b20da448f1d4413cbb96d4',1,'pebble.h']]],
   ['menu_5flayer_5fset_5fclick_5fconfig_5fonto_5fwindow',['menu_layer_set_click_config_onto_window',['../group___menu_layer.html#gac3847f5a2bd8f09f5966920c5469965a',1,'pebble.h']]],
   ['menu_5flayer_5fset_5fselected_5findex',['menu_layer_set_selected_index',['../group___menu_layer.html#ga7ddd82cbbc7fa6b479b35ba0dfb04562',1,'pebble.h']]],
-  ['menu_5flayer_5fset_5fselected_5fnext',['menu_layer_set_selected_next',['../group___menu_layer.html#ga27d5ac45541dd3b0ad9f1f0adb25720a',1,'pebble.h']]]
+  ['menu_5flayer_5fset_5fselected_5fnext',['menu_layer_set_selected_next',['../group___menu_layer.html#ga27d5ac45541dd3b0ad9f1f0adb25720a',1,'pebble.h']]],
+  ['mktime',['mktime',['../group___standard_time.html#gae114b9ba0fce4e2d6297e0e66768bb75',1,'common.dox']]]
 ];

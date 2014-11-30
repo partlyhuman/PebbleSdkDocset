@@ -1,9 +1,12 @@
 var searchData=
 [
+  ['magnetic_5fheading',['magnetic_heading',['../group___compass_service.html#ac2e476c83c6946877eedb0b471ff9cff',1,'CompassHeadingData']]],
+  ['major',['major',['../group___watch_info.html#a1e7b5ff37561b37e7defc5d9925dca2f',1,'WatchInfoVersion']]],
   ['malloc',['malloc',['../group___standard_memory.html#ga9c36d0fe3ec4675cbffdc9b52f5fb399',1,'common.dox']]],
   ['math',['Math',['../group___math.html',1,'']]],
   ['memcpy',['memcpy',['../group___standard_memory.html#gaba088e716bccbc96d42da97e96316df1',1,'common.dox']]],
   ['memmove',['memmove',['../group___standard_memory.html#ga340d11725e5c81a874f508fbcdf1c5ef',1,'common.dox']]],
+  ['memory_20management',['Memory Management',['../group___memory_management.html',1,'']]],
   ['memset',['memset',['../group___standard_memory.html#ga1dfdc55c5334154353963674598faf1b',1,'common.dox']]],
   ['menu_5fcell_5fbasic_5fdraw',['menu_cell_basic_draw',['../group___menu_layer.html#ga449640c52b9c269a0a5b8ce931d736e2',1,'pebble.h']]],
   ['menu_5fcell_5fbasic_5fheader_5fdraw',['menu_cell_basic_header_draw',['../group___menu_layer.html#ga4c5a3ee444809867a98960e0e2a18f36',1,'pebble.h']]],
@@ -20,7 +23,7 @@ var searchData=
   ['menu_5flayer_5fset_5fclick_5fconfig_5fonto_5fwindow',['menu_layer_set_click_config_onto_window',['../group___menu_layer.html#gac3847f5a2bd8f09f5966920c5469965a',1,'pebble.h']]],
   ['menu_5flayer_5fset_5fselected_5findex',['menu_layer_set_selected_index',['../group___menu_layer.html#ga7ddd82cbbc7fa6b479b35ba0dfb04562',1,'pebble.h']]],
   ['menu_5flayer_5fset_5fselected_5fnext',['menu_layer_set_selected_next',['../group___menu_layer.html#ga27d5ac45541dd3b0ad9f1f0adb25720a',1,'pebble.h']]],
-  ['menuindex',['MenuIndex',['../group___menu_layer.html#struct_menu_index',1,'']]],
+  ['menuindex',['MenuIndex',['../group___menu_layer.html#struct_menu_index',1,'MenuIndex'],['../group___menu_layer.html#gaff3bd0a7f805bf8e5eb8d181b5e2ce97',1,'MenuIndex():&#160;pebble.h']]],
   ['menulayer',['MenuLayer',['../group___menu_layer.html',1,'']]],
   ['menulayercallbacks',['MenuLayerCallbacks',['../group___menu_layer.html#struct_menu_layer_callbacks',1,'']]],
   ['menulayerdrawheadercallback',['MenuLayerDrawHeaderCallback',['../group___menu_layer.html#ga4dbe0980dc6d9fe2b49b778a067d6314',1,'pebble.h']]],
@@ -38,8 +41,11 @@ var searchData=
   ['menurowaligncenter',['MenuRowAlignCenter',['../group___menu_layer.html#gga3da7ef671ff0f18d110d0af8be996a01a7b6fa7a3d6779023b4e2139c1983127b',1,'pebble.h']]],
   ['menurowalignnone',['MenuRowAlignNone',['../group___menu_layer.html#gga3da7ef671ff0f18d110d0af8be996a01a963c2030ecc4f04f306be3418bd5bdd4',1,'pebble.h']]],
   ['menurowaligntop',['MenuRowAlignTop',['../group___menu_layer.html#gga3da7ef671ff0f18d110d0af8be996a01a4ef62b89a6b9d6a32ced134e78f17c3e',1,'pebble.h']]],
-  ['minute_5funit',['MINUTE_UNIT',['../group___wall_time.html#gga0423d00e0eb199de523a92031b5a1107af135dc6b67dce70c7b4b961605aa6970',1,'pebble.h']]],
-  ['month_5funit',['MONTH_UNIT',['../group___wall_time.html#gga0423d00e0eb199de523a92031b5a1107ac5c028cac926fb83169e7b43fa089b16',1,'pebble.h']]],
+  ['minor',['minor',['../group___watch_info.html#a12ded59fd8f84d4c86b0a5cb6f91b08c',1,'WatchInfoVersion']]],
+  ['minute_5funit',['MINUTE_UNIT',['../group___tick_timer_service.html#gga0423d00e0eb199de523a92031b5a1107af135dc6b67dce70c7b4b961605aa6970',1,'pebble.h']]],
+  ['mktime',['mktime',['../group___standard_time.html#gae114b9ba0fce4e2d6297e0e66768bb75',1,'common.dox']]],
+  ['monday',['MONDAY',['../group___wall_time.html#gga38e35eaba0dce3be153ec798fb175de5ac82db3248a96794aaefb922ea5fb293c',1,'pebble.h']]],
+  ['month_5funit',['MONTH_UNIT',['../group___tick_timer_service.html#gga0423d00e0eb199de523a92031b5a1107ac5c028cac926fb83169e7b43fa089b16',1,'pebble.h']]],
   ['math',['Math',['../group___standard_math.html',1,'']]],
   ['memory',['Memory',['../group___standard_memory.html',1,'']]]
 ];

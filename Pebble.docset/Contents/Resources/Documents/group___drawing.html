@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___drawing.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,6 +124,33 @@ $(document).ready(function(){initNavTree('group___drawing.html','');});
 <li><a class="el" href="group___graphics_types.html">Graphics Types</a> </li>
 </ul>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga8754945b07f6cb168a8acb6ab1aa07aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>* graphics_capture_frame_buffer </td>
+          <td>(</td>
+          <td class="paramtype">GContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Captures the frame buffer for direct access. Graphics functions will not affect the frame buffer while it is captured. The frame buffer is released when <a class="el" href="group___drawing.html#gace6f55055dfa5fa46572730653e1a544">graphics_release_frame_buffer</a> is called. The frame buffer must be released before the end of a layer's <code>.update_proc</code> for the layer to be drawn properly. </p>
+<p>While the frame buffer is captured calling <a class="el" href="group___drawing.html#ga8754945b07f6cb168a8acb6ab1aa07aa">graphics_capture_frame_buffer</a> will fail and return <code>NULL</code>. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>The graphics context providing the frame buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the frame buffer. <code>NULL</code> if failed. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ga2df0bc47f542ea60500d3070670725f9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -458,6 +485,68 @@ GContext </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="gaa568fc54d4dfbdab18e5b8b26744f5ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool graphics_frame_buffer_is_captured </td>
+          <td>(</td>
+          <td class="paramtype">GContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not the frame buffer has been captured by <a class="el" href="group___drawing.html#ga8754945b07f6cb168a8acb6ab1aa07aa">graphics_capture_frame_buffer</a>. Graphics functions will not affect the frame buffer until it has been released by <a class="el" href="group___drawing.html#gace6f55055dfa5fa46572730653e1a544">graphics_release_frame_buffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>The graphics context providing the frame buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the frame buffer has been captured </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gace6f55055dfa5fa46572730653e1a544"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool graphics_release_frame_buffer </td>
+          <td>(</td>
+          <td class="paramtype">GContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Releases the frame buffer. Must be called before the end of a layer's <code>.update_proc</code> for the layer to be drawn properly. </p>
+<p>If <code>buffer</code> does not point to the address previously returned by <a class="el" href="group___drawing.html#ga8754945b07f6cb168a8acb6ab1aa07aa">graphics_capture_frame_buffer</a> the frame buffer will not be released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>The graphics context providing the frame buffer </td></tr>
+    <tr><td class="paramname">buffer</td><td>The pointer to frame buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the frame buffer was released successfully </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="gae0e0ea29942e8ae8fe4a7201adbd1b72"></a>
 <div class="memitem">
@@ -511,7 +600,7 @@ GContext </dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

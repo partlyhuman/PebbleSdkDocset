@@ -1,5 +1,6 @@
 var group___drawing =
 [
+    [ "graphics_capture_frame_buffer", "group___drawing.html#ga8754945b07f6cb168a8acb6ab1aa07aa", null ],
     [ "graphics_draw_bitmap_in_rect", "group___drawing.html#ga2df0bc47f542ea60500d3070670725f9", null ],
     [ "graphics_draw_circle", "group___drawing.html#ga6356bbba09f4ebf3b79d34af93ef5321", null ],
     [ "graphics_draw_line", "group___drawing.html#gaa5477f3debdc11b018b30cd53e3505c3", null ],
@@ -8,6 +9,8 @@ var group___drawing =
     [ "graphics_draw_round_rect", "group___drawing.html#ga67acca83492c185b640d8cccb44c7ab5", null ],
     [ "graphics_fill_circle", "group___drawing.html#gac8ade795e8d0845cdb80709d2984b31f", null ],
     [ "graphics_fill_rect", "group___drawing.html#ga8c9b95e1c9fc0ce82107b95b8b804822", null ],
+    [ "graphics_frame_buffer_is_captured", "group___drawing.html#gaa568fc54d4dfbdab18e5b8b26744f5ff", null ],
+    [ "graphics_release_frame_buffer", "group___drawing.html#gace6f55055dfa5fa46572730653e1a544", null ],
     [ "GCornerMask", "group___drawing.html#gae0e0ea29942e8ae8fe4a7201adbd1b72", [
       [ "GCornerNone", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72a30ccebd81d739451a4c2e1ded1e5955e", null ],
       [ "GCornerTopLeft", "group___drawing.html#ggae0e0ea29942e8ae8fe4a7201adbd1b72a2d0d781bafbe7bf5624483d7032356bb", null ],

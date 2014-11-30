@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Handling time components. </p>
-<p>The TickTimerService allows your app to be called every time one Time component has changed. This is extremely important for watchfaces. Your app can choose on which time component change a tick should occur. Time components are defined by the TimeUnits enum in pebble.h. </p>
+<p>The TickTimerService allows your app to be called every time one Time component has changed. This is extremely important for watchfaces. Your app can choose on which time component change a tick should occur. Time components are defined by a <a class="el" href="group___tick_timer_service.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a> enum bitmask. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga8b1ebbe9ca26a97b23af5610842bc892"></a>
 <div class="memitem">
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
         <tr>
           <td class="memname">void tick_timer_service_subscribe </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group___wall_time.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group___tick_timer_service.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a>&#160;</td>
           <td class="paramname"><em>tick_units</em>, </td>
         </tr>
         <tr>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handler</td><td>The callback to be executed on tick events </td></tr>
-    <tr><td class="paramname">tick_units</td><td>the unit change we want to handle (seconds, minutes, hours) </td></tr>
+    <tr><td class="paramname">tick_units</td><td>a bitmask of all the units that have changed </td></tr>
   </table>
   </dd>
 </dl>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* TickHandler)(struct tm *tick_time, <a class="el" href="group___wall_time.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a> units_changed)</td>
+          <td class="memname">typedef void(* TickHandler)(struct tm *tick_time, <a class="el" href="group___tick_timer_service.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a> units_changed)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -191,13 +191,48 @@ $(document).ready(function(){initNavTree('group___tick_timer_service.html','');}
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga0423d00e0eb199de523a92031b5a1107"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___tick_timer_service.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time unit flags that can be used to create a bitmask for use in <a class="el" href="group___tick_timer_service.html#ga8b1ebbe9ca26a97b23af5610842bc892">tick_timer_service_subscribe()</a>. This will also be passed to <a class="el" href="group___tick_timer_service.html#gaa3777b83676624511fa63eea7fed2eaa">TickHandler</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107afd448b8fbcd39321d18aa41b62b308b9"></a>SECOND_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "seconds" time unit. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107af135dc6b67dce70c7b4b961605aa6970"></a>MINUTE_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "minutes" time unit. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107a7628af862ee9aa0b56cdfc1cea7e0f79"></a>HOUR_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "hours" time unit. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107af990f18a7186e6b386f36f2afa3c8038"></a>DAY_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "days" time unit. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107ac5c028cac926fb83169e7b43fa089b16"></a>MONTH_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "months" time unit. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107a652f00ea2c629930a32a684f9d8c876d"></a>YEAR_UNIT</em>&nbsp;</td><td class="fielddoc">
+<p>Flag to represent the "years" time unit. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

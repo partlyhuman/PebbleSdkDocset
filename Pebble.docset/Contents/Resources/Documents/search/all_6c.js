@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['launch_5freason',['launch_reason',['../group___launch_reason.html#ga1674ca6a6f48cb98b8762da667eadfc1',1,'pebble.h']]],
+  ['launch_20reason',['Launch Reason',['../group___launch_reason.html',1,'']]],
   ['layers',['Layers',['../group___layer.html',1,'']]],
   ['layer_5fadd_5fchild',['layer_add_child',['../group___layer.html#ga282c3ba9878e23bfa19033a9487fdac1',1,'pebble.h']]],
   ['layer_5fcreate',['layer_create',['../group___layer.html#gaa14dfd196c850be588b1ab30804690c0',1,'pebble.h']]],
@@ -27,5 +29,6 @@ var searchData=
   ['light_5fenable',['light_enable',['../group___light.html#ga0131a703964d49744f2da1fac234b9b1',1,'pebble.h']]],
   ['light_5fenable_5finteraction',['light_enable_interaction',['../group___light.html#ga7074135af850ea753dc5a98378bca122',1,'pebble.h']]],
   ['localtime',['localtime',['../group___standard_time.html#ga9e465efe7436775f41dd94e5e14a97d4',1,'common.dox']]],
-  ['logging',['Logging',['../group___logging.html',1,'']]]
+  ['logging',['Logging',['../group___logging.html',1,'']]],
+  ['locale',['Locale',['../group___standard_locale.html',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['launch_5freason',['launch_reason',['../group___launch_reason.html#ga1674ca6a6f48cb98b8762da667eadfc1',1,'pebble.h']]],
   ['layer_5fadd_5fchild',['layer_add_child',['../group___layer.html#ga282c3ba9878e23bfa19033a9487fdac1',1,'pebble.h']]],
   ['layer_5fcreate',['layer_create',['../group___layer.html#gaa14dfd196c850be588b1ab30804690c0',1,'pebble.h']]],
   ['layer_5fcreate_5fwith_5fdata',['layer_create_with_data',['../group___layer.html#ga5bf50fa0daaf1e3c8ded4bc15d25f199',1,'pebble.h']]],

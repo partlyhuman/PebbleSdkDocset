@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -168,6 +168,42 @@ $(document).ready(function(){initNavTree('group___accelerometer_service.html',''
 </div><div class="memdoc">
 
 <p>Unsubscribe from the accelerometer data event service. Once unsubscribed, the previously registered handler will no longer be called. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1c540bcac7ed01ae54e81b9f4a95a00e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void accel_raw_data_service_subscribe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>samples_per_update</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___accelerometer_service.html#gacddf5d3c4e9abe13f07e24e6767dd67a">AccelRawDataHandler</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscribe to the accelerometer raw data event service. Once subscribed, the handler gets called every time there are new accelerometer samples available. </p>
+<dl class="section note"><dt>Note</dt><dd>Cannot use <a class="el" href="group___accelerometer_service.html#ga37034e29e7a951e647de1e3c5deb34b7">accel_service_peek()</a> when subscribed to accelerometer data events. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>A callback to be executed on accelerometer data events </td></tr>
+    <tr><td class="paramname">samples_per_update</td><td>the number of samples to buffer, between 0 and 25. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -336,6 +372,40 @@ acceleration along the z axis </td></tr>
 
 </div>
 </div>
+<a name="struct_accel_raw_data" id="struct_accel_raw_data"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct AccelRawData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>A single accelerometer sample for all three axes. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a918cd7be9f4ad84dca85d76e8e866259"></a>int16_t</td>
+<td class="fieldname">
+x</td>
+<td class="fielddoc">
+acceleration along the x axis </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad0b4192d713701f157945e1102d1355e"></a>int16_t</td>
+<td class="fieldname">
+y</td>
+<td class="fielddoc">
+acceleration along the y axis </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a15db790b41710b4d7781150f079ff538"></a>int16_t</td>
+<td class="fieldname">
+z</td>
+<td class="fielddoc">
+acceleration along the z axis </td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="ga60d51127c2333c2dcf1353af861815b8"></a>
 <div class="memitem">
@@ -352,6 +422,28 @@ acceleration along the z axis </td></tr>
   <table class="params">
     <tr><td class="paramname">data</td><td>Pointer to the collected accelerometer samples. </td></tr>
     <tr><td class="paramname">num_samples</td><td>the number of samples stored in data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gacddf5d3c4e9abe13f07e24e6767dd67a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* AccelRawDataHandler)(<a class="el" href="group___accelerometer_service.html#struct_accel_raw_data">AccelRawData</a> *data, <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> num_samples, uint64_t timestamp)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback type for accelerometer raw data events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Pointer to the collected accelerometer samples. </td></tr>
+    <tr><td class="paramname">num_samples</td><td>the number of samples stored in data. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>the timestamp, in ms, of the first sample. </td></tr>
   </table>
   </dd>
 </dl>
@@ -437,7 +529,7 @@ acceleration along the z axis </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

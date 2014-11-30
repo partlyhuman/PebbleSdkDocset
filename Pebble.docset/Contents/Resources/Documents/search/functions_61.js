@@ -2,6 +2,7 @@ var searchData=
 [
   ['accel_5fdata_5fservice_5fsubscribe',['accel_data_service_subscribe',['../group___accelerometer_service.html#ga59f64328a814994e9a17b0602d66c82f',1,'pebble.h']]],
   ['accel_5fdata_5fservice_5funsubscribe',['accel_data_service_unsubscribe',['../group___accelerometer_service.html#ga1a501e991a1ad6a21d379c4fef4b1304',1,'pebble.h']]],
+  ['accel_5fraw_5fdata_5fservice_5fsubscribe',['accel_raw_data_service_subscribe',['../group___accelerometer_service.html#ga1c540bcac7ed01ae54e81b9f4a95a00e',1,'pebble.h']]],
   ['accel_5fservice_5fpeek',['accel_service_peek',['../group___accelerometer_service.html#ga37034e29e7a951e647de1e3c5deb34b7',1,'pebble.h']]],
   ['accel_5fservice_5fset_5fsamples_5fper_5fupdate',['accel_service_set_samples_per_update',['../group___accelerometer_service.html#ga741c3716bd24f2b4b033bfee324bd9d6',1,'pebble.h']]],
   ['accel_5fservice_5fset_5fsampling_5frate',['accel_service_set_sampling_rate',['../group___accelerometer_service.html#gace3f4489893a103a08f81a7c3b8be765',1,'pebble.h']]],
@@ -23,6 +24,7 @@ var searchData=
   ['animation_5fis_5fscheduled',['animation_is_scheduled',['../group___animation.html#gaca86c4d04d970bf4b2bc8634b30303a8',1,'pebble.h']]],
   ['animation_5fschedule',['animation_schedule',['../group___animation.html#ga18ef7816aad966166afde79101716b6a',1,'pebble.h']]],
   ['animation_5fset_5fcurve',['animation_set_curve',['../group___animation.html#ga1426d30a2706b21ca1cb1b2c5337e108',1,'pebble.h']]],
+  ['animation_5fset_5fcustom_5fcurve',['animation_set_custom_curve',['../group___animation.html#ga7688dd41c0d5fd3dac26d59311238936',1,'pebble.h']]],
   ['animation_5fset_5fdelay',['animation_set_delay',['../group___animation.html#gaf02c5765dc2a0512325ede71bcfb9ca3',1,'pebble.h']]],
   ['animation_5fset_5fduration',['animation_set_duration',['../group___animation.html#ga85d8adba15d2257b4528d89413dec407',1,'pebble.h']]],
   ['animation_5fset_5fhandlers',['animation_set_handlers',['../group___animation.html#gac8a29a88a7dbbbe14e7dd89e8b7ac11e',1,'pebble.h']]],
@@ -54,5 +56,11 @@ var searchData=
   ['app_5ftimer_5fcancel',['app_timer_cancel',['../group___timer.html#ga00bc7ef3a57f2321c5f88e7820724825',1,'pebble.h']]],
   ['app_5ftimer_5fregister',['app_timer_register',['../group___timer.html#gac6c8b77f2d03fa1dc39eb60f5e88d5e0',1,'pebble.h']]],
   ['app_5ftimer_5freschedule',['app_timer_reschedule',['../group___timer.html#ga34584069c4304e375425549f13cad1e6',1,'pebble.h']]],
+  ['app_5fworker_5fis_5frunning',['app_worker_is_running',['../group___app_worker.html#ga6b92572431bb41d2e48144fec4929672',1,'pebble.h']]],
+  ['app_5fworker_5fkill',['app_worker_kill',['../group___app_worker.html#ga9a99c4ec6caf05627b53c49349f96e16',1,'pebble.h']]],
+  ['app_5fworker_5flaunch',['app_worker_launch',['../group___app_worker.html#ga84f6780cd67e429f9b569eee36862d9a',1,'pebble.h']]],
+  ['app_5fworker_5fmessage_5fsubscribe',['app_worker_message_subscribe',['../group___app_worker.html#gae93a0baab484dda8e75e3d5699fd7463',1,'pebble.h']]],
+  ['app_5fworker_5fmessage_5funsubscribe',['app_worker_message_unsubscribe',['../group___app_worker.html#gabdd29f332fcaf8785fa2c73cf55addf3',1,'pebble.h']]],
+  ['app_5fworker_5fsend_5fmessage',['app_worker_send_message',['../group___app_worker.html#gac1a4c6ddd568429bded6373d00559fe0',1,'pebble.h']]],
   ['atan2_5flookup',['atan2_lookup',['../group___math.html#gae01f6d5abe76070a07881337246cc4de',1,'pebble.h']]]
 ];

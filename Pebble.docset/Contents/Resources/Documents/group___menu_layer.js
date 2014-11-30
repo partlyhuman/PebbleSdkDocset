@@ -30,5 +30,6 @@ var group___menu_layer =
       [ "MenuRowAlignTop", "group___menu_layer.html#gga3da7ef671ff0f18d110d0af8be996a01a4ef62b89a6b9d6a32ced134e78f17c3e", null ],
       [ "MenuRowAlignBottom", "group___menu_layer.html#gga3da7ef671ff0f18d110d0af8be996a01a66489173f2e364b034a530b657242514", null ]
     ] ],
-    [ "MENU_CELL_BASIC_HEADER_HEIGHT", "group___menu_layer.html#ga8fda2baa3281c4a977fb77e7ae1bf05e", null ]
+    [ "MENU_CELL_BASIC_HEADER_HEIGHT", "group___menu_layer.html#ga8fda2baa3281c4a977fb77e7ae1bf05e", null ],
+    [ "MenuIndex", "group___menu_layer.html#gaff3bd0a7f805bf8e5eb8d181b5e2ce97", null ]
 ];

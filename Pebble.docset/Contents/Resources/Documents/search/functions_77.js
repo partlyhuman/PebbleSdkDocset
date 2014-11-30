@@ -1,5 +1,14 @@
 var searchData=
 [
+  ['wakeup_5fcancel',['wakeup_cancel',['../group___wakeup.html#gabbe54a1d30d2fc18694572961fd4e89f',1,'pebble.h']]],
+  ['wakeup_5fcancel_5fall',['wakeup_cancel_all',['../group___wakeup.html#ga1e6e5dd7843ce0a1c9f88593617fcf3a',1,'pebble.h']]],
+  ['wakeup_5fget_5flaunch_5fevent',['wakeup_get_launch_event',['../group___wakeup.html#ga4b39e11604da247e2ee7a9249d75169b',1,'pebble.h']]],
+  ['wakeup_5fquery',['wakeup_query',['../group___wakeup.html#ga20cedaca47991ed554ec624630e529a6',1,'pebble.h']]],
+  ['wakeup_5fschedule',['wakeup_schedule',['../group___wakeup.html#ga8c69fb46a7fdbc0a77fae0f6a2f9da5d',1,'pebble.h']]],
+  ['wakeup_5fservice_5fsubscribe',['wakeup_service_subscribe',['../group___wakeup.html#gaea67463087f97d88fd136525c8101f51',1,'pebble.h']]],
+  ['watch_5finfo_5fget_5fcolor',['watch_info_get_color',['../group___watch_info.html#ga4bfe71818e0aa532ffdc42f8f22642b2',1,'pebble.h']]],
+  ['watch_5finfo_5fget_5ffirmware_5fversion',['watch_info_get_firmware_version',['../group___watch_info.html#gaf99195f1204c3c6b646b6f1ccbd561bb',1,'pebble.h']]],
+  ['watch_5finfo_5fget_5fmodel',['watch_info_get_model',['../group___watch_info.html#gaae6bd337ed913660097b24fcf4ff8265',1,'pebble.h']]],
   ['window_5fcreate',['window_create',['../group___window.html#gad97e085cc35ca1f5a6f713918089374c',1,'pebble.h']]],
   ['window_5fdestroy',['window_destroy',['../group___window.html#ga820c1ac9478c640ee5c43ec79c70ce47',1,'pebble.h']]],
   ['window_5fget_5fclick_5fconfig_5fcontext',['window_get_click_config_context',['../group___window.html#ga5be1adcc8915381d97b9b268d089d496',1,'pebble.h']]],
@@ -26,5 +35,7 @@ var searchData=
   ['window_5fstack_5fpop',['window_stack_pop',['../group___window_stack.html#gaedab08317d26dca178a994563db77862',1,'pebble.h']]],
   ['window_5fstack_5fpop_5fall',['window_stack_pop_all',['../group___window_stack.html#gacfbb60a6addd140d2b94f659b8630306',1,'pebble.h']]],
   ['window_5fstack_5fpush',['window_stack_push',['../group___window_stack.html#gabc91655655af8fd71ac7c081f40d69b2',1,'pebble.h']]],
-  ['window_5fstack_5fremove',['window_stack_remove',['../group___window_stack.html#ga44a239d564b96ca93a149a29d89707d1',1,'pebble.h']]]
+  ['window_5fstack_5fremove',['window_stack_remove',['../group___window_stack.html#ga44a239d564b96ca93a149a29d89707d1',1,'pebble.h']]],
+  ['worker_5fevent_5floop',['worker_event_loop',['../group___worker.html#gaba624492af6173015c4923120fa47e35',1,'pebble_worker.h']]],
+  ['worker_5flaunch_5fapp',['worker_launch_app',['../group___worker.html#ga4ac41d61177b9b631a1a09f04eaf4b2c',1,'pebble_worker.h']]]
 ];

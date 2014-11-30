@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -166,8 +166,8 @@ $(document).ready(function(){initNavTree('group___dictionary.html','');});
 <p>To understand the difference between <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> and <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> data structures: <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> is the header for a serialized key/value pair, while <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> is a helper data structure that references the value you want to serialize. This data structure exists to make the creation of a Dictionary easier to write. Use this mnemonic to remember the difference: TupleT(emplate), the <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> being a template to create a Dictionary with <a class="el" href="group___dictionary.html#struct_tuple" title="Data structure for one serialized key/value tuple. ">Tuple</a> structures.</p>
 <p>For example: </p>
 <div class="fragment"><div class="line"><a class="code" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> pairs[] = {</div>
-<div class="line">  TupletInteger(WEATHER_ICON_KEY, (uint8_t) 1),</div>
-<div class="line">  TupletCString(WEATHER_TEMPERATURE_KEY, <span class="stringliteral">&quot;1234 Fahrenheit&quot;</span>),</div>
+<div class="line">  <a class="code" href="group___dictionary.html#ga152caed0a3d5db76c063b69a01157e57" title="Macro to create a Tuplet with an integer value. ">TupletInteger</a>(WEATHER_ICON_KEY, (uint8_t) 1),</div>
+<div class="line">  <a class="code" href="group___dictionary.html#ga6bc99ab1d451b29385733bb92f3c937a" title="Macro to create a Tuplet with a c-string value. ">TupletCString</a>(WEATHER_TEMPERATURE_KEY, <span class="stringliteral">&quot;1234 Fahrenheit&quot;</span>),</div>
 <div class="line">};</div>
 <div class="line">uint8_t buffer[256];</div>
 <div class="line"><a class="code" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1" title="32-bit unsigned integer number ">uint32_t</a> size = <span class="keyword">sizeof</span>(buffer);</div>
@@ -1348,13 +1348,126 @@ Width of the integer. </td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga8d30623394e3c7e368ea9403412e9c79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TupletBytes</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_key, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_length&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a>) { .type = <a class="el" href="group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670ad852031b350c69166303a05dbe294ec7">TUPLE_BYTE_ARRAY</a>, .key = _key, .bytes = { .data = _data, .length = _length }})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to create a <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> with a byte array value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_key</td><td>The key </td></tr>
+    <tr><td class="paramname">_data</td><td>Pointer to the bytes </td></tr>
+    <tr><td class="paramname">_length</td><td>Length of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6bc99ab1d451b29385733bb92f3c937a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TupletCString</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_key, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_cstring&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a>) { .type = <a class="el" href="group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670a73c9d3384801aec20d36c732d9218dab">TUPLE_CSTRING</a>, .key = _key, .cstring = { .data = _cstring, .length = _cstring ? <a class="el" href="group___standard_string.html#ga008e171a518fe0e0352f31b245e03875">strlen</a>(_cstring) + 1 : 0 }})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to create a <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> with a c-string value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_key</td><td>The key </td></tr>
+    <tr><td class="paramname">_cstring</td><td>The c-string value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga152caed0a3d5db76c063b69a01157e57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TupletInteger</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_key, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_integer&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((const <a class="el" href="group___dictionary.html#struct_tuplet">Tuplet</a>) { .type = IS_SIGNED(_integer) ? <a class="el" href="group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670ad691daf1df77095c1e19fe30b6cea5b4">TUPLE_INT</a> : <a class="el" href="group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670a6802e5d267fdda619ffb13fc80d873fe">TUPLE_UINT</a>, .key = _key, .integer = { .storage = _integer, .width = sizeof(_integer) }})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to create a <a class="el" href="group___dictionary.html#struct_tuplet" title="Non-serialized, template data structure for a key/value pair. For strings and byte arrays...">Tuplet</a> with an integer value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_key</td><td>The key </td></tr>
+    <tr><td class="paramname">_integer</td><td>The integer value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

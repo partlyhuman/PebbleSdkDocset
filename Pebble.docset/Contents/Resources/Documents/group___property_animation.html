@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,11 +122,11 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 <p>Please refer to<a href="http://developer.getpebble.com/2/guides/ui-framework.html">Building User Interfaces chapter in Pebble Developer Guide</a>
  (chapter "Property Animations") for a conceptual overview of the animation framework and make sure you understand the underlying <a class="el" href="group___animation.html">Animation</a>, in case you are not familiar with it, before trying to implement a variation on PropertyAnimation.</p>
 <p>To implement a custom property animation, use <a class="el" href="group___property_animation.html#gac677f4c22571feafcfe296eaa8041d74">property_animation_create()</a> and provide a function pointers to the accessors (getter and setter) and setup, update and teardown callbacks in the implementation argument. Note that the type of property to animate with <a class="el" href="group___property_animation.html">PropertyAnimation</a> is limited to int16_t, <a class="el" href="group___graphics_types.html#struct_g_point" title="Represents a point in a 2-dimensional coordinate system. ">GPoint</a> or <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a>.</p>
-<p>For each of these types, there are implementations provided for the necessary <code>.update</code> handler of the animation: see <a class="el" href="group___property_animation.html#gadec8f7f5b5ab004f4c4561dd6e336cdd">property_animation_update_int16()</a>, <a class="el" href="group___property_animation.html#ga9e678fa0e3a405355fa8426ca4013eca">property_animation_update_gpoint()</a> and <a class="el" href="group___property_animation.html#ga7e1c8517e0c7cf9ba43cd4b8667aab6a">property_animation_update_grect()</a>. These update functions expect the <code>.accessors</code> to conform to the following interface: Any getter needs to have the following function signature: <code>__type__ getter(void *subject);</code> Any setter needs to have to following function signature: <code>void setter(void *subject, __type__ value);</code> See <a class="el" href="group___property_animation.html#ga89f63a97d7bc1f842f3826005100ac8e">Int16Getter</a>, <a class="el" href="group___property_animation.html#gaa7ff134ddfbf52b7ea200414796640f2">Int16Setter</a>, <a class="el" href="group___property_animation.html#gabcdd675808366340d41299f71df74754">GPointGetter</a>, <a class="el" href="group___property_animation.html#gaef28b72d142fabb2986eb7ef2b6c66fe">GPointSetter</a>, <a class="el" href="group___property_animation.html#ga48bf0c1eecee160ebdc1a9d179fe1721">GRectGetter</a>, <a class="el" href="group___property_animation.html#ga49bec85f2eb8e7ce823789c528dc26c0">GRectSetter</a> for the typedefs that accompany the update fuctions.</p>
+<p>For each of these types, there are implementations provided for the necessary <code>.update</code> handler of the animation: see <a class="el" href="group___property_animation.html#ga897f74042c0364cf9d719c66ed5ef395">property_animation_update_int16()</a>, <a class="el" href="group___property_animation.html#ga86c228919e6e32435dff2c53cae71fa1">property_animation_update_gpoint()</a> and <a class="el" href="group___property_animation.html#ga14667b983522e86abdb8534abf301d5d">property_animation_update_grect()</a>. These update functions expect the <code>.accessors</code> to conform to the following interface: Any getter needs to have the following function signature: <code>__type__ getter(void *subject);</code> Any setter needs to have to following function signature: <code>void setter(void *subject, __type__ value);</code> See <a class="el" href="group___property_animation.html#ga89f63a97d7bc1f842f3826005100ac8e">Int16Getter</a>, <a class="el" href="group___property_animation.html#gaa7ff134ddfbf52b7ea200414796640f2">Int16Setter</a>, <a class="el" href="group___property_animation.html#gabcdd675808366340d41299f71df74754">GPointGetter</a>, <a class="el" href="group___property_animation.html#gaef28b72d142fabb2986eb7ef2b6c66fe">GPointSetter</a>, <a class="el" href="group___property_animation.html#ga48bf0c1eecee160ebdc1a9d179fe1721">GRectGetter</a>, <a class="el" href="group___property_animation.html#ga49bec85f2eb8e7ce823789c528dc26c0">GRectSetter</a> for the typedefs that accompany the update fuctions.</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group___property_animation.html#struct_property_animation_implementation" title="Data structure containing a collection of function pointers that form the implementation of the prope...">PropertyAnimationImplementation</a> my_implementation = {</div>
 <div class="line">  .<a class="code" href="group___property_animation.html#a4f8d0d4c92845fcc68bf491b6097d96d" title="The &quot;inherited&quot; fields from the Animation &quot;base class&quot;. ">base</a> = {</div>
 <div class="line">    <span class="comment">// using the &quot;stock&quot; update callback:</span></div>
-<div class="line">    .<a class="code" href="group___animation.html#a6eb3f553df358650fb53211fd3837506" title="Called by the animation system when the animation needs to calculate the next animation frame...">update</a> = (<a class="code" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a" title="Pointer to function that updates the animation according to the given normalized time. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. ">AnimationUpdateImplementation</a>) <a class="code" href="group___property_animation.html#ga9e678fa0e3a405355fa8426ca4013eca" title="Default update callback for a property animations to update a property of type GPoint. Assign this function to the .base.update callback field of your PropertyAnimationImplementation, in combination with a .getter and .setter accessors of types GPointGetter and GPointSetter. The implementation of this function will calculate the next point of the animation and call the setter to set the new point upon the subject. ">property_animation_update_gpoint</a>,</div>
+<div class="line">    .<a class="code" href="group___animation.html#a6eb3f553df358650fb53211fd3837506" title="Called by the animation system when the animation needs to calculate the next animation frame...">update</a> = (<a class="code" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62" title="Pointer to function that updates the animation according to the given normalized distance. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. ">AnimationUpdateImplementation</a>) <a class="code" href="group___property_animation.html#ga86c228919e6e32435dff2c53cae71fa1" title="Default update callback for a property animations to update a property of type GPoint. Assign this function to the .base.update callback field of your PropertyAnimationImplementation, in combination with a .getter and .setter accessors of types GPointGetter and GPointSetter. The implementation of this function will calculate the next point of the animation and call the setter to set the new point upon the subject. ">property_animation_update_gpoint</a>,</div>
 <div class="line">  },</div>
 <div class="line">  .accessors = {</div>
 <div class="line">    <span class="comment">// my accessors that get/set a GPoint from/onto my subject:</span></div>
@@ -226,10 +226,9 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 <p>Convenience function to create and initialize a property animation that animates the frame of a Layer. It sets up the PropertyAnimation to use <a class="el" href="group___layer.html#ga5a984a17781b97ce00ae34c437171934">layer_set_frame()</a> and <a class="el" href="group___layer.html#ga76ed01d3619150b87604ebaa9dc282b7">layer_get_frame()</a> as accessors and uses the <code>layer</code> parameter as the subject for the animation. The same defaults are used as with <a class="el" href="group___animation.html#gad56f9a1a4e8b25fa3ed99632c88b4dd9">animation_create()</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">property_animation</td><td>The property animation to initialize and set up </td></tr>
     <tr><td class="paramname">layer</td><td>the layer that will be animated </td></tr>
-    <tr><td class="paramname">to_frame</td><td>the frame that the layer should animate to </td></tr>
     <tr><td class="paramname">from_frame</td><td>the frame that the layer should animate from </td></tr>
+    <tr><td class="paramname">to_frame</td><td>the frame that the layer should animate to </td></tr>
   </table>
   </dd>
 </dl>
@@ -262,7 +261,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 
 </div>
 </div>
-<a class="anchor" id="ga9e678fa0e3a405355fa8426ca4013eca"></a>
+<a class="anchor" id="ga86c228919e6e32435dff2c53cae71fa1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -276,7 +275,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a>&#160;</td>
-          <td class="paramname"><em>time_normalized</em>&#160;</td>
+          <td class="paramname"><em>distance_normalized</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -290,7 +289,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">property_animation</td><td>The property animation for which the update is requested. </td></tr>
-    <tr><td class="paramname">time_normalized</td><td>The current normalized time. See <a class="el" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a">AnimationUpdateImplementation</a> </td></tr>
+    <tr><td class="paramname">distance_normalized</td><td>The current normalized distance. See <a class="el" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62">AnimationUpdateImplementation</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,7 +297,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 
 </div>
 </div>
-<a class="anchor" id="ga7e1c8517e0c7cf9ba43cd4b8667aab6a"></a>
+<a class="anchor" id="ga14667b983522e86abdb8534abf301d5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -312,7 +311,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a>&#160;</td>
-          <td class="paramname"><em>time_normalized</em>&#160;</td>
+          <td class="paramname"><em>distance_normalized</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -326,7 +325,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">property_animation</td><td>The property animation for which the update is requested. </td></tr>
-    <tr><td class="paramname">time_normalized</td><td>The current normalized time. See <a class="el" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a">AnimationUpdateImplementation</a> </td></tr>
+    <tr><td class="paramname">distance_normalized</td><td>The current normalized distance. See <a class="el" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62">AnimationUpdateImplementation</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,7 +333,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 
 </div>
 </div>
-<a class="anchor" id="gadec8f7f5b5ab004f4c4561dd6e336cdd"></a>
+<a class="anchor" id="ga897f74042c0364cf9d719c66ed5ef395"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -348,7 +347,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a>&#160;</td>
-          <td class="paramname"><em>time_normalized</em>&#160;</td>
+          <td class="paramname"><em>distance_normalized</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -362,7 +361,7 @@ $(document).ready(function(){initNavTree('group___property_animation.html','');}
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">property_animation</td><td>The property animation for which the update is requested. </td></tr>
-    <tr><td class="paramname">time_normalized</td><td>The current normalized time. See <a class="el" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a">AnimationUpdateImplementation</a> </td></tr>
+    <tr><td class="paramname">distance_normalized</td><td>The current normalized distance. See <a class="el" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62">AnimationUpdateImplementation</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -477,7 +476,7 @@ Valid when the property being animated is of type int16_t. </td></tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock"><p>Data structure containing the setter and getter function pointers that the property animation should use. The specified setter function will be used by the animation's update callback. <br/>
- Based on the type of the property (int16_t, <a class="el" href="group___graphics_types.html#struct_g_point" title="Represents a point in a 2-dimensional coordinate system. ">GPoint</a> or <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a>), the accompanying update callback should be used, see <a class="el" href="group___property_animation.html#gadec8f7f5b5ab004f4c4561dd6e336cdd">property_animation_update_int16()</a>, <a class="el" href="group___property_animation.html#ga9e678fa0e3a405355fa8426ca4013eca">property_animation_update_gpoint()</a> and <a class="el" href="group___property_animation.html#ga7e1c8517e0c7cf9ba43cd4b8667aab6a">property_animation_update_grect()</a>. <br/>
+ Based on the type of the property (int16_t, <a class="el" href="group___graphics_types.html#struct_g_point" title="Represents a point in a 2-dimensional coordinate system. ">GPoint</a> or <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a>), the accompanying update callback should be used, see <a class="el" href="group___property_animation.html#ga897f74042c0364cf9d719c66ed5ef395">property_animation_update_int16()</a>, <a class="el" href="group___property_animation.html#ga86c228919e6e32435dff2c53cae71fa1">property_animation_update_gpoint()</a> and <a class="el" href="group___property_animation.html#ga14667b983522e86abdb8534abf301d5d">property_animation_update_grect()</a>. <br/>
  The getter function is used when the animation is initialized, to assign the current value of the subject's property as "from" or "to" value, see <a class="el" href="group___property_animation.html#gac677f4c22571feafcfe296eaa8041d74">property_animation_create()</a>. </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
@@ -640,7 +639,7 @@ The "inherited" fields from the Animation "base class". </td></tr>
 </div><div class="memdoc">
 
 <p>Function signature of a setter function to set a property of type <a class="el" href="group___graphics_types.html#struct_g_point" title="Represents a point in a 2-dimensional coordinate system. ">GPoint</a> onto the subject. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#ga9e678fa0e3a405355fa8426ca4013eca">property_animation_update_gpoint()</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#ga86c228919e6e32435dff2c53cae71fa1">property_animation_update_gpoint()</a> </dd>
 <dd>
 <a class="el" href="group___property_animation.html#struct_property_animation_accessors">PropertyAnimationAccessors</a> </dd></dl>
 
@@ -688,7 +687,7 @@ The "inherited" fields from the Animation "base class". </td></tr>
 </div><div class="memdoc">
 
 <p>Function signature of a setter function to set a property of type <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a> onto the subject. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#ga7e1c8517e0c7cf9ba43cd4b8667aab6a">property_animation_update_grect()</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#ga14667b983522e86abdb8534abf301d5d">property_animation_update_grect()</a> </dd>
 <dd>
 <a class="el" href="group___property_animation.html#struct_property_animation_accessors">PropertyAnimationAccessors</a> </dd></dl>
 
@@ -722,7 +721,7 @@ The "inherited" fields from the Animation "base class". </td></tr>
 </div><div class="memdoc">
 
 <p>Function signature of a setter function to set a property of type int16_t onto the subject. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#gadec8f7f5b5ab004f4c4561dd6e336cdd">property_animation_update_int16()</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___property_animation.html#ga897f74042c0364cf9d719c66ed5ef395">property_animation_update_int16()</a> </dd>
 <dd>
 <a class="el" href="group___property_animation.html#struct_property_animation_accessors">PropertyAnimationAccessors</a> </dd></dl>
 
@@ -734,7 +733,7 @@ The "inherited" fields from the Animation "base class". </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

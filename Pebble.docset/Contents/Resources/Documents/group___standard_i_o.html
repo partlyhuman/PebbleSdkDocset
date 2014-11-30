@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___standard_i_o.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('group___standard_i_o.html','');});
 </div><div class="memdoc">
 
 <p>Format a string into a buffer. </p>
-<p>Refer to the <a href="http://linux.die.net/man/3/snprintf" class="el">snprintf manpage</a> for details about the C formatting string format. Please note that the format codes specifically for single and double precision floating point values (such as %e, %f, and %g) are not officially supported and may not display correctly. </p>
+<p>The Pebble-supported format specifiers are displayed below.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The string buffer to write the formatted string into </td></tr>
@@ -162,8 +162,109 @@ $(document).ready(function(){initNavTree('group___standard_i_o.html','');});
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of bytes written </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes written</dd></dl>
+ 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Specifier</th>
+    <th class="tg-031e">Output</th>
+    <th class="tg-031e">Example</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">d or i</td>
+    <td class="tg-031e">Signed decimal integer</td>
+    <td class="tg-031e">294<br>-294</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">u</td>
+    <td class="tg-031e">Unsigned decimal integer</td>
+    <td class="tg-031e">7235</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">o</td>
+    <td class="tg-031e">Unsigned octal</td>
+    <td class="tg-031e">610</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">x</td>
+    <td class="tg-031e">Unsigned hexadecimal integer</td>
+    <td class="tg-031e">8b2</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">X</td>
+    <td class="tg-031e">Unsigned hexadecimal integer (uppercase)</td>
+    <td class="tg-031e">8B2</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">c</td>
+    <td class="tg-031e">Character</td>
+    <td class="tg-031e">h</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">s</td>
+    <td class="tg-031e">Null-terminated string of characters</td>
+    <td class="tg-031e">pebble</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">p</td>
+    <td class="tg-031e">Pointer address</td>
+    <td class="tg-031e">0xb8000000</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">%</td>
+    <td class="tg-031e">A % followed by another % character will write a single % to the stream.</td>
+    <td class="tg-031e">%</td>
+  </tr>
+</table>
+<br>
+<p>Length specifiers can also be combined with the format specifiers above:</p>
+ 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e"></th>
+    <th class="tg-s6z2">u o x X</th>
+    <th class="tg-s6z2">c</th>
+    <th class="tg-s6z2">s</th>
+    <th class="tg-s6z2">p</th>
+    <th class="tg-s6z2">n</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">(none)</td>
+    <td class="tg-031e">unsigned int</td>
+    <td class="tg-031e">int</td>
+    <td class="tg-031e">char*</td>
+    <td class="tg-031e">void*</td>
+    <td class="tg-031e">int*</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">h</td>
+    <td class="tg-031e">unsigned short int</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">short int*</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">l</td>
+    <td class="tg-031e">unsigned long int</td>
+    <td class="tg-031e">wint_t</td>
+    <td class="tg-031e">wchar_t*</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">long int*</td>
+  </tr>
+</table>
+ 
 </div>
 </div>
 </div><!-- contents -->
@@ -172,7 +273,7 @@ $(document).ready(function(){initNavTree('group___standard_i_o.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

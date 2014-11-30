@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['s_5ffalse',['S_FALSE',['../group___storage.html#ggae98a46f4ea1a43ca48acaf15d2eb7113a68f36740ce22fa7b0a5500578751c4df',1,'pebble.h']]],
+  ['s_5fno_5faction_5frequired',['S_NO_ACTION_REQUIRED',['../group___storage.html#ggae98a46f4ea1a43ca48acaf15d2eb7113a84443a6682392b6f7afa83fd096325cb',1,'pebble.h']]],
+  ['s_5fno_5fmore_5fitems',['S_NO_MORE_ITEMS',['../group___storage.html#ggae98a46f4ea1a43ca48acaf15d2eb7113ae1acf82ac9fe0261196ad98e1aa66008',1,'pebble.h']]],
+  ['s_5fsuccess',['S_SUCCESS',['../group___storage.html#ggae98a46f4ea1a43ca48acaf15d2eb7113a29c0c697bde0c7eb16b7f17bea656fb9',1,'pebble.h']]],
+  ['s_5ftrue',['S_TRUE',['../group___storage.html#ggae98a46f4ea1a43ca48acaf15d2eb7113a634340f260a88ae2889c4cf0502cc08b',1,'pebble.h']]],
+  ['saturday',['SATURDAY',['../group___wall_time.html#gga38e35eaba0dce3be153ec798fb175de5a31bbcd6fa6a28095ef8de658126aa5ec',1,'pebble.h']]],
   ['scroll_5flayer_5fadd_5fchild',['scroll_layer_add_child',['../group___scroll_layer.html#ga318c7ebc11aa6d2ecf12c534bf1274cb',1,'pebble.h']]],
   ['scroll_5flayer_5fcreate',['scroll_layer_create',['../group___scroll_layer.html#gab88b8cf8308e3d68d5e714db11658e62',1,'pebble.h']]],
   ['scroll_5flayer_5fdestroy',['scroll_layer_destroy',['../group___scroll_layer.html#ga2fa5ed30c56396db4f3b0325d3e22365',1,'pebble.h']]],
@@ -19,12 +25,13 @@ var searchData=
   ['scrolllayer',['ScrollLayer',['../group___scroll_layer.html',1,'']]],
   ['scrolllayercallback',['ScrollLayerCallback',['../group___scroll_layer.html#ga562d848f7db8d2c1fa10d99b256a8b3c',1,'pebble.h']]],
   ['scrolllayercallbacks',['ScrollLayerCallbacks',['../group___scroll_layer.html#struct_scroll_layer_callbacks',1,'']]],
-  ['second_5funit',['SECOND_UNIT',['../group___wall_time.html#gga0423d00e0eb199de523a92031b5a1107afd448b8fbcd39321d18aa41b62b308b9',1,'pebble.h']]],
+  ['second_5funit',['SECOND_UNIT',['../group___tick_timer_service.html#gga0423d00e0eb199de523a92031b5a1107afd448b8fbcd39321d18aa41b62b308b9',1,'pebble.h']]],
   ['section',['section',['../group___menu_layer.html#a9d05a7245c3d2f4c95fb6b33e8fb2a1a',1,'MenuIndex']]],
   ['select_5fclick',['select_click',['../group___menu_layer.html#a88bd478b423a2d6fe9e667d23a02050f',1,'MenuLayerCallbacks']]],
   ['select_5flong_5fclick',['select_long_click',['../group___menu_layer.html#a37b862ad3aceeaf906834b7d2fdb0196',1,'MenuLayerCallbacks']]],
   ['selected',['selected',['../group___number_window.html#a4e684ff178c36b96c583fd5e292ee542',1,'NumberWindowCallbacks']]],
   ['selection_5fchanged',['selection_changed',['../group___menu_layer.html#a0f35fb6edefe0879f351f16d471cb1a1',1,'MenuLayerCallbacks']]],
+  ['setlocale',['setlocale',['../group___standard_locale.html#ga32b174e036be8744d4fcdde290012d3c',1,'common.dox']]],
   ['setter',['setter',['../group___property_animation.html#a3dc6536bfcffe2d0bb3255380c6e2f7f',1,'PropertyAnimationAccessors']]],
   ['setup',['setup',['../group___animation.html#a4cfa9952ca859f0555e2db1b29f135b8',1,'AnimationImplementation']]],
   ['simple_5fmenu_5flayer_5fcreate',['simple_menu_layer_create',['../group___simple_menu_layer.html#ga8cb9fa4fbe318289989506ba49f228f5',1,'pebble.h']]],
@@ -48,6 +55,8 @@ var searchData=
   ['standard_20c',['Standard C',['../group___standard_c.html',1,'']]],
   ['string',['String',['../group___standard_string.html',1,'']]],
   ['started',['started',['../group___animation.html#aabde74563b7b9821699bb5e9b3f4a59f',1,'AnimationHandlers']]],
+  ['status_5ft',['status_t',['../group___storage.html#gaaabdaf7ee58ca7269bd4bf24efcde092',1,'pebble.h']]],
+  ['statuscode',['StatusCode',['../group___storage.html#gae98a46f4ea1a43ca48acaf15d2eb7113',1,'pebble.h']]],
   ['stopped',['stopped',['../group___animation.html#a56e5f5b77c843b7bc7e58587a42e197a',1,'AnimationHandlers']]],
   ['storage',['Storage',['../group___storage.html',1,'']]],
   ['strcat',['strcat',['../group___standard_string.html#ga19546e43db31c3095991b04023b422b2',1,'common.dox']]],
@@ -58,5 +67,6 @@ var searchData=
   ['strncat',['strncat',['../group___standard_string.html#gaef7c0be850a2df7a4e4c5f76774a721b',1,'common.dox']]],
   ['strncmp',['strncmp',['../group___standard_string.html#gab36f95eb212013e67f97dacede2751db',1,'common.dox']]],
   ['strncpy',['strncpy',['../group___standard_string.html#ga9380f4a95b2c4e3d979b1634d3a8bcc9',1,'common.dox']]],
-  ['subtitle',['subtitle',['../group___simple_menu_layer.html#a26f49bf0073e1a9c32f32cc1c2ae608d',1,'SimpleMenuItem']]]
+  ['subtitle',['subtitle',['../group___simple_menu_layer.html#a26f49bf0073e1a9c32f32cc1c2ae608d',1,'SimpleMenuItem']]],
+  ['sunday',['SUNDAY',['../group___wall_time.html#gga38e35eaba0dce3be153ec798fb175de5ad86a75e0b97510de54435996ae45b8d2',1,'pebble.h']]]
 ];

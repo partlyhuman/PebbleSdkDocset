@@ -5,7 +5,6 @@ var searchData=
   ['num_5fitems',['num_items',['../group___simple_menu_layer.html#ac0331245bc7c1a881acf42d00c4f6789',1,'SimpleMenuSection']]],
   ['num_5fpoints',['num_points',['../group___path_drawing.html#a58f935742a1b1cfde88cfcadd172a09b',1,'GPathInfo::num_points()'],['../group___path_drawing.html#aaefbfeade709d357a25b19a88f663460',1,'GPath::num_points()']]],
   ['num_5fsegments',['num_segments',['../group___vibes.html#a0ea4a7f770c28f400daf3bd255e730e7',1,'VibePattern']]],
-  ['numanimationcurve',['NumAnimationCurve',['../group___animation.html#ggaf481a363d622c146285096e6395d9ec8a2d2c5a61e04cd758cd32822ffd908f69',1,'pebble.h']]],
   ['number_5fwindow_5fcreate',['number_window_create',['../group___number_window.html#ga982395aad6f12cd46f0004f27ede215b',1,'pebble.h']]],
   ['number_5fwindow_5fdestroy',['number_window_destroy',['../group___number_window.html#ga277a36f4533d07485db71d6e615e07a1',1,'pebble.h']]],
   ['number_5fwindow_5fget_5fvalue',['number_window_get_value',['../group___number_window.html#ga035ef25b3c5ffc254df062cab1b4f9ec',1,'pebble.h']]],

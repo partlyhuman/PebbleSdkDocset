@@ -1,6 +1,7 @@
 var group___standard_c =
 [
     [ "Format", "group___standard_i_o.html", "group___standard_i_o" ],
+    [ "Locale", "group___standard_locale.html", "group___standard_locale" ],
     [ "Math", "group___standard_math.html", "group___standard_math" ],
     [ "Memory", "group___standard_memory.html", "group___standard_memory" ],
     [ "String", "group___standard_string.html", "group___standard_string" ],

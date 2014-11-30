@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,6 +139,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>click_config_provider
 : <a class="el" href="group___scroll_layer.html#a8e8c71425fed8bab16d447d74cf167e2">ScrollLayerCallbacks</a>
+</li>
+<li>compass_status
+: <a class="el" href="group___compass_service.html#acf2933559248baab84c5e0dc3017ca8f">CompassHeadingData</a>
 </li>
 <li>content_offset_changed_handler
 : <a class="el" href="group___scroll_layer.html#ad2cb7771ef3ff8930996d188565dcf1e">ScrollLayerCallbacks</a>
@@ -217,6 +220,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>is_charging
 : <a class="el" href="group___battery_state_service.html#a1a2d28c28d3d230b5f8fe2fd089ff9dd">BatteryChargeState</a>
 </li>
+<li>is_declination_valid
+: <a class="el" href="group___compass_service.html#a244791d533094a407a3879686d532afd">CompassHeadingData</a>
+</li>
 <li>is_plugged
 : <a class="el" href="group___battery_state_service.html#a00910c85f1f068363a7b400151b7f8e4">BatteryChargeState</a>
 </li>
@@ -237,6 +243,19 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>length
 : <a class="el" href="group___dictionary.html#ac83219d80bf6300b0afe53d5b30955a9">Tuple</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>magnetic_heading
+: <a class="el" href="group___compass_service.html#ac2e476c83c6946877eedb0b471ff9cff">CompassHeadingData</a>
+</li>
+<li>major
+: <a class="el" href="group___watch_info.html#a1e7b5ff37561b37e7defc5d9925dca2f">WatchInfoVersion</a>
+</li>
+<li>minor
+: <a class="el" href="group___watch_info.html#a12ded59fd8f84d4c86b0a5cb6f91b08c">WatchInfoVersion</a>
 </li>
 </ul>
 
@@ -266,9 +285,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>patch
+: <a class="el" href="group___watch_info.html#a820d5cf455587c5936f77857aa345c91">WatchInfoVersion</a>
+</li>
 <li>points
-: <a class="el" href="group___path_drawing.html#a9060d72e677cfa33dc4c26e0829299c6">GPathInfo</a>
-, <a class="el" href="group___path_drawing.html#a1c38d8ee2e1f7f9fd288bc39fa958190">GPath</a>
+: <a class="el" href="group___path_drawing.html#a1c38d8ee2e1f7f9fd288bc39fa958190">GPath</a>
+, <a class="el" href="group___path_drawing.html#a9060d72e677cfa33dc4c26e0829299c6">GPathInfo</a>
 </li>
 </ul>
 
@@ -334,9 +356,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="group___simple_menu_layer.html#a4c8e4113f9641b51e1d16e3c32f465dc">SimpleMenuSection</a>
 , <a class="el" href="group___simple_menu_layer.html#a3f4b4f9cbfbc573c71480f0a8861eacf">SimpleMenuItem</a>
 </li>
+<li>true_heading
+: <a class="el" href="group___compass_service.html#a1f1fdeabef33b1ab1ef6db10c07dfeed">CompassHeadingData</a>
+</li>
 <li>type
-: <a class="el" href="group___dictionary.html#a1451fd4819f780d8877c0ac8d52151d2">Tuplet</a>
-, <a class="el" href="group___dictionary.html#ae2c621840b9fa7c2e7ef21074331d317">Tuple</a>
+: <a class="el" href="group___dictionary.html#ae2c621840b9fa7c2e7ef21074331d317">Tuple</a>
+, <a class="el" href="group___dictionary.html#a1451fd4819f780d8877c0ac8d52151d2">Tuplet</a>
 </li>
 </ul>
 
@@ -366,6 +391,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>x
 : <a class="el" href="group___accelerometer_service.html#abe5df85a74073f78086968cbbe82b32f">AccelData</a>
 , <a class="el" href="group___graphics_types.html#a1f1a9ce775dde3448a265dc36b2024f4">GPoint</a>
+, <a class="el" href="group___accelerometer_service.html#a918cd7be9f4ad84dca85d76e8e866259">AccelRawData</a>
 </li>
 </ul>
 
@@ -374,6 +400,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>y
 : <a class="el" href="group___accelerometer_service.html#a58008ae111afcb60b47419541c48aa91">AccelData</a>
 , <a class="el" href="group___graphics_types.html#a94afc39fa39df567b9e78702d1f07b3e">GPoint</a>
+, <a class="el" href="group___accelerometer_service.html#ad0b4192d713701f157945e1102d1355e">AccelRawData</a>
 </li>
 </ul>
 
@@ -381,6 +408,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a class="anchor" id="index_z"></a>- z -</h3><ul>
 <li>z
 : <a class="el" href="group___accelerometer_service.html#a4c5562ab5758dc0374b8231f7b54d607">AccelData</a>
+, <a class="el" href="group___accelerometer_service.html#a15db790b41710b4d7781150f079ff538">AccelRawData</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -389,7 +417,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

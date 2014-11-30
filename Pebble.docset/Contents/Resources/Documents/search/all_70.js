@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['patch',['patch',['../group___watch_info.html#a820d5cf455587c5936f77857aa345c91',1,'WatchInfoVersion']]],
   ['persist_5fdata_5fmax_5flength',['PERSIST_DATA_MAX_LENGTH',['../group___storage.html#ga0131571894c87dd4e9d63007e3600f22',1,'pebble.h']]],
   ['persist_5fdelete',['persist_delete',['../group___storage.html#gac1933ab31d528d823214a078fb1823d4',1,'pebble.h']]],
   ['persist_5fexists',['persist_exists',['../group___storage.html#ga6d7d35339e88c77eb0f860e2e07a6741',1,'pebble.h']]],
@@ -17,9 +18,9 @@ var searchData=
   ['property_5fanimation_5fcreate',['property_animation_create',['../group___property_animation.html#gac677f4c22571feafcfe296eaa8041d74',1,'pebble.h']]],
   ['property_5fanimation_5fcreate_5flayer_5fframe',['property_animation_create_layer_frame',['../group___property_animation.html#ga2cac58d4cca3fe248c49178bf268ec6d',1,'pebble.h']]],
   ['property_5fanimation_5fdestroy',['property_animation_destroy',['../group___property_animation.html#ga5c0ba8e69d57c63c23d35fe31112a3ba',1,'pebble.h']]],
-  ['property_5fanimation_5fupdate_5fgpoint',['property_animation_update_gpoint',['../group___property_animation.html#ga9e678fa0e3a405355fa8426ca4013eca',1,'pebble.h']]],
-  ['property_5fanimation_5fupdate_5fgrect',['property_animation_update_grect',['../group___property_animation.html#ga7e1c8517e0c7cf9ba43cd4b8667aab6a',1,'pebble.h']]],
-  ['property_5fanimation_5fupdate_5fint16',['property_animation_update_int16',['../group___property_animation.html#gadec8f7f5b5ab004f4c4561dd6e336cdd',1,'pebble.h']]],
+  ['property_5fanimation_5fupdate_5fgpoint',['property_animation_update_gpoint',['../group___property_animation.html#ga86c228919e6e32435dff2c53cae71fa1',1,'pebble.h']]],
+  ['property_5fanimation_5fupdate_5fgrect',['property_animation_update_grect',['../group___property_animation.html#ga14667b983522e86abdb8534abf301d5d',1,'pebble.h']]],
+  ['property_5fanimation_5fupdate_5fint16',['property_animation_update_int16',['../group___property_animation.html#ga897f74042c0364cf9d719c66ed5ef395',1,'pebble.h']]],
   ['propertyanimation',['PropertyAnimation',['../group___property_animation.html',1,'']]],
   ['propertyanimation_2evalues',['PropertyAnimation.values',['../group___property_animation.html#struct_property_animation_8values',1,'']]],
   ['propertyanimation_2evalues_2efrom',['PropertyAnimation.values.from',['../group___property_animation.html#union_property_animation_8values_8from',1,'']]],

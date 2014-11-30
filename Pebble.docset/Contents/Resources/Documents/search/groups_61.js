@@ -7,5 +7,6 @@ var searchData=
   ['app_20communication',['App Communication',['../group___app_comm.html',1,'']]],
   ['appfocusservice',['AppFocusService',['../group___app_focus_service.html',1,'']]],
   ['appmessage',['AppMessage',['../group___app_message.html',1,'']]],
-  ['appsync',['AppSync',['../group___app_sync.html',1,'']]]
+  ['appsync',['AppSync',['../group___app_sync.html',1,'']]],
+  ['appworker',['AppWorker',['../group___app_worker.html',1,'']]]
 ];

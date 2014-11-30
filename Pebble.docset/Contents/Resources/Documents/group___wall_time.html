@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___wall_time.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,7 +115,6 @@ $(document).ready(function(){initNavTree('group___wall_time.html','');});
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions, data structures and other things related to wall clock time. </p>
 <p>This module contains utilities to get the current time and create strings with formatted dates and times. </p>
-<dl class="section note"><dt>Note</dt><dd>When implementing a watchface or application that tells time, make sure to check out the <code>tick_info</code> field of PebbleAppHandlers. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga5ddf6b7454fd49c0eb63d2e50d75fad7"></a>
 <div class="memitem">
@@ -172,39 +171,105 @@ $(document).ready(function(){initNavTree('group___wall_time.html','');});
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga0423d00e0eb199de523a92031b5a1107"></a>
+<a class="anchor" id="ga95c658aa0d511e4b4ca549724e02ce72"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="group___wall_time.html#ga0423d00e0eb199de523a92031b5a1107">TimeUnits</a></td>
+          <td class="memname">bool clock_is_timezone_set </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Time unit flags that can be used to create a bitmask for use in PebbleAppTickInfo. </p>
-<dl class="section see"><dt>See Also</dt><dd>PebbleAppTickInfo </dd>
-<dd>
-PebbleAppHandlers </dd></dl>
+<p>Checks if timezone is currently set, otherwise gmtime == localtime. </p>
+<dl class="section note"><dt>Note</dt><dd>This function was added in preparation of timezone support, currently always returns false </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if timezone has been set, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga170869bfe009abc85f093b0f80224009"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___standard_time.html#gaffa4d193759c763a2623cc49d69b15f5">time_t</a> clock_to_timestamp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___wall_time.html#ga38e35eaba0dce3be153ec798fb175de5">WeekDay</a>&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a (day, hour, minute) specification to a UTC timestamp occurring in the future Always returns a timestamp for the next occurring instance, example: specifying TODAY@14:30 when it is 14:40 will return a timestamp for 7 days from now at 14:30. </p>
+<dl class="section note"><dt>Note</dt><dd>This function does not support Daylight Saving Time (DST) changes, events scheduled during a DST change will be off by an hour. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">day</td><td>WeekDay day of week including support for specifying TODAY </td></tr>
+    <tr><td class="paramname">hour</td><td>hour specified in 24-hour format [0-23] </td></tr>
+    <tr><td class="paramname">minute</td><td>minute [0-59] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga38e35eaba0dce3be153ec798fb175de5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___wall_time.html#ga38e35eaba0dce3be153ec798fb175de5">WeekDay</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weekday values. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107afd448b8fbcd39321d18aa41b62b308b9"></a>SECOND_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "seconds" time unit. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5ac738929b5715d2179b64240f54a7677e"></a>TODAY</em>&nbsp;</td><td class="fielddoc">
+<p>Today. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107af135dc6b67dce70c7b4b961605aa6970"></a>MINUTE_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "minutes" time unit. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5ad86a75e0b97510de54435996ae45b8d2"></a>SUNDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Sunday. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107a7628af862ee9aa0b56cdfc1cea7e0f79"></a>HOUR_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "hours" time unit. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5ac82db3248a96794aaefb922ea5fb293c"></a>MONDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Monday. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107af990f18a7186e6b386f36f2afa3c8038"></a>DAY_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "days" time unit. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5a347c4455723bb1bc2709647607a2b282"></a>TUESDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Tuesday. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107ac5c028cac926fb83169e7b43fa089b16"></a>MONTH_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "months" time unit. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5a68288a23958cd9e1705fd81f0ee729c7"></a>WEDNESDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Wednesday. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga0423d00e0eb199de523a92031b5a1107a652f00ea2c629930a32a684f9d8c876d"></a>YEAR_UNIT</em>&nbsp;</td><td class="fielddoc">
-<p>Flag to represent the "years" time unit. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5ab4bfd6f883437c6cf31486dcf03ce0ff"></a>THURSDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Thursday. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5a8f589731fd90a9890c0df9a9c3f96131"></a>FRIDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Friday. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga38e35eaba0dce3be153ec798fb175de5a31bbcd6fa6a28095ef8de658126aa5ec"></a>SATURDAY</em>&nbsp;</td><td class="fielddoc">
+<p>Saturday. </p>
 </td></tr>
 </table>
 
@@ -216,7 +281,7 @@ PebbleAppHandlers </dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

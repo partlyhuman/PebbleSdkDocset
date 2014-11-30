@@ -16,6 +16,7 @@ var searchData=
   ['scroll_5flayer_5fset_5fcontext',['scroll_layer_set_context',['../group___scroll_layer.html#gaeb62332973b899f585563270fa7db637',1,'pebble.h']]],
   ['scroll_5flayer_5fset_5fframe',['scroll_layer_set_frame',['../group___scroll_layer.html#ga9282d6e6c53061b26b2df60e8b2d9553',1,'pebble.h']]],
   ['scroll_5flayer_5fset_5fshadow_5fhidden',['scroll_layer_set_shadow_hidden',['../group___scroll_layer.html#gab8d87f6647984e9532e848f04f610ae6',1,'pebble.h']]],
+  ['setlocale',['setlocale',['../group___standard_locale.html#ga32b174e036be8744d4fcdde290012d3c',1,'common.dox']]],
   ['simple_5fmenu_5flayer_5fcreate',['simple_menu_layer_create',['../group___simple_menu_layer.html#ga8cb9fa4fbe318289989506ba49f228f5',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fdestroy',['simple_menu_layer_destroy',['../group___simple_menu_layer.html#ga0608656e550deb3b0339cd1c807990e2',1,'pebble.h']]],
   ['simple_5fmenu_5flayer_5fget_5flayer',['simple_menu_layer_get_layer',['../group___simple_menu_layer.html#ga084151685bf2cadc5efaa52ee534c020',1,'pebble.h']]],

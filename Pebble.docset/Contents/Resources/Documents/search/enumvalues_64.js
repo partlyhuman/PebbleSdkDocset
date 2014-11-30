@@ -9,7 +9,7 @@ var searchData=
   ['data_5flogging_5fnot_5ffound',['DATA_LOGGING_NOT_FOUND',['../group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fa6b1d5cd4697ac475efab2d6e00b97a80',1,'pebble.h']]],
   ['data_5flogging_5fsuccess',['DATA_LOGGING_SUCCESS',['../group___data_logging.html#ggaddc3b8874990b538c7fe17b019ace38fa3b84913c135ef19b14498d42b50daa88',1,'pebble.h']]],
   ['data_5flogging_5fuint',['DATA_LOGGING_UINT',['../group___data_logging.html#gga35a7aa37609a9aebb3ad316e77cb716da472622733c6b9932c72ed1f19ae66526',1,'pebble.h']]],
-  ['day_5funit',['DAY_UNIT',['../group___wall_time.html#gga0423d00e0eb199de523a92031b5a1107af990f18a7186e6b386f36f2afa3c8038',1,'pebble.h']]],
+  ['day_5funit',['DAY_UNIT',['../group___tick_timer_service.html#gga0423d00e0eb199de523a92031b5a1107af990f18a7186e6b386f36f2afa3c8038',1,'pebble.h']]],
   ['dict_5finternal_5finconsistency',['DICT_INTERNAL_INCONSISTENCY',['../group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351ad1c1a2b4398b21aca5d171b47f1b6876',1,'pebble.h']]],
   ['dict_5finvalid_5fargs',['DICT_INVALID_ARGS',['../group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a7f135de6b3f8f23083dc99dcb49ac2a2',1,'pebble.h']]],
   ['dict_5fmalloc_5ffailed',['DICT_MALLOC_FAILED',['../group___dictionary.html#ggaafae887a6d07cde8d11885c755b55351a613e308b84e2711144a049c512393045',1,'pebble.h']]],

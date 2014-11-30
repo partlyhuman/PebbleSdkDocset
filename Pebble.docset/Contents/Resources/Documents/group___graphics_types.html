@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Create a new <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> on the heap as a sub-bitmap of a 'base' <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>, using a <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a> to indicate what portion of the base to use. The sub-bitmap will just reference the image data of the base bitmap. No deep-copying occurs as a result of calling this function, thus the caller is responsible for making sure the base bitmap will remain available when using the sub-bitmap. Note that you should not destroy the parent bitmap until the sub_bitmap has been destroyed. </p>
+<p>Create a new <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> on the heap as a sub-bitmap of a 'base' <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>, using a <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a> to indicate what portion of the base to use. The sub-bitmap will just reference the image data of the base bitmap. No deep-copying occurs as a result of calling this function, thus the caller is responsible for making sure the base bitmap will remain available when using the sub-bitmap. Note that you should not destroy the parent bitmap until the sub_bitmap has been destroyed. The resulting <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> must be destroyed using <a class="el" href="group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92">gbitmap_destroy()</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">base_bitmap</td><td>The bitmap that the sub-bitmap of which the image data will be used by the sub-bitmap </td></tr>
@@ -165,7 +165,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new blank <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> on the heap initialized to zeroes. </p>
+<p>Creates a new blank <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> on the heap initialized to zeroes. The resulting <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> must be destroyed using <a class="el" href="group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92">gbitmap_destroy()</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>The Pebble image dimensions as a <a class="el" href="group___graphics_types.html#struct_g_size">GSize</a>. </td></tr>
@@ -190,10 +190,12 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> on the heap initialized with a Pebble image file data (.pbi), as output by bitmapgen.py. </p>
+<p>Creates a new <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> on the heap initialized with the provided Pebble image data. </p>
+<p>The resulting <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> must be destroyed using <a class="el" href="group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92">gbitmap_destroy()</a> but the image data will not be freed automatically. The developer is responsible for keeping the image data in memory as long as the bitmap is used and releasing it after the bitmap is destroyed. </p>
+<dl class="section note"><dt>Note</dt><dd>One way to generate Pebble image data is to use bitmapgen.py in the Pebble SDK to generate a .pbi file. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>The Pebble image file data. Must not be NULL. The function assumes the data to be correct; there are no sanity checks performed on the data. </td></tr>
+    <tr><td class="paramname">data</td><td>The Pebble image data. Must not be NULL. The function assumes the data to be correct; there are no sanity checks performed on the data. The data will not be copied and the pointer must remain valid for the lifetime of this <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -215,7 +217,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> on the heap using a Pebble image file stored as a resource. The resulting <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> must be destroyed using gbitmap_destroy. </p>
+<p>Creates a new <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a> on the heap using a Pebble image file stored as a resource. The resulting <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> must be destroyed using <a class="el" href="group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92">gbitmap_destroy()</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resource_id</td><td>The ID of the bitmap resource to load </td></tr>
@@ -240,7 +242,9 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Destroy a <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>; free the <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>'s data if it is dynamically allocated. This must be called for every bitmap that's been created with gbitmap_create_*. </p>
+<p>Destroy a <a class="el" href="group___graphics_types.html#struct_g_bitmap">GBitmap</a>. This must be called for every bitmap that's been created with gbitmap_create_*. </p>
+<p>This function will also free the memory of the bitmap data (bitmap-&gt;addr) if the bitmap was created with <a class="el" href="group___graphics_types.html#gaf9265d531bb149b22875962a5a5fe068">gbitmap_create_blank()</a> or <a class="el" href="group___graphics_types.html#gae1c7c90641f5138b5f36f9334d52085a">gbitmap_create_with_resource()</a>.</p>
+<p>If the <a class="el" href="group___graphics_types.html#struct_g_bitmap" title="Structure containing the metadata of a bitmap image. ">GBitmap</a> was created with <a class="el" href="group___graphics_types.html#ga0c01fd1816c6c0fde05310141f293cc5">gbitmap_create_with_data()</a>, you must release the memory after calling <a class="el" href="group___graphics_types.html#ga0b0540c1de9ecadbef44e7d87e05ca92" title="Destroy a GBitmap. This must be called for every bitmap that&#39;s been created with gbitmap_create_*. ">gbitmap_destroy()</a>. </p>
 
 </div>
 </div>
@@ -599,7 +603,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
 </div><div class="memdoc">
 <div class="textblock"><p>Structure containing the metadata of a bitmap image. </p>
 <p>Note that this structure does NOT contain any pixel data; it only has a pointer to a buffer containing the pixels (the <code>addr</code> field). The metadata describes how long each row of pixels is in the buffer (the stride). Each row must be a multiple of 32 pixels (4 bytes). Using the <code>bounds</code> field, the area that is actually relevant can be specified.</p>
-<p>For example, when the image is 29 by 5 pixels (width by height) and the first bit of image data is the pixel at (0, 0), then the bounds.size would be <code>GSize(29, 5)</code> and bounds.origin would be <code>GPoint(0, 0)</code>. </p>
+<p>For example, when the image is 29 by 5 pixels (width by height) and the first bit of image data is the pixel at (0, 0), then the bounds.size would be <code><a class="el" href="group___graphics_types.html#ga71761014e71575ac39edc38709cc048b" title="Convenience macro to make a GSize. ">GSize(29, 5)</a></code> and bounds.origin would be <code><a class="el" href="group___graphics_types.html#gabf9cee451faac8ad07157b775b951699" title="Convenience macro to make a GPoint. ">GPoint(0, 0)</a></code>. </p>
 <div class="image">
 <img src="gbitmap.png" alt="gbitmap.png"/>
 </div>
@@ -620,7 +624,7 @@ $(document).ready(function(){initNavTree('group___graphics_types.html','');});
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
-This union is here to make it easy to copy in a full uint16_t of flags from the binary format. </td></tr>
+Private attributes used by the system. </td></tr>
 <tr><td class="fieldtype">
 <a class="anchor" id="a64ce1f39164582c8a12b599f0cd32aa9"></a>void *</td>
 <td class="fieldname">
@@ -653,7 +657,7 @@ row_size_bytes</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This union is here to make it easy to copy in a full uint16_t of flags from the binary format. </p>
+<div class="textblock"><p>Private attributes used by the system. </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
@@ -877,6 +881,34 @@ The width. </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="gabf9cee451faac8ad07157b775b951699"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="group___graphics_types.html#struct_g_point">GPoint</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="group___graphics_types.html#struct_g_point">GPoint</a>){(x), (y)})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience macro to make a <a class="el" href="group___graphics_types.html#struct_g_point" title="Represents a point in a 2-dimensional coordinate system. ">GPoint</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="ga24192f6809de17d816671a1d6a7b59b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -891,6 +923,46 @@ The width. </td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga98a870072d31f765cbfaebe222d85f6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="group___graphics_types.html#struct_g_rect">GRect</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">h&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="group___graphics_types.html#struct_g_rect">GRect</a>){{(x), (y)}, {(w), (h)}})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience macro to make a <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="ga1d67ac54b909f89dfd99e52eb1a7c0bc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -902,6 +974,34 @@ The width. </td></tr>
 </div><div class="memdoc">
 
 <p>Convenience macro to make a <a class="el" href="group___graphics_types.html#struct_g_rect" title="Represents a rectangle and defining it using the origin of the upper-lefthand corner and its size...">GRect</a> of ((0, 0), (0, 0)). </p>
+
+</div>
+</div>
+<a class="anchor" id="ga71761014e71575ac39edc38709cc048b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="group___graphics_types.html#struct_g_size">GSize</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">h&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="group___graphics_types.html#struct_g_size">GSize</a>){(w), (h)})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience macro to make a <a class="el" href="group___graphics_types.html#struct_g_size" title="Represents a 2-dimensional size. ">GSize</a>. </p>
 
 </div>
 </div>
@@ -925,7 +1025,7 @@ The width. </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

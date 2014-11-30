@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('group___animation.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -285,7 +285,42 @@ Modules</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___animation.html#gaf481a363d622c146285096e6395d9ec8" title="Values that are used to indicate the different animation curves, which determine the speed at which t...">AnimationCurve</a> </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is up to the implementation of the animation to actually use the curve. Because a curve type is often used for animations, it is included in the animation base layer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7688dd41c0d5fd3dac26d59311238936"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void animation_set_custom_curve </td>
+          <td>(</td>
+          <td class="paramtype">struct Animation *&#160;</td>
+          <td class="paramname"><em>animation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___animation.html#gadb4a8060560f10f2a608ec0f92ba0960">AnimationCurveFunction</a>&#160;</td>
+          <td class="paramname"><em>curve_function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a custom animation curve function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animation</td><td>The animation for which to set the curve. </td></tr>
+    <tr><td class="paramname">curve_function</td><td>The custom animation curve function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___animation.html#gadb4a8060560f10f2a608ec0f92ba0960" title="The function pointer type of a custom animation curve. ">AnimationCurveFunction</a> </dd></dl>
 
 </div>
 </div>
@@ -529,7 +564,7 @@ The handler that will be called when an animation is stopped. </td></tr>
 </div>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___animation.html#ga61be4aedb5d1d512a5f846c1ca78ad87" title="Pointer to function that (optionally) prepares the animation for running. This callback is called whe...">AnimationSetupImplementation</a> </dd>
 <dd>
-<a class="el" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a" title="Pointer to function that updates the animation according to the given normalized time. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. ">AnimationUpdateImplementation</a> </dd>
+<a class="el" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62" title="Pointer to function that updates the animation according to the given normalized distance. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. ">AnimationUpdateImplementation</a> </dd>
 <dd>
 <a class="el" href="group___animation.html#gadddea38a0c11c3eeb599f773388b2f01" title="Pointer to function that (optionally) cleans up the animation. This callback is called when the anima...">AnimationTeardownImplementation</a> </dd></dl>
 </div><table class="fieldtable">
@@ -547,7 +582,7 @@ teardown</td>
 <td class="fielddoc">
 Called by the animation system when an animation is unscheduled, to clean up after it has run. This callback is optional and can be left <code>NULL</code> when not needed. </td></tr>
 <tr><td class="fieldtype">
-<a class="anchor" id="a6eb3f553df358650fb53211fd3837506"></a><a class="el" href="group___animation.html#gaafbcb4e93cde98a4a2d542714675301a">AnimationUpdateImplementation</a></td>
+<a class="anchor" id="a6eb3f553df358650fb53211fd3837506"></a><a class="el" href="group___animation.html#gada818a9de1bcfe0d78e51e3e0024ad62">AnimationUpdateImplementation</a></td>
 <td class="fieldname">
 update</td>
 <td class="fielddoc">
@@ -557,6 +592,27 @@ Called by the animation system when the animation needs to calculate the next an
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="gadb4a8060560f10f2a608ec0f92ba0960"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a>(* AnimationCurveFunction)(<a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> linear_distance)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function pointer type of a custom animation curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linear_distance</td><td>The linear normalized animation distance to be curved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___animation.html#ga7688dd41c0d5fd3dac26d59311238936" title="Sets a custom animation curve function. ">animation_set_custom_curve</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ga61be4aedb5d1d512a5f846c1ca78ad87"></a>
 <div class="memitem">
 <div class="memproto">
@@ -649,21 +705,21 @@ Called by the animation system when the animation needs to calculate the next an
 
 </div>
 </div>
-<a class="anchor" id="gaafbcb4e93cde98a4a2d542714675301a"></a>
+<a class="anchor" id="gada818a9de1bcfe0d78e51e3e0024ad62"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* AnimationUpdateImplementation)(struct Animation *animation, const <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> time_normalized)</td>
+          <td class="memname">typedef void(* AnimationUpdateImplementation)(struct Animation *animation, const <a class="el" href="group___standard_c.html#gad53b3f685c3f3153f35ec87ea6f349d1">uint32_t</a> distance_normalized)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to function that updates the animation according to the given normalized time. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. </p>
+<p>Pointer to function that updates the animation according to the given normalized distance. This callback will be called repeatedly by the animation scheduler whenever the animation needs to be updated. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">animation</td><td>The animation that needs to update; gets passed in by the animation framework. </td></tr>
-    <tr><td class="paramname">time_normalized</td><td>The current normalized time; gets passed in by the animation framework for each animation frame. This is a value between <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> and <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a>. At the start of the animation, the value will be <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>. At the end of the animation, the value will be <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a>. For each frame during the animation, the value will be the running time, mapped linearly between <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> and <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a>. For example, say an animation was scheduled at t = 1.0s, has a delay of 1.0s and a duration of 2.0s. Then the .update callback will get called on t = 2.0s with time_normalized = <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>. For each frame thereafter until t = 4.0s, the update callback will get called where time_normalized is (<a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> + (((<a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a> - <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>) * t) / duration)). </td></tr>
+    <tr><td class="paramname">distance_normalized</td><td>The current normalized distance; gets passed in by the animation framework for each animation frame. This is a value between <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> and <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a>. At the start of the animation, the value will be <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>. At the end of the animation, the value will be <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a>. For each frame during the animation, the value will be the distance along the animation path, mapped between <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> and <a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a> based on the animation duration and the <a class="el" href="group___animation.html#gaf481a363d622c146285096e6395d9ec8">AnimationCurve</a> set. For example, say an animation was scheduled at t = 1.0s, has a delay of 1.0s, a duration of 2.0s and a curve of AnimationCurveLinear. Then the .update callback will get called on t = 2.0s with distance_normalized = <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>. For each frame thereafter until t = 4.0s, the update callback will get called where distance_normalized is (<a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a> + (((<a class="el" href="group___animation.html#ga43b9b82f56dbc751c7e3b25198b17d09">ANIMATION_NORMALIZED_MAX</a> - <a class="el" href="group___animation.html#ga96ce276742a60f74e5d2eb7ba2199d62">ANIMATION_NORMALIZED_MIN</a>) * t) / duration)). Other animation curves will result in a non-linear relation between distance_normalized and time. </td></tr>
   </table>
   </dd>
 </dl>
@@ -695,8 +751,11 @@ Called by the animation system when the animation needs to calculate the next an
 <tr><td class="fieldname"><em><a class="anchor" id="ggaf481a363d622c146285096e6395d9ec8a06d9643acfd6ced6e5b1b851b4f0b7de"></a>AnimationCurveEaseInOut</em>&nbsp;</td><td class="fielddoc">
 <p>Bicubic ease-in-out: accelerate from zero velocity, decelerate to zero velocity. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="ggaf481a363d622c146285096e6395d9ec8a2d2c5a61e04cd758cd32822ffd908f69"></a>NumAnimationCurve</em>&nbsp;</td><td class="fielddoc">
-<p>Number of available AnimationCurve types. </p>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf481a363d622c146285096e6395d9ec8a77e4fbe61f88241bf371cfc96edf52be"></a>AnimationCurveCustomFunction</em>&nbsp;</td><td class="fielddoc">
+<p>Custom (user-provided) animation curve. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf481a363d622c146285096e6395d9ec8a678600a8f792519bf7279c520e62a4a5"></a>AnimationCurve_Reserved1</em>&nbsp;</td><td class="fielddoc">
+<p>Reserved for forward-compatibility use. </p>
 </td></tr>
 </table>
 
@@ -714,7 +773,7 @@ Called by the animation system when the animation needs to calculate the next an
 </div><div class="memdoc">
 
 <p>Constant to indicate "infinite" duration. This can be used with <a class="el" href="group___animation.html#ga85d8adba15d2257b4528d89413dec407">animation_set_duration()</a> to indicate that the animation should run indefinitely. This is useful when implementing for example a frame-by-frame simulation that does not have a clear ending (e.g. a game). </p>
-<dl class="section note"><dt>Note</dt><dd>Note that <code>time_normalized</code> parameter that is passed into the <code>.update</code> implementation is meaningless in when an infinite duration is used. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Note that <code>distance_normalized</code> parameter that is passed into the <code>.update</code> implementation is meaningless in when an infinite duration is used. </dd></dl>
 
 </div>
 </div>
@@ -728,7 +787,7 @@ Called by the animation system when the animation needs to calculate the next an
       </table>
 </div><div class="memdoc">
 
-<p>The normalized time at the end of the animation. </p>
+<p>The normalized distance at the end of the animation. </p>
 
 </div>
 </div>
@@ -742,7 +801,7 @@ Called by the animation system when the animation needs to calculate the next an
       </table>
 </div><div class="memdoc">
 
-<p>The normalized time at the start of the animation. </p>
+<p>The normalized distance at the start of the animation. </p>
 
 </div>
 </div>
@@ -752,7 +811,7 @@ Called by the animation system when the animation needs to calculate the next an
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 12 2014 18:36:10 for Pebble SDK by
+    <li class="footer">Generated on Thu Nov 20 2014 20:35:18 for Pebble SDK by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

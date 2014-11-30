@@ -32,5 +32,8 @@ var group___dictionary =
       [ "TUPLE_CSTRING", "group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670a73c9d3384801aec20d36c732d9218dab", null ],
       [ "TUPLE_UINT", "group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670a6802e5d267fdda619ffb13fc80d873fe", null ],
       [ "TUPLE_INT", "group___dictionary.html#ggaf164f32d9bda6829f1738ef3fb2c6670ad691daf1df77095c1e19fe30b6cea5b4", null ]
-    ] ]
+    ] ],
+    [ "TupletBytes", "group___dictionary.html#ga8d30623394e3c7e368ea9403412e9c79", null ],
+    [ "TupletCString", "group___dictionary.html#ga6bc99ab1d451b29385733bb92f3c937a", null ],
+    [ "TupletInteger", "group___dictionary.html#ga152caed0a3d5db76c063b69a01157e57", null ]
 ];

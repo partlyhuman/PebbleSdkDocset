@@ -1,16 +1,15 @@
 var NAVTREE =
 [
   [ "Pebble SDK", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
-    [ "API Changelog", "_a_p_i_changelog.html", null ]
+    [ "Modules", "modules.html", "modules" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_a_p_i_changelog.html",
-"group___graphics_types.html#gga0d021422bd90a2a49e6c8d848e6d556fa3ca84b5c70798643a3bd07b263c47fe6",
-"group___wall_time.html#gga0423d00e0eb199de523a92031b5a1107ac5c028cac926fb83169e7b43fa089b16"
+"group___accelerometer_service.html",
+"group___event_service.html",
+"group___standard_time.html#ga99ef1cb2c789827dd5db3886dccf9067"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
